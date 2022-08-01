@@ -1,8 +1,6 @@
-package com.chainsys.springmvc.common.util;
+package com.chainsys.doctorappointmentbilling.commonutil;
 
-import java.io.InvalidClassException;
 import java.util.Date;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Validator {

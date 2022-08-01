@@ -1,4 +1,4 @@
-package com.chainsys.projectwork.pojo;
+package com.chainsys.doctorappointmentbilling.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,20 +10,20 @@ import javax.persistence.Table;
 public class DoctorDetails {
 	@Id
 	@Column(name = "DOCTOR_ID")
-	private int doctorId;
+	private int doctorid;
 	@Column(name = "speciality")
 	private String speciality;
 	@Column(name = "AVAILABLE_TIME")
-	private String availableTime;
+	private String availabletime;
 	@Column(name = "EXPERIENCE")
 	private int experience;
 
-	public int getDoctorId() {
-		return doctorId;
+	public int getDoctorid() {
+		return doctorid;
 	}
 
-	public void setDoctorId(int doctorId) {
-		this.doctorId = doctorId;
+	public void setDoctorid(int doctorid) {
+		this.doctorid = doctorid;
 	}
 
 	public String getSpeciality() {
@@ -34,12 +34,12 @@ public class DoctorDetails {
 		this.speciality = speciality;
 	}
 
-	public String getAvailableTime() {
-		return availableTime;
+	public String getAvailabletime() {
+		return availabletime;
 	}
 
-	public void setAvailableTime(String availableTime) {
-		this.availableTime = availableTime;
+	public void setAvailabletime(String availabletime) {
+		this.availabletime = availabletime;
 	}
 
 	public int getExperience() {

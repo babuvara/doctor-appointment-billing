@@ -1,4 +1,4 @@
-package com.chainsys.projectwork;
+package com.chainsys.doctorappointmentbilling;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

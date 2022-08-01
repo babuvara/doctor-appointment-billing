@@ -28,15 +28,15 @@
 			<tbody>
 				<c:forEach var="per" items="${allperson}">
 					<tr>
-						<td>${per.person_id}</td>
+						<td>${per.personid}</td>
 						<td>${per.name}</td>
 						<td>${per.gender}</td>
 						<td>${per.dob}</td>
-						<td>${per.blood_group}</td>
-						<td>${per.email_id}</td>
-						<td>${per.mobile_number}</td>
+						<td>${per.bloodgroup}</td>
+						<td>${per.emailid}</td>
+						<td>${per.mobilenumber}</td>
 						<td>${per.location}</td>
-						<td>${per.person_type}</td>
+						<td>${per.persontype}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

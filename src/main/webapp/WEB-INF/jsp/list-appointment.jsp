@@ -26,13 +26,13 @@
 			<tbody>
 				<c:forEach var="app" items="${allappointment}">
 					<tr>
-						<td>${app.appointment_id}</td>
-						<td>${app.appointment_date}</td>
-						<td>${app.appointment_time}</td>
-						<td>${app.patient_id}</td>
+						<td>${app.appointmentid}</td>
+						<td>${app.appointmentdate}</td>
+						<td>${app.appointmenttime}</td>
+						<td>${app.patientid}</td>
 						<td>${app.purpose}</td>
-						<td>${app.doctor_id}</td>
-						<td>${app.appointment_status}</td>
+						<td>${app.doctorid}</td>
+						<td>${app.appointmentstatus}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

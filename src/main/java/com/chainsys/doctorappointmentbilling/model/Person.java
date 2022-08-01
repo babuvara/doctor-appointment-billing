@@ -1,4 +1,4 @@
-package com.chainsys.projectwork.pojo;
+package com.chainsys.doctorappointmentbilling.model;
 
 import java.sql.Date;
 
@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Person {
 	@Id
 	@Column(name = "PERSON_ID")
-	private int personId;
+	private int personid;
 	@Column(name = "NAME")
 	private String name;
 	@Column(name = "GENDER")
@@ -20,22 +20,22 @@ public class Person {
 	@Column(name = "DOB")
 	private Date dob;
 	@Column(name = "BLOOD_GROUP")
-	private String bloodGroup;
+	private String bloodgroup;
 	@Column(name = "EMAIL_ID")
-	private String emailId;
+	private String emailid;
 	@Column(name = "MOBILE_NUMBER")
-	private long mobileNumber;
+	private long mobilenumber;
 	@Column(name = "LOCATION")
 	private String location;
 	@Column(name = "PERSON_TYPE")
-	private String personType;
+	private String persontype;
 
-	public int getPersonId() {
-		return personId;
+	public int getPersonid() {
+		return personid;
 	}
 
-	public void setPersonId(int personId) {
-		this.personId = personId;
+	public void setPersonid(int personid) {
+		this.personid = personid;
 	}
 
 	public String getName() {
@@ -62,28 +62,28 @@ public class Person {
 		this.dob = dob;
 	}
 
-	public String getBloodGroup() {
-		return bloodGroup;
+	public String getBloodgroup() {
+		return bloodgroup;
 	}
 
-	public void setBloodGroup(String bloodGroup) {
-		this.bloodGroup = bloodGroup;
+	public void setBloodgroup(String bloodgroup) {
+		this.bloodgroup = bloodgroup;
 	}
 
-	public String getEmailId() {
-		return emailId;
+	public String getEmailid() {
+		return emailid;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
 	}
 
-	public long getMobileNumber() {
-		return mobileNumber;
+	public long getMobilenumber() {
+		return mobilenumber;
 	}
 
-	public void setMobileNumber(long mobileNumber) {
-		this.mobileNumber = mobileNumber;
+	public void setMobilenumber(long mobilenumber) {
+		this.mobilenumber = mobilenumber;
 	}
 
 	public String getLocation() {
@@ -94,11 +94,12 @@ public class Person {
 		this.location = location;
 	}
 
-	public String getPersonType() {
-		return personType;
+	public String getPersontype() {
+		return persontype;
 	}
 
-	public void setPersonType(String personType) {
-		this.personType = personType;
+	public void setPersontype(String persontype) {
+		this.persontype = persontype;
 	}
+
 }

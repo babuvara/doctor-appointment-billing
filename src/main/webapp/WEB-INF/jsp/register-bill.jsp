@@ -15,21 +15,21 @@
 			<form:form action="register" method="post"
 				modelAttribute="registerbill">
 				<div>
-					<label for="hospital_name">Hospital Name</label>
+					<label for="hospitalname">Hospital Name</label>
 					<div>
-						<form:input path="hospital_name" />
+						<form:input path="hospitalname" />
 					</div>
 				</div>
 				<div>
-					<label for="doctor_id">Doctor id</label>
+					<label for="doctorid">Doctor id</label>
 					<div>
-						<form:input path="doctor_id" />
+						<form:input path="doctorid" />
 					</div>
 				</div>
 				<div>
-					<label for="patient_id">Patient id</label>
+					<label for="patientid">Patient id</label>
 					<div>
-						<form:input path="patient_id" />
+						<form:input path="patientid" />
 					</div>
 				</div>
 				<div>
@@ -39,15 +39,15 @@
 					</div>
 				</div>
 				<div>
-					<label for="appointment_id">Appointment id</label>
+					<label for="appointmentid">Appointment id</label>
 					<div>
-						<form:input path="appointment_id" />
+						<form:input path="appointmentid" />
 					</div>
 				</div>
 				<div>
-					<label for="net_bill">Net Bill</label>
+					<label for="netbill">Net Bill</label>
 					<div>
-						<form:input path="net_bill" />
+						<form:input path="netbill" />
 					</div>
 				</div>
 				<div>

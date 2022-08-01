@@ -1,4 +1,4 @@
-package com.chainsys.springmvc.common.util;
+package com.chainsys.doctorappointmentbilling.commonutil;
 
 public class InvalidInputDataException extends Exception {
 	public InvalidInputDataException() {

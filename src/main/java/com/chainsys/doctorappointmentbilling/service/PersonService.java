@@ -1,6 +1,5 @@
-package com.chainsys.projectwork.service;
+package com.chainsys.doctorappointmentbilling.service;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -8,27 +7,22 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.projectwork.dao.DoctorDetailsRepository;
-import com.chainsys.projectwork.pojo.DoctorDetails;
-
-
-
-
+import com.chainsys.doctorappointmentbilling.dao.PersonRepository;
+import com.chainsys.doctorappointmentbilling.model.Person;
 
 @Service
-public class DoctorDetailsService {
+public class PersonService {
 	@Autowired
-	private DoctorDetailsRepository repo;
+	private PersonRepository repo;
 
-
-	public List<DoctorDetails> getDoctorDetails() {
-		List<DoctorDetails> docdetlist = repo.findAll();
-		return docdetlist;
+	public List<Person> getperson() {
+		List<Person> personlist = repo.findAll();
+		return personlist;
 	}
 
 	@Transactional
-	public DoctorDetails save(DoctorDetails doc) {
-		return repo.save(doc);
+	public Person save(Person per) {
+		return repo.save(per);
 	}
 
 //	public Doctor findById(long id) {

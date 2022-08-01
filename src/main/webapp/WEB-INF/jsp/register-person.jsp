@@ -15,9 +15,9 @@
 			<form:form action="register" method="post"
 				modelAttribute="registerperson">
 				<div>
-					<label for="person_id">Person id</label>
+					<label for="personid">Person id</label>
 					<div>
-						<form:input path="person_id" />
+						<form:input path="personid" />
 					</div>
 				</div>
 				<div>
@@ -39,21 +39,21 @@
 					</div>
 				</div>
 				<div>
-					<label for="blood_group">Blood Group</label>
+					<label for="bloodgroup">Blood Group</label>
 					<div>
-						<form:input path="blood_group" />
+						<form:input path="bloodgroup" />
 					</div>
 				</div>
 				<div>
-					<label for="email_id">Email id</label>
+					<label for="emailid">Email id</label>
 					<div>
-						<form:input path="email_id" />
+						<form:input path="emailid" />
 					</div>
 				</div>
 				<div>
-					<label for="mobile_number">Mobile Number</label>
+					<label for="mobilenumber">Mobile Number</label>
 					<div>
-						<form:input path="mobile_number" />
+						<form:input path="mobilenumber" />
 					</div>
 				</div>
 				<div>
@@ -63,9 +63,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="person_type">Person Type</label>
+					<label for="persontype">Person Type</label>
 					<div>
-						<form:input path="person_type" />
+						<form:input path="persontype" />
 					</div>
 				</div>
 				<div>

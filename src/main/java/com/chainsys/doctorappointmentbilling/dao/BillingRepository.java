@@ -1,23 +1,16 @@
-package com.chainsys.projectwork.dao;
+package com.chainsys.doctorappointmentbilling.dao;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.chainsys.projectwork.pojo.Billing;
-
-
-
+import com.chainsys.doctorappointmentbilling.model.Billing;
 
 @Repository
 public interface BillingRepository extends CrudRepository<Billing, Long> {
-	// Doctor findById(long id);
 
-	Billing save(Billing thebill);
-
-	// use for adding a new Doctor
-	// void deleteById(long dr_id);
+	Billing save(Billing bill);
 
 	List<Billing> findAll();
 }

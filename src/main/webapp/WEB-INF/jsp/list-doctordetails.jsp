@@ -23,9 +23,9 @@
 			<tbody>
 				<c:forEach var="docdet" items="${alldoctordetails}">
 					<tr>
-						<td>${docdet.doctor_id}</td>
+						<td>${docdet.doctorid}</td>
 						<td>${docdet.speciality}</td>
-						<td>${docdet.available_time}</td>
+						<td>${docdet.availabletime}</td>
 						<td>${docdet.experience}</td>
 					</tr>
 				</c:forEach>
