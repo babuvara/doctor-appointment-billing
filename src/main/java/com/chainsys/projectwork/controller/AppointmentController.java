@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.chainsys.projectwork.pojo.Person;
-import com.chainsys.projectwork.service.PersonService;
+import com.chainsys.projectwork.pojo.Appointment;
+import com.chainsys.projectwork.service.AppointmentService;
 
 @Controller
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/appointment")
+public class AppointmentController {
 	@Autowired
-	private PersonService prService;
+	private AppointmentService appService;
 
-	@GetMapping("/getperson")
+	@GetMapping("/getappointment")
 	public String getAllPersons(Model model) {
-		List<Person> personlist = prService.getperson();
-		model.addAttribute("allperson", personlist);
-		return "list-person";
+		List<Appointment> applist = appService.getappointment();
+		model.addAttribute("allappointment", applist);
+		return "list-appointment";
 	}
 
 //	@Bean
@@ -64,23 +64,17 @@ public class PersonController {
 //	public List<Doctor> getDoctors() {
 //		return repo.findAll();
 //	}
-	@GetMapping("/registerperson")
+	@GetMapping("/registerappointment")
 	public String showRegisterForm(Model model) {
-		Person theper = new Person();
-		model.addAttribute("registerperson", theper);
-		return "register-person";
+		Appointment theapp = new Appointment();
+		model.addAttribute("registerappointment", theapp);
+		return "register-appointment";
 	}
 
 	@PostMapping("/register")
-	public String addNewPerson(@ModelAttribute("registerperson") Person theper) {
-		prService.save(theper);
-		if (theper.getPerson_type().equals("Doctor")) {
-			return "redirect:/doctordetails/registerdoctordetails";
-
-		} else {
-
-			return "redirect:/appointment/registerappointment";
-		}
-
+	public String addNewPerson(@ModelAttribute("registerappointment") Appointment theapp) {
+		appService.save(theapp);
+		return "redirect:/appointment/getappointment";
 	}
+
 }

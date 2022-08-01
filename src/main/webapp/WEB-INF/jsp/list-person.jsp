@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>person list</title>
+<title>persons list</title>
 </head>
 <body style="background-color: powderblue;">
 <body>
@@ -24,17 +26,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="doct" items="${allperson}">
+				<c:forEach var="per" items="${allperson}">
 					<tr>
-						<td>${doct.person_id}</td>
-						<td>${doct.name}</td>
-						<td>${doct.gender}</td>
-						<td>${doct.dob}</td>
-						<td>${doct.blood_group}</td>
-						<td>${doct.email_id}</td>
-						<td>${doct.mobile_number}</td>
-						<td>${doct.location}</td>
-						<td>${doct.person_type}</td>
+						<td>${per.person_id}</td>
+						<td>${per.name}</td>
+						<td>${per.gender}</td>
+						<td>${per.dob}</td>
+						<td>${per.blood_group}</td>
+						<td>${per.email_id}</td>
+						<td>${per.mobile_number}</td>
+						<td>${per.location}</td>
+						<td>${per.person_type}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

@@ -8,25 +8,27 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.projectwork.dao.PersonRepository;
-import com.chainsys.projectwork.pojo.Person;
+import com.chainsys.projectwork.dao.AppointmentRepository;
+import com.chainsys.projectwork.pojo.Appointment;
+
+
 
 
 
 @Service
-public class PersonService {
+public class AppointmentService {
 	@Autowired
-	private PersonRepository repo;
+	private AppointmentRepository repo;
 
 
-	public List<Person> getperson() {
-		List<Person> personlist = repo.findAll();
-		return personlist;
+	public List<Appointment> getappointment() {
+		List<Appointment> applist = repo.findAll();
+		return applist;
 	}
 
 	@Transactional
-	public Person save(Person per) {
-		return repo.save(per);
+	public Appointment save(Appointment app) {
+		return repo.save(app);
 	}
 
 //	public Doctor findById(long id) {

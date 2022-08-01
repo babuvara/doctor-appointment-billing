@@ -12,7 +12,8 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="register" method="post" modelAttribute="registerperson">
+			<form:form action="register" method="post"
+				modelAttribute="registerperson">
 				<div>
 					<label for="person_id">Person id</label>
 					<div>
@@ -34,7 +35,7 @@
 				<div>
 					<label for="dob">DOB</label>
 					<div>
-						<form:input path="dob" />
+						<form:input path="dob" type="date"/>
 					</div>
 				</div>
 				<div>

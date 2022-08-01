@@ -1,30 +1,41 @@
 package com.chainsys.projectwork.pojo;
 
-import java.util.Date;
+import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Entity
 @Table(name = "PERSON")
 public class Person {
 	@Id
-	private int person_id;
+	@Column(name = "PERSON_ID")
+	private int personId;
+	@Column(name = "NAME")
 	private String name;
+	@Column(name = "GENDER")
 	private String gender;
+	@Column(name = "DOB")
 	private Date dob;
-	private String blood_group;
-	private String email_id;
-	private long mobile_number;
+	@Column(name = "BLOOD_GROUP")
+	private String bloodGroup;
+	@Column(name = "EMAIL_ID")
+	private String emailId;
+	@Column(name = "MOBILE_NUMBER")
+	private long mobileNumber;
+	@Column(name = "LOCATION")
 	private String location;
-	private String person_type;
+	@Column(name = "PERSON_TYPE")
+	private String personType;
 
-	public int getPerson_id() {
-		return person_id;
+	public int getPersonId() {
+		return personId;
 	}
 
-	public void setPerson_id(int person_id) {
-		this.person_id = person_id;
+	public void setPersonId(int personId) {
+		this.personId = personId;
 	}
 
 	public String getName() {
@@ -51,28 +62,28 @@ public class Person {
 		this.dob = dob;
 	}
 
-	public String getBlood_group() {
-		return blood_group;
+	public String getBloodGroup() {
+		return bloodGroup;
 	}
 
-	public void setBlood_group(String blood_group) {
-		this.blood_group = blood_group;
+	public void setBloodGroup(String bloodGroup) {
+		this.bloodGroup = bloodGroup;
 	}
 
-	public String getEmail_id() {
-		return email_id;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setEmail_id(String email_id) {
-		this.email_id = email_id;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
-	public long getMobile_number() {
-		return mobile_number;
+	public long getMobileNumber() {
+		return mobileNumber;
 	}
 
-	public void setMobile_number(long mobile_number) {
-		this.mobile_number = mobile_number;
+	public void setMobileNumber(long mobileNumber) {
+		this.mobileNumber = mobileNumber;
 	}
 
 	public String getLocation() {
@@ -83,16 +94,11 @@ public class Person {
 		this.location = location;
 	}
 
-	public String getPerson_type() {
-		return person_type;
+	public String getPersonType() {
+		return personType;
 	}
 
-	public void setPerson_type(String person_type) {
-		this.person_type = person_type;
+	public void setPersonType(String personType) {
+		this.personType = personType;
 	}
-	@Override
-	public String toString() {
-		return String.format("%d, %s, %s, %s, %s, %s, %s, %s ,%s",person_id, name, gender, dob, blood_group, email_id, mobile_number, location, person_type);
-	}
-
 }

@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.chainsys.projectwork.pojo.Person;
-import com.chainsys.projectwork.service.PersonService;
+import com.chainsys.projectwork.pojo.Billing;
+import com.chainsys.projectwork.service.BillingService;
 
 @Controller
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/billing")
+public class BillingController {
 	@Autowired
-	private PersonService prService;
+	private BillingService billService;
 
-	@GetMapping("/getperson")
+	@GetMapping("/getbill")
 	public String getAllPersons(Model model) {
-		List<Person> personlist = prService.getperson();
-		model.addAttribute("allperson", personlist);
-		return "list-person";
+		List<Billing> billlist = billService.getbill();
+		model.addAttribute("allbill", billlist);
+		return "list-bill";
 	}
 
 //	@Bean
@@ -64,23 +64,17 @@ public class PersonController {
 //	public List<Doctor> getDoctors() {
 //		return repo.findAll();
 //	}
-	@GetMapping("/registerperson")
+	@GetMapping("/registerbill")
 	public String showRegisterForm(Model model) {
-		Person theper = new Person();
-		model.addAttribute("registerperson", theper);
-		return "register-person";
+		Billing thebill = new Billing();
+		model.addAttribute("registerbill", thebill);
+		return "register-bill";
 	}
 
 	@PostMapping("/register")
-	public String addNewPerson(@ModelAttribute("registerperson") Person theper) {
-		prService.save(theper);
-		if (theper.getPerson_type().equals("Doctor")) {
-			return "redirect:/doctordetails/registerdoctordetails";
-
-		} else {
-
-			return "redirect:/appointment/registerappointment";
-		}
-
+	public String addNewBill(@ModelAttribute("registerbill") Billing thebill) {
+		billService.save(thebill);
+		return "redirect:/billing/getbill";
 	}
+
 }

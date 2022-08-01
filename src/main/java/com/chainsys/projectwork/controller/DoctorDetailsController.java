@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.chainsys.projectwork.pojo.Person;
-import com.chainsys.projectwork.service.PersonService;
+import com.chainsys.projectwork.pojo.DoctorDetails;
+import com.chainsys.projectwork.service.DoctorDetailsService;
 
 @Controller
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/doctordetails")
+public class DoctorDetailsController {
 	@Autowired
-	private PersonService prService;
+	private DoctorDetailsService docdetService;
 
-	@GetMapping("/getperson")
-	public String getAllPersons(Model model) {
-		List<Person> personlist = prService.getperson();
-		model.addAttribute("allperson", personlist);
-		return "list-person";
+	@GetMapping("/getdoctordetails")
+	public String getAllDoctorDetails(Model model) {
+		List<DoctorDetails> doctordetailslist = docdetService.getDoctorDetails();
+		model.addAttribute("alldoctordetails", doctordetailslist);
+		return "list-doctordetails";
 	}
 
 //	@Bean
@@ -64,23 +64,17 @@ public class PersonController {
 //	public List<Doctor> getDoctors() {
 //		return repo.findAll();
 //	}
-	@GetMapping("/registerperson")
+	@GetMapping("/registerdoctordetails")
 	public String showRegisterForm(Model model) {
-		Person theper = new Person();
-		model.addAttribute("registerperson", theper);
-		return "register-person";
+		DoctorDetails thedoc = new DoctorDetails();
+		model.addAttribute("registerdoctordetails", thedoc);
+		return "register-doctordetails";
 	}
 
 	@PostMapping("/register")
-	public String addNewPerson(@ModelAttribute("registerperson") Person theper) {
-		prService.save(theper);
-		if (theper.getPerson_type().equals("Doctor")) {
-			return "redirect:/doctordetails/registerdoctordetails";
-
-		} else {
-
-			return "redirect:/appointment/registerappointment";
-		}
-
+	public String addNewPerson(@ModelAttribute("registerdoctordetails") DoctorDetails doc) {
+		docdetService.save(doc);
+		return "redirect:/doctordetails/getdoctordetails";
 	}
+
 }
