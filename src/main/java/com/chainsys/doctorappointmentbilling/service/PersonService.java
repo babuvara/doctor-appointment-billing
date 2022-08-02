@@ -5,6 +5,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import com.chainsys.doctorappointmentbilling.dao.PersonRepository;
@@ -25,6 +26,9 @@ public class PersonService {
 		return repo.save(per);
 	}
 
+	public Person getPersonAccess() {
+		return repo.getPersonAccess();
+	}
 //	public Doctor findById(long id) {
 //		return repo.findById(id);
 //	}

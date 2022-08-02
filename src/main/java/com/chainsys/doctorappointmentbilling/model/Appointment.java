@@ -12,50 +12,50 @@ import javax.persistence.Table;
 public class Appointment {
 	@Id
 	@Column(name = "APPOINTMENT_ID")
-	private int appointmentid;
+	private int appointmentId;
 	@Column(name = "APPOINTMENT_DATE")
-	private Date appointmentdate;
+	private Date appointmentDate;
 	@Column(name = "APPOINTMENT_TIME")
-	private String appointmenttime;
+	private String appointmentTime;
 	@Column(name = "PATIENT_ID")
-	private int patientid;
+	private int patientId;
 	@Column(name = "PURPOSE")
 	private String purpose;
 	@Column(name = "DOCTOR_ID")
-	private int doctorid;
+	private int doctorId;
 	@Column(name = "APPOINTMENT_STATUS")
-	private String appointmentstatus;
+	private String appointmentStatus;
 
-	public int getAppointmentid() {
-		return appointmentid;
+	public int getAppointmentId() {
+		return appointmentId;
 	}
 
-	public void setAppointmentid(int appointmentid) {
-		this.appointmentid = appointmentid;
+	public void setAppointmentId(int appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 
-	public Date getAppointmentdate() {
-		return appointmentdate;
+	public Date getAppointmentDate() {
+		return appointmentDate;
 	}
 
-	public void setAppointmentdate(Date appointmentdate) {
-		this.appointmentdate = appointmentdate;
+	public void setAppointmentDate(Date appointmentDate) {
+		this.appointmentDate = appointmentDate;
 	}
 
-	public String getAppointmenttime() {
-		return appointmenttime;
+	public String getAppointmentTime() {
+		return appointmentTime;
 	}
 
-	public void setAppointmenttime(String appointmenttime) {
-		this.appointmenttime = appointmenttime;
+	public void setAppointmentTime(String appointmentTime) {
+		this.appointmentTime = appointmentTime;
 	}
 
-	public int getPatientid() {
-		return patientid;
+	public int getPatientId() {
+		return patientId;
 	}
 
-	public void setPatientid(int patientid) {
-		this.patientid = patientid;
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
 	}
 
 	public String getPurpose() {
@@ -66,20 +66,20 @@ public class Appointment {
 		this.purpose = purpose;
 	}
 
-	public int getDoctorid() {
-		return doctorid;
+	public int getDoctorId() {
+		return doctorId;
 	}
 
-	public void setDoctorid(int doctorid) {
-		this.doctorid = doctorid;
+	public void setDoctorId(int doctorId) {
+		this.doctorId = doctorId;
 	}
 
-	public String getAppointmentstatus() {
-		return appointmentstatus;
+	public String getAppointmentStatus() {
+		return appointmentStatus;
 	}
 
-	public void setAppointmentstatus(String appointmentstatus) {
-		this.appointmentstatus = appointmentstatus;
+	public void setAppointmentStatus(String appointmentStatus) {
+		this.appointmentStatus = appointmentStatus;
 	}
 
 }

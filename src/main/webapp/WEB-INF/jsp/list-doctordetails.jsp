@@ -11,7 +11,7 @@
 <body style="background-color: powderblue;">
 <body>
 	<div id="table root">
-		<table>
+		<table border="2" width="100%" cellpadding="2">
 			<thead>
 				<tr>
 					<th>Doctor id</th>
@@ -23,10 +23,11 @@
 			<tbody>
 				<c:forEach var="docdet" items="${alldoctordetails}">
 					<tr>
-						<td>${docdet.doctorid}</td>
+						<td>${docdet.doctorId}</td>
 						<td>${docdet.speciality}</td>
-						<td>${docdet.availabletime}</td>
+						<td>${docdet.availableTime}</td>
 						<td>${docdet.experience}</td>
+						<td><a href="alldoctordetails?doctorId=${docdet.doctorId}">Book</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

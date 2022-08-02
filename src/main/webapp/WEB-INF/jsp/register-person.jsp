@@ -7,6 +7,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Register Person</title>
+<style>
+input[type=submit] {
+	width: 10%;
+	background: purple;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background: #000;
+}
+</style>
 </head>
 <body style="background-color: powderblue;">
 <body>
@@ -15,9 +31,9 @@
 			<form:form action="register" method="post"
 				modelAttribute="registerperson">
 				<div>
-					<label for="personid">Person id</label>
+					<label for="personId">Person id</label>
 					<div>
-						<form:input path="personid" />
+						<form:input path="personId" />
 					</div>
 				</div>
 				<div>
@@ -28,32 +44,41 @@
 				</div>
 				<div>
 					<label for="gender">Gender</label>
-					<div>
-						<form:input path="gender" />
-					</div>
+					<form:select path="gender">
+						<form:option value="gender">Gender</form:option>
+						<form:option value="male">Male</form:option>
+						<form:option value="female">Female</form:option>
+						<form:option value="transgender">Transgender</form:option>
+					</form:select>
 				</div>
 				<div>
 					<label for="dob">DOB</label>
 					<div>
-						<form:input path="dob" type="date"/>
+						<form:input path="dob" type="date" />
 					</div>
 				</div>
 				<div>
-					<label for="bloodgroup">Blood Group</label>
+					<label for="bloodGroup">Blood Group</label>
 					<div>
-						<form:input path="bloodgroup" />
+						<form:input path="bloodGroup" />
 					</div>
 				</div>
 				<div>
-					<label for="emailid">Email id</label>
+					<label for="emailId">Email id</label>
 					<div>
-						<form:input path="emailid" />
+						<form:input path="emailId" />
 					</div>
 				</div>
 				<div>
-					<label for="mobilenumber">Mobile Number</label>
+					<label for="password">Password</label>
 					<div>
-						<form:input path="mobilenumber" />
+						<form:input path="password" />
+					</div>
+				</div>
+				<div>
+					<label for="mobileNumber">Mobile Number</label>
+					<div>
+						<form:input path="mobileNumber" />
 					</div>
 				</div>
 				<div>
@@ -63,13 +88,15 @@
 					</div>
 				</div>
 				<div>
-					<label for="persontype">Person Type</label>
-					<div>
-						<form:input path="persontype" />
-					</div>
-				</div>
+					<label for="personType">Person Type</label>
+					<form:select path="personType">
+						<form:option value="personType">Person Type</form:option>
+						<form:option value="doctor">Doctor</form:option>
+						<form:option value="patient">Patient</form:option>
+					</form:select>
+				</div>		
 				<div>
-					<form:button>Register</form:button>
+					<input type="submit" value="submit">
 				</div>
 			</form:form>
 		</div>

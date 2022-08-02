@@ -2,6 +2,7 @@ package com.chainsys.doctorappointmentbilling.dao;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,4 +18,7 @@ public interface PersonRepository extends CrudRepository<Person, Long> {
 	// void deleteById(long dr_id);
 
 	List<Person> findAll();
+
+	@Query(value = "select * from PERSON ", nativeQuery = true)
+	Person getPersonAccess();
 }

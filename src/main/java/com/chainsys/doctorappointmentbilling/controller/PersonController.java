@@ -67,13 +67,31 @@ public class PersonController {
 	@PostMapping("/register")
 	public String addNewPerson(@ModelAttribute("registerperson") Person per) {
 		prService.save(per);
-		if (per.getPersontype().equals("Doctor")) {
-			return "redirect:/doctordetails/registerdoctordetails";
+//		if (per.getPersonType().equals("Doctor")) {
+			return "redirect:/person/login";
 
-		} else {
+//		} else {
+//
+//			return "redirect:/doctordetails/getdoctordetails";
+//		}
+	}
 
-			return "redirect:/appointment/registerappointment";
-		}
+	@GetMapping("/login")
+	public String personLogin(Model model) {
+		Person theper = new Person();
+		model.addAttribute("person", theper);
+		return "person-login-form";
+	}
+
+	@PostMapping("/check")
+	public String checkingAccess(@ModelAttribute("person") Person person) {
+		Person personAccess = prService.getPersonAccess();
+		if ((personAccess.getEmailId().equals(person.getEmailId()))
+				&& (personAccess.getPassword().equals(person.getPassword()))) {
+			return "redirect:/doctordetails/getdoctordetails";
+		} else
+			return null;
 
 	}
+
 }

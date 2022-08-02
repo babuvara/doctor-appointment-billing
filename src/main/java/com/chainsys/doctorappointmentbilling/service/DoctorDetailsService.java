@@ -24,5 +24,9 @@ public class DoctorDetailsService {
 	public DoctorDetails save(DoctorDetails docdet) {
 		return repo.save(docdet);
 	}
+	@Transactional
+	public DoctorDetails deleteBooking(DoctorDetails docdet) {
+		return repo.save(docdet);
+	}
 
 }

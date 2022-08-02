@@ -10,20 +10,20 @@ import javax.persistence.Table;
 public class DoctorDetails {
 	@Id
 	@Column(name = "DOCTOR_ID")
-	private int doctorid;
+	private int doctorId;
 	@Column(name = "speciality")
 	private String speciality;
 	@Column(name = "AVAILABLE_TIME")
-	private String availabletime;
+	private String availableTime;
 	@Column(name = "EXPERIENCE")
 	private int experience;
 
-	public int getDoctorid() {
-		return doctorid;
+	public int getDoctorId() {
+		return doctorId;
 	}
 
-	public void setDoctorid(int doctorid) {
-		this.doctorid = doctorid;
+	public void setDoctorId(int doctorId) {
+		this.doctorId = doctorId;
 	}
 
 	public String getSpeciality() {
@@ -34,12 +34,12 @@ public class DoctorDetails {
 		this.speciality = speciality;
 	}
 
-	public String getAvailabletime() {
-		return availabletime;
+	public String getAvailableTime() {
+		return availableTime;
 	}
 
-	public void setAvailabletime(String availabletime) {
-		this.availabletime = availabletime;
+	public void setAvailableTime(String availableTime) {
+		this.availableTime = availableTime;
 	}
 
 	public int getExperience() {

@@ -15,27 +15,27 @@
 			<form:form action="register" method="post"
 				modelAttribute="registerappointment">
 				<div>
-					<label for="appointmentid">Appointment id</label>
+					<label for="appointmentId">Appointment id</label>
 					<div>
-						<form:input path="appointmentid" />
+						<form:input path="appointmentId" />
 					</div>
 				</div>
 				<div>
-					<label for="appointmentdate">Appointment Date</label>
+					<label for="appointmentDate">Appointment Date</label>
 					<div>
-						<form:input path="appointmentdate" />
+						<form:input path="appointmentDate" type="date"/>
 					</div>
 				</div>
 				<div>
-					<label for="appointmenttime">Appointment Time</label>
+					<label for="appointmentTime">Appointment Time</label>
 					<div>
-						<form:input path="appointmenttime" />
+						<form:input path="appointmentTime" />
 					</div>
 				</div>
 				<div>
-					<label for="patientid">Patient id</label>
+					<label for="patientId">Patient id</label>
 					<div>
-						<form:input path="patientid" />
+						<form:input path="patientId" />
 					</div>
 				</div>
 				<div>
@@ -45,15 +45,15 @@
 					</div>
 				</div>
 				<div>
-					<label for="doctorid">Doctor id</label>
+					<label for="doctorId">Doctor id</label>
 					<div>
-						<form:input path="doctorid" />
+						<form:input path="doctorId" />
 					</div>
 				</div>
 				<div>
-					<label for="appointmentstatus">Appointment Status</label>
+					<labe for="appointmentStatus">Appointment Status</label>
 					<div>
-						<form:input path="appointmentstatus" />
+						<form:input path="appointmentStatus" />
 					</div>
 				</div>
 				<div>

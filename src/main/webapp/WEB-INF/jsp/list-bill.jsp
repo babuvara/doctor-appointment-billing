@@ -25,12 +25,12 @@
 			<tbody>
 				<c:forEach var="bill" items="${allbill}">
 					<tr>
-						<td>${bill.hospitalname}</td>
-						<td>${bill.doctorid}</td>
-						<td>${bill.patientid}</td>
+						<td>${bill.hospitalName}</td>
+						<td>${bill.doctorId}</td>
+						<td>${bill.patientId}</td>
 						<td>${bill.purpose}</td>
-						<td>${bill.appointmentid}</td>
-						<td>${bill.netbill}</td>
+						<td>${bill.appointmentId}</td>
+						<td>${bill.netBill}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

@@ -10,40 +10,40 @@ import javax.persistence.Table;
 public class Billing {
 	@Id
 	@Column(name = "HOSPITAL_NAME")
-	private String hospitalname;
+	private String hospitalName;
 	@Column(name = "DOCTOR_ID")
-	private int doctorid;
+	private int doctorId;
 	@Column(name = "PATIENT_ID")
-	private int patientid;
+	private int patientId;
 	@Column(name = "PURPOSE")
 	private String purpose;
 	@Column(name = "APPOINTMENT_ID")
-	private int appointmentid;
+	private int appointmentId;
 	@Column(name = "NET_BILL")
-	private float netbill;
+	private float netBill;
 
-	public String getHospitalname() {
-		return hospitalname;
+	public String getHospitalName() {
+		return hospitalName;
 	}
 
-	public void setHospitalname(String hospitalname) {
-		this.hospitalname = hospitalname;
+	public void setHospitalName(String hospitalName) {
+		this.hospitalName = hospitalName;
 	}
 
-	public int getDoctorid() {
-		return doctorid;
+	public int getDoctorId() {
+		return doctorId;
 	}
 
-	public void setDoctorid(int doctorid) {
-		this.doctorid = doctorid;
+	public void setDoctorId(int doctorId) {
+		this.doctorId = doctorId;
 	}
 
-	public int getPatientid() {
-		return patientid;
+	public int getPatientId() {
+		return patientId;
 	}
 
-	public void setPatientid(int patientid) {
-		this.patientid = patientid;
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
 	}
 
 	public String getPurpose() {
@@ -54,20 +54,20 @@ public class Billing {
 		this.purpose = purpose;
 	}
 
-	public int getAppointmentid() {
-		return appointmentid;
+	public int getAppointmentId() {
+		return appointmentId;
 	}
 
-	public void setAppointmentid(int appointmentid) {
-		this.appointmentid = appointmentid;
+	public void setAppointmentId(int appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 
-	public float getNetbill() {
-		return netbill;
+	public float getNetBill() {
+		return netBill;
 	}
 
-	public void setNetbill(float netbill) {
-		this.netbill = netbill;
+	public void setNetBill(float netBill) {
+		this.netBill = netBill;
 	}
 
 }

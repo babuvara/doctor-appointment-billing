@@ -15,9 +15,9 @@
 			<form:form action="register" method="post"
 				modelAttribute="registerdoctordetails">
 				<div>
-					<label for="doctorid">Doctor id</label>
+					<label for="doctorId">Doctor id</label>
 					<div>
-						<form:input path="doctorid" />
+						<form:input path="doctorId" />
 					</div>
 				</div>
 				<div>
@@ -27,9 +27,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="availabletime">Available Time</label>
+					<label for="availableTime">Available Time</label>
 					<div>
-						<form:input path="availabletime" />
+						<form:input path="availableTime" />
 					</div>
 				</div>
 				<div>

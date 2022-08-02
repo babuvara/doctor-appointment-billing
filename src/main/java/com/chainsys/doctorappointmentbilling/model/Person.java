@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Person {
 	@Id
 	@Column(name = "PERSON_ID")
-	private int personid;
+	private int personId;
 	@Column(name = "NAME")
 	private String name;
 	@Column(name = "GENDER")
@@ -20,22 +20,24 @@ public class Person {
 	@Column(name = "DOB")
 	private Date dob;
 	@Column(name = "BLOOD_GROUP")
-	private String bloodgroup;
+	private String bloodGroup;
 	@Column(name = "EMAIL_ID")
-	private String emailid;
+	private String emailId;
+	@Column(name = "PASSWORD")
+	private String password;
 	@Column(name = "MOBILE_NUMBER")
-	private long mobilenumber;
+	private long mobileNumber;
 	@Column(name = "LOCATION")
 	private String location;
 	@Column(name = "PERSON_TYPE")
-	private String persontype;
+	private String personType;
 
-	public int getPersonid() {
-		return personid;
+	public int getPersonId() {
+		return personId;
 	}
 
-	public void setPersonid(int personid) {
-		this.personid = personid;
+	public void setPersonId(int personId) {
+		this.personId = personId;
 	}
 
 	public String getName() {
@@ -62,28 +64,36 @@ public class Person {
 		this.dob = dob;
 	}
 
-	public String getBloodgroup() {
-		return bloodgroup;
+	public String getBloodGroup() {
+		return bloodGroup;
 	}
 
-	public void setBloodgroup(String bloodgroup) {
-		this.bloodgroup = bloodgroup;
+	public void setBloodGroup(String bloodGroup) {
+		this.bloodGroup = bloodGroup;
 	}
 
-	public String getEmailid() {
-		return emailid;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setEmailid(String emailid) {
-		this.emailid = emailid;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
-	public long getMobilenumber() {
-		return mobilenumber;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setMobilenumber(long mobilenumber) {
-		this.mobilenumber = mobilenumber;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public long getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(long mobileNumber) {
+		this.mobileNumber = mobileNumber;
 	}
 
 	public String getLocation() {
@@ -94,12 +104,12 @@ public class Person {
 		this.location = location;
 	}
 
-	public String getPersontype() {
-		return persontype;
+	public String getPersonType() {
+		return personType;
 	}
 
-	public void setPersontype(String persontype) {
-		this.persontype = persontype;
+	public void setPersonType(String personType) {
+		this.personType = personType;
 	}
 
 }
