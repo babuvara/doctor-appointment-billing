@@ -89,12 +89,10 @@ input[type=submit]:hover {
 				</div>
 				<div>
 					<label for="personType">Person Type</label>
-					<form:select path="personType">
-						<form:option value="personType">Person Type</form:option>
-						<form:option value="doctor">Doctor</form:option>
-						<form:option value="patient">Patient</form:option>
-					</form:select>
-				</div>		
+					<div>
+						<form:input path="personType" />
+					</div>
+				</div>
 				<div>
 					<input type="submit" value="submit">
 				</div>

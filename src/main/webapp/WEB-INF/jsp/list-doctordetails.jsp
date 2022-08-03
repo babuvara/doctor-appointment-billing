@@ -27,7 +27,7 @@
 						<td>${docdet.speciality}</td>
 						<td>${docdet.availableTime}</td>
 						<td>${docdet.experience}</td>
-						<td><a href="alldoctordetails?doctorId=${docdet.doctorId}">Book</a></td>
+						<td><a href="alldoctordetails?doctorId=${docdet.doctorId}"><input onclick="change()" type="button" value="book" id="myButton1"></input></a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
