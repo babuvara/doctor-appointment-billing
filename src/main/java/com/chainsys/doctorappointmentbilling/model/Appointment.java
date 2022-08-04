@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.model;
 
+/**
+ * @author babu3107
+ */
 import java.sql.Date;
 
 import javax.persistence.Column;

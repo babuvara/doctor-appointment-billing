@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.service;
 
+/**
+ * @author babu3107
+ */
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -13,20 +16,27 @@ import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
 @Service
 public class DoctorDetailsService {
 	@Autowired
-	private DoctorDetailsRepository repo;
+	private DoctorDetailsRepository doctorDetailsRepo;
 
 	public List<DoctorDetails> getDoctorDetails() {
-		List<DoctorDetails> docdetlist = repo.findAll();
-		return docdetlist;
+		List<DoctorDetails> doctorList = doctorDetailsRepo.findAll();
+		return doctorList;
 	}
 
 	@Transactional
-	public DoctorDetails save(DoctorDetails docdet) {
-		return repo.save(docdet);
+	public DoctorDetails save(DoctorDetails docDet) {
+		return doctorDetailsRepo.save(docDet);
 	}
+
 	@Transactional
-	public DoctorDetails deleteBooking(DoctorDetails docdet) {
-		return repo.save(docdet);
+	public DoctorDetails deleteBooking(DoctorDetails docDet) {
+		return doctorDetailsRepo.save(docDet);
+	}
+
+	public DoctorDetails getDoctorDetailsByNameAndPassword(String name, String password) {
+
+		return doctorDetailsRepo.findByDoctorNameAndPassword(name, password);
+
 	}
 
 }

@@ -10,7 +10,7 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="check" method="post" modelAttribute="person">
+			<form:form action="checkpatientlogin" method="post" modelAttribute="patient">
 				<div>
 					<label for=emailId>Email</label>
 					<div>

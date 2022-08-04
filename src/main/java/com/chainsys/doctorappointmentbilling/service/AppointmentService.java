@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.service;
 
+/**
+ * @author babu3107
+ */
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -15,9 +18,9 @@ public class AppointmentService {
 	@Autowired
 	private AppointmentRepository repo;
 
-	public List<Appointment> getappointment() {
-		List<Appointment> applist = repo.findAll();
-		return applist;
+	public List<Appointment> getAppointment() {
+		List<Appointment> appList = repo.findAll();
+		return appList;
 	}
 
 	@Transactional

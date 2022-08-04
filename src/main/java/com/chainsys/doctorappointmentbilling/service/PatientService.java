@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.service;
 
+/**
+ * @author babu3107
+ */
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -8,26 +11,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.doctorappointmentbilling.dao.PersonRepository;
-import com.chainsys.doctorappointmentbilling.model.Person;
+import com.chainsys.doctorappointmentbilling.dao.PatientRepository;
+import com.chainsys.doctorappointmentbilling.model.Patient;
 
 @Service
-public class PersonService {
+public class PatientService {
 	@Autowired
-	private PersonRepository repo;
+	private PatientRepository patientRepo;
 
-	public List<Person> getperson() {
-		List<Person> personlist = repo.findAll();
-		return personlist;
+	public List<Patient> getPatient() {
+		List<Patient> patientList = patientRepo.findAll();
+		return patientList;
 	}
 
 	@Transactional
-	public Person save(Person per) {
-		return repo.save(per);
+	public Patient save(Patient per) {
+		return patientRepo.save(per);
 	}
 
-	public Person getPersonAccess() {
-		return repo.getPersonAccess();
+	public Patient getPatientAccess() {
+		return patientRepo.getPatientAccess();
 	}
 //	public Doctor findById(long id) {
 //		return repo.findById(id);
@@ -51,7 +54,7 @@ public class PersonService {
 //			app.setDoc_id(id);
 //			app.setPatient_name("Babu");
 //			app.setFees_collected(i * 500);
-//			dto.addAppointment(app);
+//			dto.addAppointment(app);	
 //		}
 //		return dto;
 //
@@ -66,4 +69,9 @@ public class PersonService {
 //			apprepo.save(appointmentList.get(i));
 //		}
 //	}
+
+	public Patient getPatientByEmailIdAndPassword(String email, String password) {
+		return patientRepo.findByEmailIdAndPassword(email, password);
+
+	}
 }

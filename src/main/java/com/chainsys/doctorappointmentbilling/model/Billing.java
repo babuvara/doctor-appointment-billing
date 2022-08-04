@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.model;
 
+/**
+ * @author babu3107
+ */
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;

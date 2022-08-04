@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.service;
 
+/**
+ * @author babu3107
+ */
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -15,9 +18,9 @@ public class BillingService {
 	@Autowired
 	private BillingRepository repo;
 
-	public List<Billing> getbill() {
-		List<Billing> billinglist = repo.findAll();
-		return billinglist;
+	public List<Billing> getBill() {
+		List<Billing> billingList = repo.findAll();
+		return billingList;
 	}
 
 	@Transactional

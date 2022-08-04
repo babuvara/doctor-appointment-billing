@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.controller;
 
+/**
+ * @author babu3107
+ */
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,22 +24,22 @@ public class AppointmentController {
 	private AppointmentService appService;
 
 	@GetMapping("/getappointment")
-	public String getAllPersons(Model model) {
-		List<Appointment> applist = appService.getappointment();
-		model.addAttribute("allappointment", applist);
+	public String getAllAppointments(Model model) {
+		List<Appointment> appList = appService.getAppointment();
+		model.addAttribute("allappointment", appList);
 		return "list-appointment";
 	}
 
 	@GetMapping("/registerappointment")
 	public String showRegisterForm(Model model) {
-		Appointment theapp = new Appointment();
-		model.addAttribute("registerappointment", theapp);
+		Appointment theApp = new Appointment();
+		model.addAttribute("registerappointment", theApp);
 		return "register-appointment";
 	}
 
 	@PostMapping("/register")
-	public String addNewPerson(@ModelAttribute("registerappointment") Appointment theapp) {
-		appService.save(theapp);
+	public String addNewPerson(@ModelAttribute("registerappointment") Appointment theApp) {
+		appService.save(theApp);
 		return "redirect:/appointment/getappointment";
 	}
 

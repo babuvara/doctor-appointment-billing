@@ -7,13 +7,34 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Register Bill</title>
+<style>
+input[type=submit] {
+	width: 10%;
+	background: purple;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background: #000;
+}
+</style>
+<center>
+	<h1>Bill-Registration</h1>
+</center>
 </head>
 <body style="background-color: powderblue;">
-<body>
-	<div id="root">
+
+	<body>
+<div id="root">
 		<div id="form">
 			<form:form action="register" method="post"
 				modelAttribute="registerbill">
+				<center>
 				<div>
 					<label for="hospitalName">Hospital Name</label>
 					<div>
@@ -51,10 +72,10 @@
 					</div>
 				</div>
 				<div>
-					<form:button>Register</form:button>
+					<input type="submit" value="submit">
 				</div>
+				</center>
 			</form:form>
 		</div>
 	</div>
-</body>
-</html>
+</body></html>

@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.controller;
 
+/**
+ * @author babu3107
+ */
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,32 +21,45 @@ import com.chainsys.doctorappointmentbilling.service.DoctorDetailsService;
 @RequestMapping("/doctordetails")
 public class DoctorDetailsController {
 	@Autowired
-	private DoctorDetailsService docdetService;
+	private DoctorDetailsService docDetService;
 
 	@GetMapping("/getdoctordetails")
 	public String getAllDoctorDetails(Model model) {
-		List<DoctorDetails> doctordetailslist = docdetService.getDoctorDetails();
-		model.addAttribute("alldoctordetails", doctordetailslist);
+		List<DoctorDetails> doctorDetailsList = docDetService.getDoctorDetails();
+		model.addAttribute("alldoctordetails", doctorDetailsList);
 		return "list-doctordetails";
 	}
 
 	@GetMapping("/registerdoctordetails")
 	public String showRegisterForm(Model model) {
-		DoctorDetails thedoc = new DoctorDetails();
-		model.addAttribute("registerdoctordetails", thedoc);
-		return "register-doctordetails";			
+		DoctorDetails theDoc = new DoctorDetails();
+		model.addAttribute("registerdoctordetails", theDoc);
+		return "register-doctordetails";
 	}
 
 	@PostMapping("/register")
-	public String addNewPerson(@ModelAttribute("registerdoctordetails") DoctorDetails doc) {
-		docdetService.save(doc);
+	public String addNewDoctor(@ModelAttribute("registerdoctordetails") DoctorDetails doc) {
+		docDetService.save(doc);
 		return "redirect:/billing/getbill";
 	}
 
-	@DeleteMapping("/deletedoctordetails")
-	public String deleteDoctorDetails(DoctorDetails docdet) {
-		docdetService.save(docdet);
-		return "redirect:/doctordetails/getdoctordetails";
+	@GetMapping("/doctorlogin")
+	public String doctorAccessform(Model model) {
+		DoctorDetails theDoc = new DoctorDetails();
+		model.addAttribute("doctor", theDoc);
+		return "doctor-login-form";
+	}
+
+	@PostMapping("/checkdoctorlogin")
+	public String checkingAccess(@ModelAttribute("doctor") DoctorDetails theDoc) {
+		DoctorDetails doctor = docDetService.getDoctorDetailsByNameAndPassword(theDoc.getDoctorName(),
+				theDoc.getPassword());
+		if (doctor != null) {
+
+			return "redirect:/patient/getpatient";
+		} else
+			return "invalid-doctor-error";
+
 	}
 
 }

@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.model;
 
+/**
+ * @author babu3107
+ */
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -8,11 +11,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PERSON")
-public class Person {
+@Table(name = "PATIENT")
+public class Patient {
 	@Id
-	@Column(name = "PERSON_ID")
-	private int personId;
+	@Column(name = "PATIENT_ID")
+	private int patientId;
 	@Column(name = "NAME")
 	private String name;
 	@Column(name = "GENDER")
@@ -29,15 +32,15 @@ public class Person {
 	private long mobileNumber;
 	@Column(name = "LOCATION")
 	private String location;
-	@Column(name = "PERSON_TYPE")
-	private String personType;
+	@Column(name = "DISEASE")
+	private String disease;
 
-	public int getPersonId() {
-		return personId;
+	public int getPatientId() {
+		return patientId;
 	}
 
-	public void setPersonId(int personId) {
-		this.personId = personId;
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
 	}
 
 	public String getName() {
@@ -104,12 +107,12 @@ public class Person {
 		this.location = location;
 	}
 
-	public String getPersonType() {
-		return personType;
+	public String getDisease() {
+		return disease;
 	}
 
-	public void setPersonType(String personType) {
-		this.personType = personType;
+	public void setDisease(String disease) {
+		this.disease = disease;
 	}
 
 }

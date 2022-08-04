@@ -1,5 +1,8 @@
 package com.chainsys.doctorappointmentbilling.controller;
 
+/**
+ * @author babu3107
+ */
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,22 +24,22 @@ public class BillingController {
 	private BillingService billService;
 
 	@GetMapping("/getbill")
-	public String getAllPersons(Model model) {
-		List<Billing> billlist = billService.getbill();
-		model.addAttribute("allbill", billlist);
+	public String getAllBill(Model model) {
+		List<Billing> billList = billService.getBill();
+		model.addAttribute("allbill", billList);
 		return "list-bill";
 	}
 
 	@GetMapping("/registerbill")
 	public String showRegisterForm(Model model) {
-		Billing thebill = new Billing();
-		model.addAttribute("registerbill", thebill);
+		Billing theBill = new Billing();
+		model.addAttribute("registerbill", theBill);
 		return "register-bill";
 	}
 
 	@PostMapping("/register")
-	public String addNewBill(@ModelAttribute("registerbill") Billing thebill) {
-		billService.save(thebill);
+	public String addNewBill(@ModelAttribute("registerbill") Billing theBill) {
+		billService.save(theBill);
 		return "redirect:/billing/getbill";
 	}
 
