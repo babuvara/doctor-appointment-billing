@@ -7,7 +7,10 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -28,6 +31,18 @@ public class Appointment {
 	private int doctorId;
 	@Column(name = "APPOINTMENT_STATUS")
 	private String appointmentStatus;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "DOCTOR_ID", nullable = false, insertable = false, updatable = false)
+	private DoctorDetails doctorDetails;
+
+	public DoctorDetails getDocDet() {
+		return doctorDetails;
+	}
+
+	public void setDocDet(DoctorDetails doctorDetails) {
+		this.doctorDetails = doctorDetails;
+	}
 
 	public int getAppointmentId() {
 		return appointmentId;

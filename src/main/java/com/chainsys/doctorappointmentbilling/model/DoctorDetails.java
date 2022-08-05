@@ -1,11 +1,15 @@
 package com.chainsys.doctorappointmentbilling.model;
 
+import java.util.List;
+
 /**
  * @author babu3107
  */
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +28,19 @@ public class DoctorDetails {
 	private String availableTime;
 	@Column(name = "EXPERIENCE")
 	private String experience;
+	
+	
+
+	@OneToMany(mappedBy = "doctorDetails", fetch = FetchType.LAZY)
+	private List<Appointment> appointmentList;
+
+	public List<Appointment> getAppointment() {
+		return appointmentList;
+	}
+
+	public void setAppointment(List<Appointment> appointmentList) {
+		this.appointmentList = appointmentList;
+	}
 
 	public int getDoctorId() {
 		return doctorId;

@@ -11,8 +11,8 @@ import org.springframework.stereotype.Repository;
 import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
 
 @Repository
-public interface DoctorDetailsRepository extends CrudRepository<DoctorDetails, Long> {
-
+public interface DoctorDetailsRepository extends CrudRepository<DoctorDetails, Integer> {
+	DoctorDetails findById(int id);
 	DoctorDetails save(DoctorDetails docDet);
 
 	List<DoctorDetails> findAll();

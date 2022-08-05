@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.chainsys.doctorappointmentbilling.model.Billing;
 
 @Repository
-public interface BillingRepository extends CrudRepository<Billing, Long> {
+public interface BillingRepository extends CrudRepository<Billing, Integer> {
 
 	Billing save(Billing bill);
 

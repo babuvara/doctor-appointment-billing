@@ -11,8 +11,11 @@ import org.springframework.stereotype.Repository;
 import com.chainsys.doctorappointmentbilling.model.Appointment;
 
 @Repository
-public interface AppointmentRepository extends CrudRepository<Appointment, Long> {
+public interface AppointmentRepository extends CrudRepository<Appointment, Integer> {
+	Appointment findByAppointmentId(int id);
 	Appointment save(Appointment app);
 
 	List<Appointment> findAll();
+
+	List<Appointment> findByDoctorId(int id);
 }

@@ -20,7 +20,7 @@
 				<div>
 					<label for="password">Password</label>
 					<div>
-						<form:input path="password" />
+						<form:input path="password" type="password"/>
 					</div>
 				</div>
 				<form:button>Login</form:button>

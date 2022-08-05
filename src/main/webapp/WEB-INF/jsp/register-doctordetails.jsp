@@ -48,7 +48,7 @@ input[type=submit]:hover {
 					<div>
 						<label for="password">Password</label>
 						<div>
-							<form:input path="password" />
+							<form:input path="password" type="password"/>
 						</div>
 					</div>
 					<div>

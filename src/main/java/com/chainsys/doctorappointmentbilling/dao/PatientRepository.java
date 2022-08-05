@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.chainsys.doctorappointmentbilling.model.Patient;
 
 @Repository
-public interface PatientRepository extends CrudRepository<Patient, Long> {
+public interface PatientRepository extends CrudRepository<Patient, Integer> {
 	// Doctor findById(long id);
 
 	Patient save(Patient per);

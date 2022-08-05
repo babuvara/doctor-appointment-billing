@@ -48,12 +48,10 @@ input[type=submit]:hover {
 					</div>
 					<div>
 						<label for="gender">Gender</label>
-						<form:select path="gender">
-							<form:option value="gender">Gender</form:option>
-							<form:option value="male">Male</form:option>
-							<form:option value="female">Female</form:option>
-							<form:option value="transgender">Transgender</form:option>
-						</form:select>
+						Male:
+						<form:radiobutton path="gender" value="Male" />
+						Female:
+						<form:radiobutton path="gender" value="Female" />
 					</div>
 					<div>
 						<label for="dob">DOB</label>
@@ -64,7 +62,6 @@ input[type=submit]:hover {
 					<div>
 						<label for="bloodGroup">Blood Group</label>
 						<form:select path="bloodGroup">
-							<form:option value="bloodGroup">Blood Group</form:option>
 							<form:option value="O Positive">O Positive</form:option>
 							<form:option value="O Negative">O Negative</form:option>
 							<form:option value="A Positive">A Positive</form:option>

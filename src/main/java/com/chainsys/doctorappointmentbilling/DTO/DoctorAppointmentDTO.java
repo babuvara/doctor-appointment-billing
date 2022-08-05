@@ -6,26 +6,32 @@ package com.chainsys.doctorappointmentbilling.DTO;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.chainsys.doctorappointmentbilling.model.Appointment;
-import com.chainsys.doctorappointmentbilling.model.Patient;
+import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
 
 public class DoctorAppointmentDTO {
-	private Patient patient;
-	private List<Appointment> appList = new ArrayList<Appointment>();
 
-	public Patient getDoctor() {
-		return patient;
+	@Autowired
+	private DoctorDetails doctorDetails;
+
+	private List<Appointment> appointmentList = new ArrayList<Appointment>();
+
+	public DoctorDetails getDoctorId() {
+		return doctorDetails;
 	}
 
-	public void setPerson(Patient patient) {
-		this.patient = patient;
+	public void setDoctor(DoctorDetails doctorDetails) {
+		this.doctorDetails = doctorDetails;
 	}
 
-	public void addAppointment(Appointment app) {
-		appList.add(app);
+	public List<Appointment> getAppointmentList() {
+		return appointmentList;
 	}
 
-	public List<Appointment> getAppointment() {
-		return appList;
+	public void addAppointmentList(Appointment appointmentlist) {
+		appointmentList.add(appointmentlist);
 	}
+
 }

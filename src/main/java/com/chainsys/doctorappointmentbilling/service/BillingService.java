@@ -16,15 +16,15 @@ import com.chainsys.doctorappointmentbilling.model.Billing;
 @Service
 public class BillingService {
 	@Autowired
-	private BillingRepository repo;
+	private BillingRepository billingRepo;
 
 	public List<Billing> getBill() {
-		List<Billing> billingList = repo.findAll();
+		List<Billing> billingList = billingRepo.findAll();
 		return billingList;
 	}
 
 	@Transactional
 	public Billing save(Billing bill) {
-		return repo.save(bill);
+		return billingRepo.save(bill);
 	}
 }
