@@ -47,6 +47,8 @@ tr:hover {
 						<td>${docDet.speciality}</td>
 						<td>${docDet.availableTime}</td>
 						<td>${docDet.experience}</td>
+						<td><a href="alldoctordetails?doctorId=${docDet.doctorId}"><input
+								onclick="change()" type="button" value="Book" id="myButton1"></input></a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

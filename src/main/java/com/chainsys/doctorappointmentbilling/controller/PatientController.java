@@ -5,10 +5,12 @@ package com.chainsys.doctorappointmentbilling.controller;
  */
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -68,11 +70,15 @@ public class PatientController {
 	}
 
 	@PostMapping("/register")
-	public String addNewPatient(@ModelAttribute("registerpatient") Patient pat) {
-		ptService.save(pat);
-		return "index";
+	public String addNewPatient(@Valid @ModelAttribute("registerpatient") Patient pat, BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return "register-patient";
+		} else {
+			ptService.save(pat);
+			return "Registration-success-patient";
+		}
 	}
-
+	
 	@GetMapping("/patientlogin")
 	public String patientAccessform(Model model) {
 		Patient thePat = new Patient();
@@ -85,7 +91,7 @@ public class PatientController {
 		Patient pat = ptService.getPatientByEmailIdAndPassword(patient.getEmailId(), patient.getPassword());
 		if (pat != null) {
 
-			return "redirect:/doctordetails/getdoctordetails";
+			return "patientlogin";
 		} else
 			return "invalid-patient-error";
 

@@ -10,7 +10,8 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="checkdoctorlogin" method="post" modelAttribute="doctor">
+			<form:form action="checkdoctorlogin" method="post"
+				modelAttribute="doctor">
 				<div>
 					<label for=doctorName>Name</label>
 					<div>
@@ -26,6 +27,11 @@
 				<form:button>Login</form:button>
 			</form:form>
 		</div>
+	</div>
+	<div align="center">
+		<label> Don't have an Account</label> <a href="registerdoctordetails">
+			<input onclick="change()" type="button" value="Sign Up"></input>
+		</a>
 	</div>
 </body>
 </html>

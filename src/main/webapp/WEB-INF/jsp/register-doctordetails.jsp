@@ -25,56 +25,88 @@ input[type=submit]:hover {
 </style>
 <center>
 	<h1>Doctor-Registration</h1>
-</center>
 </head>
-<body style="background-color: powderblue;">
+<body style="background-color: beige;">
 	<div id="root">
 		<div id="form">
-			<form:form action="register" method="post"
-				modelAttribute="registerdoctordetails">
-				<center>
-					<div>
-						<label for="doctorId">Doctor id</label>
-						<div>
-							<form:input path="doctorId" />
-						</div>
-					</div>
-					<div>
-						<label for="doctorName">Doctor Name</label>
-						<div>
-							<form:input path="doctorName" />
-						</div>
-					</div>
-					<div>
-						<label for="password">Password</label>
-						<div>
-							<form:input path="password" type="password"/>
-						</div>
-					</div>
-					<div>
-						<label for="speciality">Speciality</label>
-						<div>
-							<form:input path="speciality" />
-						</div>
-					</div>
-					<div>
-						<label for="availableTime">Available Time</label>
-						<div>
-							<form:input path="availableTime" />
-						</div>
-					</div>
-					<div>
-						<label for="experience">Experience</label>
-						<div>
-							<form:input path="experience" />
-						</div>
-					</div>
-					<div>
-						<input type="submit" value="submit">
-					</div>
-				</center>
-			</form:form>
+			<div align="center">
+				<table border="" width=50% cellpadding="10">
+					<form:form action="register" method="post"
+						modelAttribute="registerdoctordetails">
+						<tr>
+							<div>
+								<td><label for="doctorId">Doctor id</label></td>
+								<td>
+									<div>
+										<form:input path="doctorId" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="doctorName">Doctor Name</label></td>
+								<td>
+									<div>
+										<form:input path="doctorName" />
+										<form:errors path="doctorName" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="password">Password</label></td>
+								<td>
+									<div>
+										<form:input path="password" type="password" />
+										<form:errors path="password" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="speciality">Speciality</label></td>
+								<td>
+									<div>
+										<form:input path="speciality" />
+										<form:errors path="speciality" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="availableTime">Available Time</label></td>
+								<td>
+									<div>
+										<form:input path="availableTime" />
+										<form:errors path="availableTime" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								<td><label for="experience">Experience</label></td>
+								<td>
+									<div>
+										<form:input path="experience" />
+										<form:errors path="experience" />
+									</div>
+								</td>
+							</div>
+						</tr>
+						<tr>
+							<div>
+								</td> <input type="submit" value="submit">
+								</td>
+						</tr>
+					</form:form>
+				</table>
+			</div>
 		</div>
-	</div>
+		</center>
 </body>
 </html>

@@ -5,9 +5,12 @@ package com.chainsys.doctorappointmentbilling.controller;
  */
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -30,6 +33,13 @@ public class DoctorDetailsController {
 		return "list-doctordetails";
 	}
 
+	@GetMapping("/bookdoctordetails")
+	public String BookDoctorDetails(Model model) {
+		List<DoctorDetails> doctorDetailsList = docDetService.getDoctorDetails();
+		model.addAttribute("alldoctordetails", doctorDetailsList);
+		return "book-doctordetails";
+	}
+
 	@GetMapping("/registerdoctordetails")
 	public String showRegisterForm(Model model) {
 		DoctorDetails theDoc = new DoctorDetails();
@@ -38,9 +48,14 @@ public class DoctorDetailsController {
 	}
 
 	@PostMapping("/register")
-	public String addNewDoctor(@ModelAttribute("registerdoctordetails") DoctorDetails doc) {
-		docDetService.save(doc);
-		return "redirect:/billing/getbill";
+	public String addNewDoctor(@Valid @ModelAttribute("registerdoctordetails") DoctorDetails doc,
+			BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return "register-doctordetails";
+		} else {
+			docDetService.save(doc);
+			return "Registration-success-doctor";
+		}
 	}
 
 	@GetMapping("/doctorlogin")
@@ -56,7 +71,7 @@ public class DoctorDetailsController {
 				theDoc.getPassword());
 		if (doctor != null) {
 
-			return "redirect:/patient/getpatient";
+			return "doctorlogin";
 		} else
 			return "invalid-doctor-error";
 

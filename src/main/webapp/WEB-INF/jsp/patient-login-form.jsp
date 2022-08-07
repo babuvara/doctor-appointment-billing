@@ -10,7 +10,8 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="checkpatientlogin" method="post" modelAttribute="patient">
+			<form:form action="checkpatientlogin" method="post"
+				modelAttribute="patient">
 				<div>
 					<label for=emailId>Email</label>
 					<div>
@@ -20,12 +21,17 @@
 				<div>
 					<label for="password">Password</label>
 					<div>
-						<form:input path="password" type="password"/>
+						<form:input path="password" type="password" />
 					</div>
 				</div>
 				<form:button>Login</form:button>
 			</form:form>
 		</div>
+	</div>
+	<div align="center">
+		<label> Don't have an Account</label> <a href="registerpatient"> <input
+			onclick="change()" type="button" value="Sign Up"></input>
+		</a>
 	</div>
 </body>
 </html>
