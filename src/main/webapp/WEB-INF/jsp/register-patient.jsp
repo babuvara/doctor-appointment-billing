@@ -85,7 +85,7 @@ input[type=submit]:hover {
 							<div>
 								<td><label for="bloodGroup">Blood Group</label></td>
 								<td><form:select path="bloodGroup">
-								<form:errors path="bloodGroup" />
+										<form:errors path="bloodGroup" />
 										<form:option value="O Positive">O Positive</form:option>
 										<form:option value="O Negative">O Negative</form:option>
 										<form:option value="A Positive">A Positive</form:option>
@@ -131,7 +131,7 @@ input[type=submit]:hover {
 								<td>
 									<div>
 										<form:select path="location">
-										<form:errors path="location" />
+											<form:errors path="location" />
 											<form:option value="Ariyalur">Ariyalur</form:option>
 											<form:option value="Chengalpattu">Chengalpattu</form:option>
 											<form:option value="Chennai">Chennai</form:option>

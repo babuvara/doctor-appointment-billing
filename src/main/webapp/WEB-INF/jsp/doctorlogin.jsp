@@ -21,7 +21,7 @@
 				aria-current="page" href="/">Logout</a></li>
 		</ul>
 		<img
-		src="https://starhospitals.in/img/internationalpatients/IN-Patient-Guide.jpg"
-		img-fluid" alt="...">
+			src="https://starhospitals.in/img/internationalpatients/IN-Patient-Guide.jpg"
+			img-fluid" alt="...">
 </body>
 </html>

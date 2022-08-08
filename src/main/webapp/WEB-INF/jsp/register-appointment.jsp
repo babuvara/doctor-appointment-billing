@@ -28,60 +28,60 @@ input[type=submit]:hover {
 </center>
 </head>
 <body style="background-color: powderblue;">
-
-	<body>
-<div id="root">
+<body>
+	<div id="root">
 		<div id="form">
 			<form:form action="register" method="post"
 				modelAttribute="registerappointment">
 				<center>
-				<div>
-					<label for="appointmentId">Appointment id</label>
 					<div>
-						<form:input path="appointmentId" />
+						<label for="appointmentId">Appointment id</label>
+						<div>
+							<form:input path="appointmentId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="appointmentDate">Appointment Date</label>
 					<div>
-						<form:input path="appointmentDate" type="date" />
+						<label for="appointmentDate">Appointment Date</label>
+						<div>
+							<form:input path="appointmentDate" type="date" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="appointmentTime">Appointment Time</label>
 					<div>
-						<form:input path="appointmentTime" />
+						<label for="appointmentTime">Appointment Time</label>
+						<div>
+							<form:input path="appointmentTime" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="patientId">Patient id</label>
 					<div>
-						<form:input path="patientId" />
+						<label for="patientId">Patient id</label>
+						<div>
+							<form:input path="patientId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="purpose">Purpose</label>
 					<div>
-						<form:input path="purpose" />
+						<label for="purpose">Purpose</label>
+						<div>
+							<form:input path="purpose" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="doctorId">Doctor id</label>
 					<div>
-						<form:input path="doctorId" />
+						<label for="doctorId">Doctor id</label>
+						<div>
+							<form:input path="doctorId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<labe for="appointmentStatus">Appointment Status</label>
 					<div>
-						<form:input path="appointmentStatus" />
+						<labe for="appointmentStatus">Appointment Status</label>
+						<div>
+							<form:input path="appointmentStatus" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<input type="submit" value="submit">
-				</div>
+					<div>
+						<input type="submit" value="submit">
+					</div>
 				</center>
 			</form:form>
 		</div>
 	</div>
-</body></html>
+</body>
+</html>

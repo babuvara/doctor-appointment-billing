@@ -1,0 +1,56 @@
+    create table PATIENT(
+                        PATIENT_ID NUMBER(6) PRIMARY KEY,
+                        NAME VARCHAR(20),
+                        GENDER VARCHAR(20),
+                        DOB DATE,
+                        BLOOD_GROUP VARCHAR(20),
+                        EMAIL_ID VARCHAR(45) UNIQUE,
+                        PASSWORD VARCHAR(45),
+                        MOBILE_NUMBER LONG,
+                        LOCATION VARCHAR(45),
+                        DISEASE VARCHAR(45));
+                       
+--------------------------------------------------------------------------------
+create table DOCTORDETAILS(
+                         DOCTOR_ID NUMBER(6) primary key,
+                         DOCTOR_NAME VARCHAR(45),
+                         PASSWORD VARCHAR(45),
+                         speciality VARCHAR(45),
+                         AVAILABLE_TIME  VARCHAR(20),
+                         EXPERIENCE  VARCHAR(45));
+                        
+--------------------------------------------------------------------------------
+create table APPOINTMENT(
+                        APPOINTMENT_ID NUMBER(6) PRIMARY KEY,
+                        APPOINTMENT_DATE DATE,
+                        APPOINTMENT_TIME VARCHAR(20),
+                        PATIENT_ID NUMBER(6),
+                        PURPOSE VARCHAR(45),
+                        DOCTOR_ID NUMBER(6),
+                        APPOINTMENT_STATUS VARCHAR(45),
+                        FOREIGN KEY(PATIENT_ID)REFERENCES PATIENT(PATIENT_ID),
+                        FOREIGN KEY(DOCTOR_ID)REFERENCES DOCTORDETAILS(DOCTOR_ID));
+--------------------------------------------------------------------------------
+create table BILLING(HOSPITAL_NAME VARCHAR(45) PRIMARY KEY,
+                        DOCTOR_ID NUMBER(6),
+                        PATIENT_ID NUMBER(6),
+                        PURPOSE VARCHAR(45),
+                        APPOINTMENT_ID NUMBER(6),
+                        NET_BILL float,
+                        FOREIGN KEY(DOCTOR_ID)REFERENCES DOCTORDETAILS(DOCTOR_ID),
+                        FOREIGN KEY(PATIENT_ID)REFERENCES PATIENT(PATIENT_ID),
+                        FOREIGN KEY(APPOINTMENT_ID)REFERENCES APPOINTMENT(APPOINTMENT_ID));
+--------------------------------------------------------------------------------
+desc billing;
+--------------------------------------------------------------------------------
+select * from PATIENT;
+select * from doctordetails;
+select * from appointment;
+select * from billing;
+
+commit;
+
+drop table billing;
+drop table appointment;
+drop table doctordetails;
+drop table person;

@@ -28,54 +28,54 @@ input[type=submit]:hover {
 </center>
 </head>
 <body style="background-color: powderblue;">
-
-	<body>
-<div id="root">
+<body>
+	<div id="root">
 		<div id="form">
 			<form:form action="register" method="post"
 				modelAttribute="registerbill">
 				<center>
-				<div>
-					<label for="hospitalName">Hospital Name</label>
 					<div>
-						<form:input path="hospitalName" />
+						<label for="hospitalName">Hospital Name</label>
+						<div>
+							<form:input path="hospitalName" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="doctorId">Doctor id</label>
 					<div>
-						<form:input path="doctorId" />
+						<label for="doctorId">Doctor id</label>
+						<div>
+							<form:input path="doctorId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="patientId">Patient id</label>
 					<div>
-						<form:input path="patientId" />
+						<label for="patientId">Patient id</label>
+						<div>
+							<form:input path="patientId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="purpose">Purpose</label>
 					<div>
-						<form:input path="purpose" />
+						<label for="purpose">Purpose</label>
+						<div>
+							<form:input path="purpose" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="appointmentId">Appointment id</label>
 					<div>
-						<form:input path="appointmentId" />
+						<label for="appointmentId">Appointment id</label>
+						<div>
+							<form:input path="appointmentId" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="netBill">Net Bill</label>
 					<div>
-						<form:input path="netBill" />
+						<label for="netBill">Net Bill</label>
+						<div>
+							<form:input path="netBill" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<input type="submit" value="submit">
-				</div>
+					<div>
+						<input type="submit" value="submit">
+					</div>
 				</center>
 			</form:form>
 		</div>
 	</div>
-</body></html>
+</body>
+</html>

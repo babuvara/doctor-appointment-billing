@@ -16,38 +16,35 @@
 <body>
 	<center>
 		<h1>Doctor-Appointment</h1>
-	<ul class="nav nav-tabs nav-dark bg-warning">
-		<li class="nav-item"><a class="nav-link active"
-			aria-current="page" href="/">Home</a></li>
-		<li class="nav-item"><a class="nav-link"
-			href="/patient/patientlogin">Patient Login</a></li>
-		<li class="nav-item"><a class="nav-link"
-			href="/doctordetails/doctorlogin">Doctor Login</a></li>
-	</ul>
-	<img
-		src="https://previews.123rf.com/images/stockbroker/stockbroker1507/stockbroker150705607/42402717-doctor-sitting-by-male-patient-s-bed-in-hospital.jpg"
-		img-fluid" alt="...">
-	<br>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="card dark">
-				<div class="card-body">
-					<br>
-						<a href="#" class="btn btn-success">Go somewhere</a>
+		<ul class="nav nav-tabs nav-dark bg-warning">
+			<li class="nav-item"><a class="nav-link active"
+				aria-current="page" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="/patient/patientlogin">Patient Login</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="/doctordetails/doctorlogin">Doctor Login</a></li>
+		</ul>
+		<img
+			src="https://previews.123rf.com/images/stockbroker/stockbroker1507/stockbroker150705607/42402717-doctor-sitting-by-male-patient-s-bed-in-hospital.jpg"
+			img-fluid" alt="..."> <br>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="card dark">
+					<div class="card-body">
+						<br> <a href="#" class="btn btn-success">Go somewhere</a>
+					</div>
 				</div>
 			</div>
+			<br> <br> <br> <a href="/patient/registerpatient">Patient
+				Registration</a> <br> <a
+				href="/doctordetails/registerdoctordetails">Doctor Registration</a>
+			<br> <a href="/patient/getpatient">Patients List</a> <br> <a
+				href="/doctordetails/getdoctordetails">Doctors List</a> <br> <a
+				href="/appointment/getappointment">Appointment List</a> <br> <a
+				href="/appointment/registerappointment">Register Appointment</a> <br>
+			<a href="/billing/getbill">Bill Details</a> <br> <a
+				href="/billing/registerbill">Register Bill</a>
 		</div>
-		<br>
-		<br>
-			<br> <a href="/patient/registerpatient">Patient Registration</a>
-			<br> <a href="/doctordetails/registerdoctordetails">Doctor
-				Registration</a> <br> <a href="/patient/getpatient">Patients
-				List</a> <br> <a href="/doctordetails/getdoctordetails">Doctors
-				List</a> <br> <a href="/appointment/getappointment">Appointment
-				List</a> <br> <a href="/appointment/registerappointment">Register
-				Appointment</a> <br> <a href="/billing/getbill">Bill Details</a> <br>
-			<a href="/billing/registerbill">Register Bill</a>
-	</div>
 	</center>
 </body>
 </body>

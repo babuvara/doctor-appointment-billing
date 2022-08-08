@@ -53,7 +53,7 @@ tr:hover {
 				</c:forEach>
 			</tbody>
 		</table>
-		</center>
-		</div>
+	</center>
+	</div>
 </body>
 </html>

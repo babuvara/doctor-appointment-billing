@@ -23,7 +23,7 @@
 				aria-current="page" href="/">Logout</a></li>
 		</ul>
 		<img
-		src="https://www.qmatic.com/hubfs/images/gl/blog/patient-appointment-systems-in-hospitals-featured2.png"
-		img-fluid" alt="...">
+			src="https://www.qmatic.com/hubfs/images/gl/blog/patient-appointment-systems-in-hospitals-featured2.png"
+			img-fluid" alt="...">
 </body>
 </html>

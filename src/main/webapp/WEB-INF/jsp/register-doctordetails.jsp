@@ -98,12 +98,12 @@ input[type=submit]:hover {
 								</td>
 							</div>
 						</tr>
-						<tr>
+					</form:form>
+					<tr>
 							<div>
 								</td> <input type="submit" value="submit">
 								</td>
 						</tr>
-					</form:form>
 				</table>
 			</div>
 		</div>
