@@ -60,7 +60,6 @@
 					<th>appointmentTime</th>
 					<th>patientId</th>
 					<th>purpose</th>
-					<th>source</th>
 					<th>doctorId</th>
 					<th>appointmentStatus</th>
 				</tr>

@@ -36,23 +36,13 @@ input[type=submit]:hover {
 						modelAttribute="registerpatient">
 						<tr>
 							<div>
-								<td><label for="patientId">Patient id</label></td>
-								<td>
-									<div>
-										<form:input path="patientId" />
-									</div>
-								</td>
-							</div>
-						</tr>
-						<tr>
-							<div>
 								<td><label for="name">Name</label></td>
 								<td>
 									<div>
-										<form:input path="name" />
-										<form:errors path="name" />
+										<form:input path="name" placeholder="Name" required="true"/>
 									</div>
 								</td>
+								<form:errors path="name" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -76,9 +66,10 @@ input[type=submit]:hover {
 								<td><label for="dob">DOB</label></td>
 								<td>
 									<div>
-										<form:input path="dob" type="date" />
+										<form:input path="dob" type="date" required="true"/>
 									</div>
 								</td>
+								<form:errors path="dob" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -101,18 +92,19 @@ input[type=submit]:hover {
 							<div>
 								<td><label for="emailId">Email id</label></td>
 								<td><div>
-										<form:input path="emailId" />
-										<form:errors path="emailId" />
+										<form:input path="emailId" placeholder="email" required="true"/>
 									</div></td>
+									<form:errors path="emailId" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
 							<div>
 								<td><label for="password">Password</label></td>
 								<td><div>
-										<form:input path="password" />
-										<form:errors path="password" />
+										<form:input path="password" pattern="^(?=.[A-Za-z])(?=.\\d)(?=.[@$!%#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
+                        required="true"/>
 									</div></td>
+									<form:errors path="password" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -120,7 +112,7 @@ input[type=submit]:hover {
 								<td><label for="mobileNumber">Mobile Number</label></td>
 								<td>
 									<div>
-										<form:input path="mobileNumber" />
+										<form:input path="mobileNumber" placeholder="Mobile Number" required="true"/>
 									</div>
 								</td>
 							</div>
@@ -180,18 +172,14 @@ input[type=submit]:hover {
 								<td>
 									<div>
 										<form:input path="disease" />
-										<form:errors path="disease" />
 									</div>
 								</td>
+								<form:errors path="disease" cssClass="text-danger" />
 							</div>
 						</tr>
-						<tr>
-							<div>
-								</td> <input type="submit" value="submit">
-								</td>
-						</tr>
-					</form:form>
 				</table>
+				<align="center">
+				<input type="submit" value="submit"> </form:form>
 			</div>
 		</div>
 		</center>

@@ -59,7 +59,7 @@ input[type=submit]:hover {
 								<td><label for="password">Password</label></td>
 								<td>
 									<div>
-										<form:input path="password" type="password" />
+										<form:input path="password" />
 										<form:errors path="password" />
 									</div>
 								</td>
@@ -97,14 +97,9 @@ input[type=submit]:hover {
 									</div>
 								</td>
 							</div>
-						</tr>
-					</form:form>
-					<tr>
-							<div>
-								</td> <input type="submit" value="submit">
-								</td>
-						</tr>
 				</table>
+				<align="center">
+				<input type="submit" value="submit"> </form:form>
 			</div>
 		</div>
 		</center>

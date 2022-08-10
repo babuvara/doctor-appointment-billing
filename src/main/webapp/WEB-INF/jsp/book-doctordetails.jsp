@@ -37,6 +37,7 @@ tr:hover {
 					<th>Speciality</th>
 					<th>Available Time</th>
 					<th>Experience</th>
+					<th>Booking Status</th>
 				</tr>
 			</thead>
 			<tbody>

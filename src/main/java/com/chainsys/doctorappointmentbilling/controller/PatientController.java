@@ -31,37 +31,6 @@ public class PatientController {
 		model.addAttribute("allpatient", patientList);
 		return "list-patient";
 	}
-
-//	@Bean
-//	public void setRepo(DoctorRepository repo) {
-//		this.repo = repo;
-//	}
-//	@DeleteMapping("/deletedoctor")
-//	public String deleteDoctor(int id) {
-//		repo.deleteById(id);
-//		return "redirect:/getalldoctors";
-//	}
-//
-//	@PostMapping(value = "/newdoctor", consumes = "application/json")
-//	// we need give from where to read data from the HTTP request and also the
-//	// content type ("application/json")
-//	public String addDoctor(@RequestBody Doctor dr) {
-//		repo.save(dr);
-//		return "redirect:/getalldoctors";
-//
-//	}
-//
-//	@PostMapping(value = "/modifydoctor", consumes = "application/json")
-//	public String modifyDoctor(@RequestBody Doctor dr) {
-//		repo.save(dr);
-//		return "redirect:/getalldoctors";
-//
-//	}
-//
-//	@GetMapping("/getalldoctors")
-//	public List<Doctor> getDoctors() {
-//		return repo.findAll();
-//	}
 	@GetMapping("/registerpatient")
 	public String showPatientDetailsRegisterForm(Model model) {
 		Patient pat = new Patient();

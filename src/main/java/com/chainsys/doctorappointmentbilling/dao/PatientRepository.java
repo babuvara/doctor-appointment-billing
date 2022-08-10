@@ -20,9 +20,7 @@ public interface PatientRepository extends CrudRepository<Patient, Integer> {
 	// void deleteById(long dr_id);
 
 	List<Patient> findAll();
-
-	@Query(value = "select * from PATIENT ", nativeQuery = true)
-	Patient getPatientAccess();
+	
 
 	Patient findByEmailIdAndPassword(String email, String password);
 }

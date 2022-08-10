@@ -23,7 +23,6 @@
 				href="/patient/patientlogin">Patient Login</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="/doctordetails/doctorlogin">Doctor Login</a></li>
-		</ul>
 		<img
 			src="https://previews.123rf.com/images/stockbroker/stockbroker1507/stockbroker150705607/42402717-doctor-sitting-by-male-patient-s-bed-in-hospital.jpg"
 			img-fluid" alt="..."> <br>

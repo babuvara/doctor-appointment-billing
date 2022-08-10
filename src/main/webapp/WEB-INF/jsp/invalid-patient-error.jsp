@@ -7,8 +7,10 @@
 <title>Error</title>
 </head>
 <body>
-	<h2>Invalid Name and Password</h2>
-	<div>Check your user name and password</div>
-	<a href="/patient/patientlogin"> Return to Patient login</a>
+	<center>
+		<h2>Invalid Name and Password</h2>
+		<div>Check your user name and password</div>
+		<a href="/patient/patientlogin"> Return to Patient login</a>
+	</center>
 </body>
 </html>

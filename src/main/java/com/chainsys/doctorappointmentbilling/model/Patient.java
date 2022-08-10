@@ -7,17 +7,21 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "PATIENT")
 public class Patient {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="PATIENT_ID_REF")
+	@SequenceGenerator(name="PATIENT_ID_REF",sequenceName ="PATIENT_ID_REF",allocationSize = 1)
 	@Column(name = "PATIENT_ID")
 	private int patientId;
 	@Size(min =3,message =" Name Size is not less than 3")
