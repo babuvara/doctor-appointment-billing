@@ -13,14 +13,10 @@ import com.chainsys.doctorappointmentbilling.model.Patient;
 
 @Repository
 public interface PatientRepository extends CrudRepository<Patient, Integer> {
-	// Doctor findById(long id);
 
-	Patient save(Patient per);
-
-	// void deleteById(long dr_id);
+	Patient save(Patient patient);
 
 	List<Patient> findAll();
-	
 
 	Patient findByEmailIdAndPassword(String email, String password);
 }

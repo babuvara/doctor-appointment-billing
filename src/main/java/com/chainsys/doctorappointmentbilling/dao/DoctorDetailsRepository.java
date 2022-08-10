@@ -13,11 +13,11 @@ import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
 @Repository
 public interface DoctorDetailsRepository extends CrudRepository<DoctorDetails, Integer> {
 	DoctorDetails findById(int id);
-	DoctorDetails save(DoctorDetails docDet);
+
+	DoctorDetails save(DoctorDetails doctorDetails);
 
 	List<DoctorDetails> findAll();
-	
 
-DoctorDetails findByDoctorNameAndPassword(String name, String password);
+	DoctorDetails findByDoctorNameAndPassword(String name, String password);
 
 }

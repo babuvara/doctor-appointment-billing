@@ -24,13 +24,13 @@ public class DoctorDetailsService {
 	}
 
 	@Transactional
-	public DoctorDetails save(DoctorDetails docDet) {
-		return doctorDetailsRepo.save(docDet);
+	public DoctorDetails save(DoctorDetails doctorDetails) {
+		return doctorDetailsRepo.save(doctorDetails);
 	}
 
 	@Transactional
-	public DoctorDetails deleteBooking(DoctorDetails docDet) {
-		return doctorDetailsRepo.save(docDet);
+	public DoctorDetails deleteBooking(DoctorDetails doctorDetails) {
+		return doctorDetailsRepo.save(doctorDetails);
 	}
 
 	public DoctorDetails getDoctorDetailsByNameAndPassword(String name, String password) {

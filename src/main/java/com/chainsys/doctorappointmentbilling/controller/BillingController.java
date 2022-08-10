@@ -32,14 +32,14 @@ public class BillingController {
 
 	@GetMapping("/registerbill")
 	public String showRegisterForm(Model model) {
-		Billing theBill = new Billing();
-		model.addAttribute("registerbill", theBill);
+		Billing bill = new Billing();
+		model.addAttribute("registerbill", bill);
 		return "register-bill";
 	}
 
 	@PostMapping("/register")
-	public String addNewBill(@ModelAttribute("registerbill") Billing theBill) {
-		billService.save(theBill);
+	public String addNewBill(@ModelAttribute("registerbill") Billing bill) {
+		billService.save(bill);
 		return "redirect:/billing/getbill";
 	}
 

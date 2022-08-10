@@ -65,15 +65,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="app" items="${appointmentlist}">
+				<c:forEach var="appointment" items="${appointmentlist}">
 					<tr>
-						<td>${app.appointmentId}</td>
-						<td>${app.appointmentDate}</td>
-						<td>${app.appointmentTime}</td>
-						<td>${app.patientId}</td>
-						<td>${app.purpose}</td>
-						<td>${app.doctorId}</td>
-						<td>${app.appointmentStatus}</td>
+						<td>${appointment.appointmentId}</td>
+						<td>${appointment.appointmentDate}</td>
+						<td>${appointment.appointmentTime}</td>
+						<td>${appointment.patientId}</td>
+						<td>${appointment.purpose}</td>
+						<td>${appointment.doctorId}</td>
+						<td>${appointment.appointmentStatus}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

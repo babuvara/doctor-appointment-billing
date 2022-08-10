@@ -8,8 +8,11 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -18,6 +21,8 @@ import javax.validation.constraints.Size;
 @Table(name = "DOCTORDETAILS")
 public class DoctorDetails {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="DOCTOR_ID_REF")
+	@SequenceGenerator(name="DOCTOR_ID_REF",sequenceName ="DOCTOR_ID_REF",allocationSize = 1)
 	@Column(name = "DOCTOR_ID")
 	private int doctorId;
 	@Size(min =3,message =" Name Size is not less than 3")

@@ -21,25 +21,25 @@ import com.chainsys.doctorappointmentbilling.service.AppointmentService;
 @RequestMapping("/appointment")
 public class AppointmentController {
 	@Autowired
-	private AppointmentService appService;
+	private AppointmentService appointmentService;
 
 	@GetMapping("/getappointment")
 	public String getAllAppointments(Model model) {
-		List<Appointment> appList = appService.getAppointment();
-		model.addAttribute("allappointment", appList);
+		List<Appointment> appointmentList = appointmentService.getAppointment();
+		model.addAttribute("allappointment", appointmentList);
 		return "list-appointment";
 	}
 
 	@GetMapping("/registerappointment")
 	public String showRegisterForm(Model model) {
-		Appointment theApp = new Appointment();
-		model.addAttribute("registerappointment", theApp);
+		Appointment appointment = new Appointment();
+		model.addAttribute("registerappointment", appointment);
 		return "register-appointment";
 	}
 
 	@PostMapping("/register")
-	public String addNewPerson(@ModelAttribute("registerappointment") Appointment theApp) {
-		appService.save(theApp);
+	public String addNewPerson(@ModelAttribute("registerappointment") Appointment appointment) {
+		appointmentService.save(appointment);
 		return "redirect:/appointment/getappointment";
 	}
 

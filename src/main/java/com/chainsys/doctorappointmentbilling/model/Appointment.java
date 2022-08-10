@@ -8,15 +8,20 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "APPOINTMENT")
 public class Appointment {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="APPOINTMENT_ID_REF")
+	@SequenceGenerator(name="APPOINTMENT_ID_REF",sequenceName ="APPOINTMENT_ID_REF",allocationSize = 1)
 	@Column(name = "APPOINTMENT_ID")
 	private int appointmentId;
 	@Column(name = "APPOINTMENT_DATE")
@@ -25,8 +30,6 @@ public class Appointment {
 	private String appointmentTime;
 	@Column(name = "PATIENT_ID")
 	private int patientId;
-	@Column(name = "PURPOSE")
-	private String purpose;
 	@Column(name = "DOCTOR_ID")
 	private int doctorId;
 	@Column(name = "APPOINTMENT_STATUS")
@@ -74,14 +77,6 @@ public class Appointment {
 
 	public void setPatientId(int patientId) {
 		this.patientId = patientId;
-	}
-
-	public String getPurpose() {
-		return purpose;
-	}
-
-	public void setPurpose(String purpose) {
-		this.purpose = purpose;
 	}
 
 	public int getDoctorId() {

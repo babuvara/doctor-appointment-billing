@@ -26,19 +26,7 @@
 		<img
 			src="https://previews.123rf.com/images/stockbroker/stockbroker1507/stockbroker150705607/42402717-doctor-sitting-by-male-patient-s-bed-in-hospital.jpg"
 			img-fluid" alt="..."> <br>
-		<div class="row">
-			<div class="col-sm-6">
-				<div class="card dark">
-					<div class="card-body">
-						<br> <a href="#" class="btn btn-success">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<br> <br> <br> <a href="/patient/registerpatient">Patient
-				Registration</a> <br> <a
-				href="/doctordetails/registerdoctordetails">Doctor Registration</a>
-			<br> <a href="/patient/getpatient">Patients List</a> <br> <a
-				href="/doctordetails/getdoctordetails">Doctors List</a> <br> <a
+			<a
 				href="/appointment/getappointment">Appointment List</a> <br> <a
 				href="/appointment/registerappointment">Register Appointment</a> <br>
 			<a href="/billing/getbill">Bill Details</a> <br> <a

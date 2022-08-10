@@ -23,42 +23,42 @@ import com.chainsys.doctorappointmentbilling.service.PatientService;
 @RequestMapping("/patient")
 public class PatientController {
 	@Autowired
-	private PatientService ptService;
+	private PatientService patientService;
 
 	@GetMapping("/getpatient")
 	public String getAllPatient(Model model) {
-		List<Patient> patientList = ptService.getPatient();
+		List<Patient> patientList = patientService.getPatient();
 		model.addAttribute("allpatient", patientList);
 		return "list-patient";
 	}
 	@GetMapping("/registerpatient")
 	public String showPatientDetailsRegisterForm(Model model) {
-		Patient pat = new Patient();
-		model.addAttribute("registerpatient", pat);
+		Patient patient = new Patient();
+		model.addAttribute("registerpatient", patient);
 		return "register-patient";
 	}
 
 	@PostMapping("/register")
-	public String addNewPatient(@Valid @ModelAttribute("registerpatient") Patient pat, BindingResult bindingResult) {
+	public String addNewPatient(@Valid @ModelAttribute("registerpatient") Patient patient, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return "register-patient";
 		} else {
-			ptService.save(pat);
+			patientService.save(patient);
 			return "Registration-success-patient";
 		}
 	}
 	
 	@GetMapping("/patientlogin")
 	public String patientAccessform(Model model) {
-		Patient thePat = new Patient();
-		model.addAttribute("patient", thePat);
+		Patient patient = new Patient();
+		model.addAttribute("patient", patient);
 		return "patient-login-form";
 	}
 
 	@PostMapping("/checkpatientlogin")
 	public String checkingAccess(@ModelAttribute("patient") Patient patient) {
-		Patient pat = ptService.getPatientByEmailIdAndPassword(patient.getEmailId(), patient.getPassword());
-		if (pat != null) {
+		Patient patientLogin = patientService.getPatientByEmailIdAndPassword(patient.getEmailId(), patient.getPassword());
+		if (patientLogin != null) {
 
 			return "patientlogin";
 		} else

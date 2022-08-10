@@ -38,21 +38,19 @@ tr:hover {
 						<th>Appointment Date</th>
 						<th>Appointment Time</th>
 						<th>Patient id</th>
-						<th>Purpose</th>
 						<th>Doctor id</th>
 						<th>Appointment Status</th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="app" items="${allappointment}">
+					<c:forEach var="appointment" items="${allappointment}">
 						<tr>
-							<td>${app.appointmentId}</td>
-							<td>${app.appointmentDate}</td>
-							<td>${app.appointmentTime}</td>
-							<td>${app.patientId}</td>
-							<td>${app.purpose}</td>
-							<td>${app.doctorId}</td>
-							<td>${app.appointmentStatus}</td>
+							<td>${appointment.appointmentId}</td>
+							<td>${appointment.appointmentDate}</td>
+							<td>${appointment.appointmentTime}</td>
+							<td>${appointment.patientId}</td>
+							<td>${appointment.doctorId}</td>
+							<td>${appointment.appointmentStatus}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

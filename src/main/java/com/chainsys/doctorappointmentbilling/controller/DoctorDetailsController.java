@@ -24,52 +24,52 @@ import com.chainsys.doctorappointmentbilling.service.DoctorDetailsService;
 @RequestMapping("/doctordetails")
 public class DoctorDetailsController {
 	@Autowired
-	private DoctorDetailsService docDetService;
+	private DoctorDetailsService doctorDetailsService;
 
 	@GetMapping("/getdoctordetails")
 	public String getAllDoctorDetails(Model model) {
-		List<DoctorDetails> doctorDetailsList = docDetService.getDoctorDetails();
+		List<DoctorDetails> doctorDetailsList = doctorDetailsService.getDoctorDetails();
 		model.addAttribute("alldoctordetails", doctorDetailsList);
 		return "list-doctordetails";
 	}
 
 	@GetMapping("/bookdoctordetails")
 	public String BookDoctorDetails(Model model) {
-		List<DoctorDetails> doctorDetailsList = docDetService.getDoctorDetails();
+		List<DoctorDetails> doctorDetailsList = doctorDetailsService.getDoctorDetails();
 		model.addAttribute("alldoctordetails", doctorDetailsList);
 		return "book-doctordetails";
 	}
 
 	@GetMapping("/registerdoctordetails")
 	public String showRegisterForm(Model model) {
-		DoctorDetails theDoc = new DoctorDetails();
-		model.addAttribute("registerdoctordetails", theDoc);
+		DoctorDetails doctorDetails = new DoctorDetails();
+		model.addAttribute("registerdoctordetails", doctorDetails);
 		return "register-doctordetails";
 	}
 
 	@PostMapping("/register")
-	public String addNewDoctor(@Valid @ModelAttribute("registerdoctordetails") DoctorDetails doc,
+	public String addNewDoctor(@Valid @ModelAttribute("registerdoctordetails") DoctorDetails doctor,
 			BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return "register-doctordetails";
 		} else {
-			docDetService.save(doc);
+			doctorDetailsService.save(doctor);
 			return "Registration-success-doctor";
 		}
 	}
 
 	@GetMapping("/doctorlogin")
 	public String doctorAccessform(Model model) {
-		DoctorDetails theDoc = new DoctorDetails();
-		model.addAttribute("doctor", theDoc);
+		DoctorDetails doctorDetails = new DoctorDetails();
+		model.addAttribute("doctor", doctorDetails);
 		return "doctor-login-form";
 	}
 
 	@PostMapping("/checkdoctorlogin")
-	public String checkingAccess(@ModelAttribute("doctor") DoctorDetails theDoc) {
-		DoctorDetails doctor = docDetService.getDoctorDetailsByNameAndPassword(theDoc.getDoctorName(),
-				theDoc.getPassword());
-		if (doctor != null) {
+	public String checkingAccess(@ModelAttribute("doctor") DoctorDetails doctorDetails) {
+		DoctorDetails doctorLogin = doctorDetailsService.getDoctorDetailsByNameAndPassword(doctorDetails.getDoctorName(),
+				doctorDetails.getPassword());
+		if (doctorLogin != null) {
 
 			return "doctorlogin";
 		} else

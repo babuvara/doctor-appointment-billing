@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Persons list</title>
+<title>Patients list</title>
 <style>
 table, th, td {
 	border: 1px solid black;
@@ -33,7 +33,6 @@ tr:hover {
 			<table>
 				<thead>
 					<tr>
-						<th>Patient id</th>
 						<th>Name</th>
 						<th>Gender</th>
 						<th>DOB</th>
@@ -45,17 +44,16 @@ tr:hover {
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="pat" items="${allpatient}">
+					<c:forEach var="patient" items="${allpatient}">
 						<tr>
-							<td>${pat.patientId}</td>
-							<td>${pat.name}</td>
-							<td>${pat.gender}</td>
-							<td>${pat.dob}</td>
-							<td>${pat.bloodGroup}</td>
-							<td>${pat.emailId}</td>
-							<td>${pat.mobileNumber}</td>
-							<td>${pat.location}</td>
-							<td>${pat.disease}</td>
+							<td>${patient.name}</td>
+							<td>${patient.gender}</td>
+							<td>${patient.dob}</td>
+							<td>${patient.bloodGroup}</td>
+							<td>${patient.emailId}</td>
+							<td>${patient.mobileNumber}</td>
+							<td>${patient.location}</td>
+							<td>${patient.disease}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

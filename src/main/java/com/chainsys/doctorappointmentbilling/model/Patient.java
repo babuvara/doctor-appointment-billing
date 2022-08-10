@@ -24,32 +24,32 @@ public class Patient {
 	@SequenceGenerator(name="PATIENT_ID_REF",sequenceName ="PATIENT_ID_REF",allocationSize = 1)
 	@Column(name = "PATIENT_ID")
 	private int patientId;
-	@Size(min =3,message =" Name Size is not less than 3")
-	@NotBlank( message ="Name can not be Empty")
+	// @Size(min =3,message =" Name Size is not less than 3")
+	// @NotBlank( message ="Name can not be Empty")
 	@Column(name = "NAME")
 	private String name;
-	@NotBlank( message ="Mandatory field")
+	// @NotBlank( message ="Mandatory field")
 	@Column(name = "GENDER")
 	private String gender;  
 	@Column(name = "DOB")
 	private Date dob;
-	@NotBlank( message ="This field can not be Empty")
+	// @NotBlank( message ="This field can not be Empty")
 	@Column(name = "BLOOD_GROUP")
 	private String bloodGroup;
 	@Email(message="Please Enter a Valid Email Id !!")
 	@Column(name = "EMAIL_ID")
 	private String emailId;
-	@Size(min =8,message =" Password Contains Minimum 8 Characters")
+	// @Size(min =8,message =" Password Contains Minimum 8 Characters")
 	// @Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The Password can contain only characters and digits")
-	@NotBlank( message ="Password is must field")
+	// @NotBlank( message ="Password is must field")
 	@Column(name = "PASSWORD")
 	private String password;
 	@Column(name = "MOBILE_NUMBER")
 	private long mobileNumber;
-	@NotBlank( message ="Location can not be Empty")
+	// @NotBlank( message ="Location can not be Empty")
 	@Column(name = "LOCATION")
 	private String location;
-	@NotBlank( message ="Disease can not be Empty")
+	// @NotBlank( message ="Disease can not be Empty")
 	@Column(name = "DISEASE")
 	private String disease;
 

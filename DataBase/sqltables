@@ -1,43 +1,44 @@
-    create table PATIENT(
-                        PATIENT_ID NUMBER(6) PRIMARY KEY,
-                        NAME VARCHAR(20),
-                        GENDER VARCHAR(20),
-                        DOB DATE,
-                        BLOOD_GROUP VARCHAR(20),
-                        EMAIL_ID VARCHAR(45) UNIQUE,
-                        PASSWORD VARCHAR(45),
-                        MOBILE_NUMBER LONG,
-                        LOCATION VARCHAR(45),
-                        DISEASE VARCHAR(45));
-                       
+create table PATIENT(
+                        PATIENT_ID NUMBER NOT NULL,
+                        NAME VARCHAR(45) NOT NULL,
+                        GENDER VARCHAR(11)NOT NULL,
+                        DOB DATE NOT NULL,
+                        BLOOD_GROUP VARCHAR(10) NOT NULL,
+                        EMAIL_ID VARCHAR(60) NOT NULL UNIQUE,
+                        PASSWORD VARCHAR(45) NOT NULL,
+                        MOBILE_NUMBER LONG NOT NULL,
+                        LOCATION VARCHAR(45) NOT NULL,
+                        DISEASE VARCHAR(45) NOT NULL,
+                        PRIMARY KEY (PATIENT_ID));
 --------------------------------------------------------------------------------
 create table DOCTORDETAILS(
-                         DOCTOR_ID NUMBER(6) primary key,
-                         DOCTOR_NAME VARCHAR(45),
-                         PASSWORD VARCHAR(45),
-                         speciality VARCHAR(45),
-                         AVAILABLE_TIME  VARCHAR(20),
-                         EXPERIENCE  VARCHAR(45));
-                        
+                         DOCTOR_ID NUMBER NOT NULL,
+                         DOCTOR_NAME VARCHAR(45) NOT NULL,
+                         PASSWORD VARCHAR(45) NOT NULL,
+                         SPECIALITY VARCHAR(45) NOT NULL,
+                         AVAILABLE_TIME  VARCHAR(15) NOT NULL,
+                         EXPERIENCE  VARCHAR(45) NOT NULL,
+                         PRIMARY KEY (DOCTOR_ID));       
 --------------------------------------------------------------------------------
 create table APPOINTMENT(
-                        APPOINTMENT_ID NUMBER(6) PRIMARY KEY,
-                        APPOINTMENT_DATE DATE,
-                        APPOINTMENT_TIME VARCHAR(20),
-                        PATIENT_ID NUMBER(6),
-                        PURPOSE VARCHAR(45),
-                        DOCTOR_ID NUMBER(6),
-                        APPOINTMENT_STATUS VARCHAR(45),
+                        APPOINTMENT_ID NUMBER NOT NULL,
+                        APPOINTMENT_DATE DATE NOT NULL,
+                        APPOINTMENT_TIME VARCHAR(10) NOT NULL,
+                        PATIENT_ID NUMBER NOT NULL,
+                        DOCTOR_ID NUMBER NOT NULL,
+                        APPOINTMENT_STATUS VARCHAR(10) NOT NULL,
+                        PRIMARY KEY (APPOINTMENT_ID),
                         FOREIGN KEY(PATIENT_ID)REFERENCES PATIENT(PATIENT_ID),
                         FOREIGN KEY(DOCTOR_ID)REFERENCES DOCTORDETAILS(DOCTOR_ID));
 --------------------------------------------------------------------------------
-create table BILLING(HOSPITAL_NAME VARCHAR(45) PRIMARY KEY,
-                        DOCTOR_ID NUMBER(6),
-                        PATIENT_ID NUMBER(6),
-                        PURPOSE VARCHAR(45),
-                        APPOINTMENT_ID NUMBER(6),
-                        NET_BILL float,
-                        FOREIGN KEY(DOCTOR_ID)REFERENCES DOCTORDETAILS(DOCTOR_ID),
+create table BILLING(
+                        BILL_ID NUMBER NOT NULL,
+                        HOSPITAL_NAME VARCHAR(45) NOT NULL,
+                        PATIENT_ID NUMBER NOT NULL,
+                        PURPOSE VARCHAR(45) NOT NULL,
+                        APPOINTMENT_ID NUMBER NOT NULL,
+                        NET_BILL float NOT NULL,
+                        PRIMARY KEY (BILL_ID),
                         FOREIGN KEY(PATIENT_ID)REFERENCES PATIENT(PATIENT_ID),
                         FOREIGN KEY(APPOINTMENT_ID)REFERENCES APPOINTMENT(APPOINTMENT_ID));
 --------------------------------------------------------------------------------
@@ -53,4 +54,20 @@ commit;
 drop table billing;
 drop table appointment;
 drop table doctordetails;
-drop table person;
+drop table PATIENT;
+--------------------------------------------------------------------------------
+
+desc doctordetails;
+desc billing;
+
+--------------------------------------------------------------------------------
+               
+create sequence  PATIENT_ID_REF start with 101 increment by 1;
+create sequence  DOCTOR_ID_REF start with 201 increment by 1;
+create sequence  APPOINTMENT_ID_REF start with 301 increment by 1;
+create sequence  BILL_ID_REF start with 501 increment by 1;
+
+drop sequence PATIENT_ID_REF;
+drop sequence DOCTOR_ID_REF;
+drop sequence APPOINTMENT_ID_REF;
+drop sequence BILL_ID_REF;

@@ -25,8 +25,8 @@ public class PatientService {
 	}
 
 	@Transactional
-	public Patient save(Patient per) {
-		return patientRepo.save(per);
+	public Patient save(Patient patient) {
+		return patientRepo.save(patient);
 	}
 
 	public List<Patient> getPatientAccess() {

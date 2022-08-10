@@ -35,16 +35,6 @@ input[type=submit]:hover {
 						modelAttribute="registerdoctordetails">
 						<tr>
 							<div>
-								<td><label for="doctorId">Doctor id</label></td>
-								<td>
-									<div>
-										<form:input path="doctorId" />
-									</div>
-								</td>
-							</div>
-						</tr>
-						<tr>
-							<div>
 								<td><label for="doctorName">Doctor Name</label></td>
 								<td>
 									<div>

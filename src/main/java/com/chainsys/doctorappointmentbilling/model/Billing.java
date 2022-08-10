@@ -5,17 +5,22 @@ package com.chainsys.doctorappointmentbilling.model;
  */
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "BILLING")
 public class Billing {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="BILL_ID_REF")
+	@SequenceGenerator(name="BILL_ID_REF",sequenceName ="BILL_ID_REF",allocationSize = 1)
+	@Column(name = "BILL_ID")
+	private int billId;
 	@Column(name = "HOSPITAL_NAME")
 	private String hospitalName;
-	@Column(name = "DOCTOR_ID")
-	private int doctorId;
 	@Column(name = "PATIENT_ID")
 	private int patientId;
 	@Column(name = "PURPOSE")
@@ -25,20 +30,20 @@ public class Billing {
 	@Column(name = "NET_BILL")
 	private float netBill;
 
+	public int getBillId() {
+		return billId;
+	}
+
+	public void setBillId(int billId) {
+		this.billId = billId;
+	}
+
 	public String getHospitalName() {
 		return hospitalName;
 	}
 
 	public void setHospitalName(String hospitalName) {
 		this.hospitalName = hospitalName;
-	}
-
-	public int getDoctorId() {
-		return doctorId;
-	}
-
-	public void setDoctorId(int doctorId) {
-		this.doctorId = doctorId;
 	}
 
 	public int getPatientId() {

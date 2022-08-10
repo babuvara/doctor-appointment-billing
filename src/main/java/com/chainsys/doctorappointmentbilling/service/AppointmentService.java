@@ -16,16 +16,16 @@ import com.chainsys.doctorappointmentbilling.model.Appointment;
 @Service
 public class AppointmentService {
 	@Autowired
-	private AppointmentRepository appointRepo;
+	private AppointmentRepository appointmentRepo;
 
 	public List<Appointment> getAppointment() {
-		List<Appointment> appList = appointRepo.findAll();
-		return appList;
+		List<Appointment> appointmentList = appointmentRepo.findAll();
+		return appointmentList;
 	}
 
 	@Transactional
-	public Appointment save(Appointment app) {
-		return appointRepo.save(app);
+	public Appointment save(Appointment appointment) {
+		return appointmentRepo.save(appointment);
 	}
 
 }

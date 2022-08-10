@@ -56,9 +56,9 @@ input[type=submit]:hover {
 										<form:radiobutton path="gender" value="Female" />
 										Transgender:
 										<form:radiobutton path="gender" value="Transgender" />
-										<form:errors path="gender" />
 									</div>
 								</td>
+									<form:errors path="gender" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -92,7 +92,7 @@ input[type=submit]:hover {
 							<div>
 								<td><label for="emailId">Email id</label></td>
 								<td><div>
-										<form:input path="emailId" placeholder="email" required="true"/>
+										<form:input path="emailId" placeholder="Email" required="true"/>
 									</div></td>
 									<form:errors path="emailId" cssClass="text-danger" />
 							</div>
@@ -101,10 +101,8 @@ input[type=submit]:hover {
 							<div>
 								<td><label for="password">Password</label></td>
 								<td><div>
-										<form:input path="password" pattern="^(?=.[A-Za-z])(?=.\\d)(?=.[@$!%#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
-                        required="true"/>
+										<form:input path="password" placeholder="Password" required="true"/>
 									</div></td>
-									<form:errors path="password" cssClass="text-danger" />
 							</div>
 						</tr>
 						<tr>
@@ -171,7 +169,7 @@ input[type=submit]:hover {
 								<td><label for="disease">Disease</label></td>
 								<td>
 									<div>
-										<form:input path="disease" />
+										<form:input path="disease" placeholder="Disease" required="true"/>
 									</div>
 								</td>
 								<form:errors path="disease" cssClass="text-danger" />

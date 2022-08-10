@@ -32,7 +32,6 @@ tr:hover {
 		<table>
 			<thead>
 				<tr>
-					<th>Doctor id</th>
 					<th>Doctor Name</th>
 					<th>Speciality</th>
 					<th>Available Time</th>
@@ -40,13 +39,12 @@ tr:hover {
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="docDet" items="${alldoctordetails}">
+				<c:forEach var="doctorDetails" items="${alldoctordetails}">
 					<tr>
-						<td>${docDet.doctorId}</td>
-						<td>${docDet.doctorName}</td>
-						<td>${docDet.speciality}</td>
-						<td>${docDet.availableTime}</td>
-						<td>${docDet.experience}</td>
+						<td>${doctorDetails.doctorName}</td>
+						<td>${doctorDetails.speciality}</td>
+						<td>${doctorDetails.availableTime}</td>
+						<td>${doctorDetails.experience}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

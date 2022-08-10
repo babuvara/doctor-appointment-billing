@@ -33,7 +33,6 @@ tr:hover {
 			<thead>
 				<tr>
 					<th>Hospital Name</th>
-					<th>Doctor id</th>
 					<th>Patient id</th>
 					<th>Purpose</th>
 					<th>Appointment id</th>
@@ -44,7 +43,6 @@ tr:hover {
 				<c:forEach var="bill" items="${allbill}">
 					<tr>
 						<td>${bill.hospitalName}</td>
-						<td>${bill.doctorId}</td>
 						<td>${bill.patientId}</td>
 						<td>${bill.purpose}</td>
 						<td>${bill.appointmentId}</td>

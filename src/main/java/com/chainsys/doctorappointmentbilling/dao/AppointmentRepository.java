@@ -13,7 +13,8 @@ import com.chainsys.doctorappointmentbilling.model.Appointment;
 @Repository
 public interface AppointmentRepository extends CrudRepository<Appointment, Integer> {
 	Appointment findByAppointmentId(int id);
-	Appointment save(Appointment app);
+
+	Appointment save(Appointment appointment);
 
 	List<Appointment> findAll();
 

@@ -59,12 +59,6 @@ input[type=submit]:hover {
 						</div>
 					</div>
 					<div>
-						<label for="purpose">Purpose</label>
-						<div>
-							<form:input path="purpose" />
-						</div>
-					</div>
-					<div>
 						<label for="doctorId">Doctor id</label>
 						<div>
 							<form:input path="doctorId" />
