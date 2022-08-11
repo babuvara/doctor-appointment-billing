@@ -10,7 +10,7 @@
 <style type="text/css">
 body {
 	background-image:
-		url("https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2JlY29taW5nLWRvY3Rvci5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==");
+		url("https://img.freepik.com/free-photo/doctor-nurses-special-equipment_23-2148980721.jpg?w=2000");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -101,9 +101,11 @@ label {
 					</tr>
 				</form:form>
 			</table>
-			<label>Don't have an Account?</label> <a href="registerpatient">
+			<div>
+			<label>Don't have an Account?</label> <a href="signuppatient">
 				<input onclick="change()" type="button" value="Sign Up"></input>
 			</a>
+			</div>
 		</div>
 	</div>
 </body>

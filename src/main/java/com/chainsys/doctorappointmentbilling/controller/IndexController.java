@@ -10,6 +10,10 @@ public class IndexController {
 	@GetMapping("/")
 	public String index() {
 		return "index";
+	}
+		@GetMapping("/register")
+		public String register() {
+			return "register";
 
 	}
 }

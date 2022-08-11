@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
 import com.chainsys.doctorappointmentbilling.service.DoctorDetailsService;
@@ -34,11 +35,13 @@ public class DoctorDetailsController {
 	}
 
 	@GetMapping("/bookdoctordetails")
-	public String BookDoctorDetails(Model model) {
+	public String BookDoctorDetails( Model model) {
 		List<DoctorDetails> doctorDetailsList = doctorDetailsService.getDoctorDetails();
 		model.addAttribute("alldoctordetails", doctorDetailsList);
+		
 		return "book-doctordetails";
 	}
+	
 
 	@GetMapping("/registerdoctordetails")
 	public String showRegisterForm(Model model) {
@@ -54,6 +57,7 @@ public class DoctorDetailsController {
 			return "register-doctordetails";
 		} else {
 			doctorDetailsService.save(doctor);
+			
 			return "Registration-success-doctor";
 		}
 	}

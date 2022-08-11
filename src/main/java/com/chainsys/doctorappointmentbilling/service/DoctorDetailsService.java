@@ -22,6 +22,10 @@ public class DoctorDetailsService {
 		List<DoctorDetails> doctorList = doctorDetailsRepo.findAll();
 		return doctorList;
 	}
+	
+	public DoctorDetails findById(int id) {
+		return doctorDetailsRepo.findById(id);
+	}
 
 	@Transactional
 	public DoctorDetails save(DoctorDetails doctorDetails) {

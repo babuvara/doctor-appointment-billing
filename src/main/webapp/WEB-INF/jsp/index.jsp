@@ -1,38 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Index</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
+<title>Home Page</title>
+<style type="text/css">
+<%@include file="/WEB-INF/css/index.css"%>
+</style>
 </head>
-<body style="background-color: powderblue;">
 <body>
-	<center>
-		<h1>Doctor-Appointment</h1>
-		<ul class="nav nav-tabs nav-dark bg-warning">
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="/">Home</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="/patient/patientlogin">Patient Login</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="/doctordetails/doctorlogin">Doctor Login</a></li>
-		<img
-			src="https://previews.123rf.com/images/stockbroker/stockbroker1507/stockbroker150705607/42402717-doctor-sitting-by-male-patient-s-bed-in-hospital.jpg"
-			img-fluid" alt="..."> <br>
-			<a
-				href="/appointment/getappointment">Appointment List</a> <br> <a
-				href="/appointment/registerappointment">Register Appointment</a> <br>
-			<a href="/billing/getbill">Bill Details</a> <br> <a
-				href="/billing/registerbill">Register Bill</a>
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>MyHealth</a>
+			</div>
+			<ul>
+				<li><a href="/register">Register</a></li>
+				<li><a href="/patient/patientlogin">Patient Login</a></li>
+				<li><a href="/doctordetails/doctorlogin">Doctor Login</a></li>
+			</ul>
 		</div>
-	</center>
-</body>
+	</nav>
+	<div class="img"></div>
+	<div class="center">
+		<div class="title">Doctor-Appointment</div>
+		<div class="btns"></div>
+	</div>
 </body>
 </html>

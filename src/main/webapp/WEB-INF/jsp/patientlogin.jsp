@@ -14,16 +14,19 @@
 <body>
 	<center>
 		<h1>Welcome</h1>
-		<ul class="nav nav-tabs nav-dark bg-success">
-			<li class="nav-item"><a class="nav-link"
-				href="/doctordetails/getdoctordetails">Doctors Lists</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="/doctordetails/bookdoctordetails">Book Doctors</a></li>
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="/">Logout</a></li>
-		</ul>
-		<img
-			src="https://www.qmatic.com/hubfs/images/gl/blog/patient-appointment-systems-in-hospitals-featured2.png"
-			img-fluid" alt="...">
+		
+			<ul class="nav nav-tabs nav-dark bg-success">
+				<li class="nav-item"><a class="nav-link"
+					href="/doctordetails/getdoctordetails">Doctors Lists</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="/doctordetails/bookdoctordetails">Book Doctors</a></li>
+				<li class="nav-item"><a class="nav-link active"
+					aria-current="page" href="/">Logout</a></li>
+			</ul>
+			<img
+				src="https://www.qmatic.com/hubfs/images/gl/blog/patient-appointment-systems-in-hospitals-featured2.png"
+				img-fluid" alt="...">
+
+		
 </body>
 </html>

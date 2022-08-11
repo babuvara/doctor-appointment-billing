@@ -8,19 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>DoctorDetails list</title>
 <style>
-table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-
-th, td {
-	border-color: #96D4D4;
-}
-
-tr:hover {
-	background-color: #D6EEEE;
-}
+<%@include file="/WEB-INF/css/book-doctordetails.css"%>
 </style>
 </head>
 <body>
@@ -48,7 +36,7 @@ tr:hover {
 						<td>${doctorDetails.speciality}</td>
 						<td>${doctorDetails.availableTime}</td>
 						<td>${doctorDetails.experience}</td>
-						<td><a href="/appointment/getappointment"><input
+						<td><a href="/appointment/registerappointment?doctorId=${doctorDetails.doctorId}"><input
 								onclick="change()" type="button" value="Book" id="myButton1"></input></a></td>
 					</tr>
 				</c:forEach>
@@ -56,5 +44,10 @@ tr:hover {
 		</table>
 	</center>
 	</div>
+	
+
+	
+	
+	
 </body>
 </html>

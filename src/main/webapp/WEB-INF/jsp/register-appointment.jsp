@@ -35,12 +35,6 @@ input[type=submit]:hover {
 				modelAttribute="registerappointment">
 				<center>
 					<div>
-						<label for="appointmentId">Appointment id</label>
-						<div>
-							<form:input path="appointmentId" />
-						</div>
-					</div>
-					<div>
 						<label for="appointmentDate">Appointment Date</label>
 						<div>
 							<form:input path="appointmentDate" type="date" />
@@ -65,7 +59,7 @@ input[type=submit]:hover {
 						</div>
 					</div>
 					<div>
-						<labe for="appointmentStatus">Appointment Status</label>
+						<label for="appointmentStatus">Appointment Status</label>
 						<div>
 							<form:input path="appointmentStatus" />
 						</div>

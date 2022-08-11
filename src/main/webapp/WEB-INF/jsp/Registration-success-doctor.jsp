@@ -24,11 +24,10 @@ input[type=button]:hover {
 </head>
 <body style="background-color: powderblue;">
 <body>
-	<center>
+	
 		<h1 style='text: colour= green;'>Registered Successfully</h1>
-		<!--  <a href="/doctordetails/doctorlogin">Go To Login</a>  -->
 		<a href="/doctordetails/doctorlogin"><input onclick="change()"
 			type="button" value="Go To Login" id="myButton1"></input></a>
-	</center>
+	
 </body>
 </html>
