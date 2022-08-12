@@ -5,23 +5,28 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Doctor Login</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
+<style type="text/css">
+<%@include file="/WEB-INF/css/doctorlogin.css"%>
+</style>
 </head>
-<body style="background-color: beige;">
 <body>
-	<center>
-		<h1>Have a Nice Day Doctor !!</h1>
-		<ul class="nav nav-tabs nav-dark bg-warning">
-			<li class="nav-item"><a class="nav-link"
-				href="/patient/getpatient">Patients Lists</a></li>
-			<li class="nav-item"><a class="nav-link active"
-				aria-current="page" href="/">Logout</a></li>
-		</ul>
-		<img
-			src="https://starhospitals.in/img/internationalpatients/IN-Patient-Guide.jpg"
-			img-fluid" alt="...">
+	<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>MyHealth</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/patient/getpatient">Patients Lists</a></li>
+				<li><a href="/appointment/getappointment">Appointments Lists</a></li>
+				<li><a href="/">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="img"></div>
+	<div class="center">
+		<div class="title">Have a nice day Doctor !</div>
+		<div class="btns"></div>
+	</div>
 </body>
 </html>

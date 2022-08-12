@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
+import com.chainsys.doctorappointmentbilling.model.Patient;
 import com.chainsys.doctorappointmentbilling.service.DoctorDetailsService;
 
 @Controller
@@ -58,6 +59,21 @@ public class DoctorDetailsController {
 		} else {
 			doctorDetailsService.save(doctor);
 			
+			return "Registration-success-doctor";
+		}
+	}
+	@GetMapping("/signupdoctor")
+	public String showDoctorDetailsSignUpForm(Model model) {
+		DoctorDetails doctorDetails = new DoctorDetails();
+		model.addAttribute("signupdoctor", doctorDetails);
+		return "signup-doctordetails";
+	}
+	@PostMapping("/signup")
+	public String addSignUpDoctor(@Valid @ModelAttribute("signupdoctor") DoctorDetails doctor, BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return "signup-doctordetails";
+		} else {
+			doctorDetailsService.save(doctor);
 			return "Registration-success-doctor";
 		}
 	}

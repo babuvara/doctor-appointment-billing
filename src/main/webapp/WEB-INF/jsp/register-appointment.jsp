@@ -1,75 +1,79 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Register Appointment</title>
+<title>Appointment</title>
 <style>
-input[type=submit] {
-	width: 10%;
-	background: purple;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-input[type=submit]:hover {
-	background: #000;
-}
+<%@include file="/WEB-INF/css/register-patient.css"%>
 </style>
-<center>
-	<h1>Appointment-Registration</h1>
-</center>
 </head>
-<body style="background-color: powderblue;">
+<body style="background-color: Dodgerblue;">
 <body>
-	<div id="root">
-		<div id="form">
-			<form:form action="register" method="post"
-				modelAttribute="registerappointment">
-				<center>
-					<div>
-						<label for="appointmentDate">Appointment Date</label>
-						<div>
-							<form:input path="appointmentDate" type="date" />
-						</div>
-					</div>
-					<div>
-						<label for="appointmentTime">Appointment Time</label>
-						<div>
-							<form:input path="appointmentTime" />
-						</div>
-					</div>
-					<div>
-						<label for="patientId">Patient id</label>
-						<div>
-							<form:input path="patientId" />
-						</div>
-					</div>
-					<div>
-						<label for="doctorId">Doctor id</label>
-						<div>
-							<form:input path="doctorId" />
-						</div>
-					</div>
-					<div>
-						<label for="appointmentStatus">Appointment Status</label>
-						<div>
-							<form:input path="appointmentStatus" />
-						</div>
-					</div>
-					<div>
-						<input type="submit" value="submit">
-					</div>
-				</center>
-			</form:form>
-		</div>
+   <h2 align="center">Book Your Appointment</h2>
+	<div class="container">
+		<form:form action="register" method="post"
+			modelAttribute="registerappointment">
+
+
+			<div class="row">
+				<div class="col-25">
+
+					<label for="appointmentDate">Appointment Date</label>
+
+				</div>
+				<div class="col-75">
+					<form:input path="appointmentDate" type="date" required="true" />
+				</div>
+				<form:errors path="appointmentDate" cssClass="text-danger" />
+			</div>
+				<div class="row">
+				<div class="col-25">
+					<label for="appointmentTime">Appointment Time</label>
+				</div>
+				<div class="col-75">
+					<form:select path="appointmentTime">
+						<form:errors path="appointmentTime" />
+						<form:option value="9 - 10 AM">9 - 10 AM</form:option>
+						<form:option value="10 - 11 AM">10 - 11 AM</form:option>
+						<form:option value="11 - 12 PM">11 - 12 PM</form:option>
+						<form:option value="12 - 1 PM">12 - 1 PM</form:option>
+						<form:option value="1 - 2 PM">1 - 2 PM</form:option>
+						<form:option value="2 - 3 PM">2 - 3 PM</form:option>
+						<form:option value="3 - 4 PM">3 - 4 PM</form:option>
+						<form:option value="4 - 5 PM">4 - 5 PM</form:option>
+						<form:option value="5 - 6 PM">5 - 6 PM</form:option>
+					</form:select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+
+					<label for="patientId">Patient id</label>
+
+				</div>
+				<div class="col-75">
+					<form:input path="patientId" placeholder="patient id" required="true" />
+				</div>
+				<form:errors path="patientId" cssClass="text-danger" />
+			</div>
+			<div class="row">
+				<div class="col-25">
+
+					<label for="doctorId">Doctor id</label>
+
+				</div>
+				<div class="col-75">
+					<form:input path="doctorId" placeholder="doctor id" required="true" />
+				</div>
+				<form:errors path="doctorId" cssClass="text-danger" />
+			</div>
+			<div class="row">
+				<form:button class="btn">Submit</form:button>
+			</div>
+		</form:form>
 	</div>
 </body>
 </html>
