@@ -21,13 +21,13 @@
 			<div class="row">
 				<div class="col-25">
 
-					<label for="doctorName">Name</label>
+					<label for="doctorEmail">Email</label>
 				
 				</div>
 				<div class="col-75">
-					<form:input path="doctorName" placeholder="Doctor Name" required="true" />
+					<form:input path="doctorEmail" placeholder="Doctor Email" required="true" />
 				</div>
-				<form:errors path="doctorName" cssClass="text-danger" />
+				<form:errors path="doctorEmail" cssClass="text-danger" />
 			</div>
 				<div class="row">
 				<div class="col-25">

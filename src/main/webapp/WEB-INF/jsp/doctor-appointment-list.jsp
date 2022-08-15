@@ -7,6 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Appointments Details</title>
+<style>
+<%@include file="/WEB-INF/css/list-patient.css"%>
+</style>
 </head>
 <body>
 	<div id="root">

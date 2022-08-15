@@ -8,36 +8,19 @@
 <meta charset="ISO-8859-1">
 <title>Appointment list</title>
 <style>
-table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-
-th, td {
-	border-color: #96D4D4;
-}
-
-tr:hover {
-	background-color: #D6EEEE;
-}
+<%@include file="/WEB-INF/css/list-patient.css"%>
 </style>
 </head>
-<body style="background-color: powderblue;">
 <body>
-	<center>
-		<div style="width: 100%" style="text-align: center;">
-			<h1 style="color: tomato">Appointments list</h1>
-	</center>
+			<h1>Appointments list</h1>
 	<div id="table root">
-		<center>
 			<table>
 				<thead>
 					<tr>
 						<th>Appointment id</th>
 						<th>Appointment Date</th>
 						<th>Appointment Time</th>
-						<th>Patient id</th>
+						<th>Patient Email</th>
 						<th>Doctor id</th>
 						<th>Appointment Status</th>
 					</tr>
@@ -48,14 +31,13 @@ tr:hover {
 							<td>${appointment.appointmentId}</td>
 							<td>${appointment.appointmentDate}</td>
 							<td>${appointment.appointmentTime}</td>
-							<td>${appointment.patientId}</td>
+							<td>${appointment.patientEmail}</td>
 							<td>${appointment.doctorId}</td>
 							<td>${appointment.appointmentStatus}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-		</center>
 	</div>
 </body>
 </html>

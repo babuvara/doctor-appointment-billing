@@ -8,11 +8,10 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.doctorappointmentbilling.dao.PatientRepository;
 import com.chainsys.doctorappointmentbilling.model.Patient;
+import com.chainsys.doctorappointmentbilling.repository.PatientRepository;
 
 @Service
 public class PatientService {

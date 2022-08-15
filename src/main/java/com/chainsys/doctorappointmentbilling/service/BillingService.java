@@ -10,8 +10,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.doctorappointmentbilling.dao.BillingRepository;
 import com.chainsys.doctorappointmentbilling.model.Billing;
+import com.chainsys.doctorappointmentbilling.repository.BillingRepository;
 
 @Service
 public class BillingService {

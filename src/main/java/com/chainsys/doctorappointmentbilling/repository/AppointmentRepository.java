@@ -1,4 +1,4 @@
-package com.chainsys.doctorappointmentbilling.dao;
+package com.chainsys.doctorappointmentbilling.repository;
 
 /**
  * @author babu3107
@@ -14,6 +14,7 @@ import com.chainsys.doctorappointmentbilling.model.Appointment;
 public interface AppointmentRepository extends CrudRepository<Appointment, Integer> {
 	Appointment findByAppointmentId(int id);
 
+	@SuppressWarnings("unchecked")
 	Appointment save(Appointment appointment);
 
 	List<Appointment> findAll();

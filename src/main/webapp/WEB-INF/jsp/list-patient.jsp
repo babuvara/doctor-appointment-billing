@@ -8,28 +8,12 @@
 <meta charset="ISO-8859-1">
 <title>Patients list</title>
 <style>
-table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-
-th, td {
-	border-color: #96D4D4;
-}
-
-tr:hover {
-	background-color: #D6EEEE;
-}
+<%@include file="/WEB-INF/css/list-patient.css"%>
 </style>
 </head>
 <body>
-	<center>
-		<div style="width: 100%" style="text-align: center;">
-			<h1 style="color: powderblue">Patients list</h1>
-	</center>
-	<div id="table root">
-		<center>
+		<h1>Patients list</h1>
+		<div id="table root">
 			<table>
 				<thead>
 					<tr>
@@ -40,7 +24,7 @@ tr:hover {
 						<th>Email id</th>
 						<th>Mobile Number</th>
 						<th>Location</th>
-						<th>Disease</th>
+						<th>Symptoms</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -53,13 +37,11 @@ tr:hover {
 							<td>${patient.emailId}</td>
 							<td>${patient.mobileNumber}</td>
 							<td>${patient.location}</td>
-							<td>${patient.disease}</td>
+							<td>${patient.symptoms}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-		</center>
-	</div>
-	</div>
+		</div>
 </body>
 </html>

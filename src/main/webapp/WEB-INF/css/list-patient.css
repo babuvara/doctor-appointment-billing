@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+h1 {
+	color: beige;
+	margin-left:575px;
+	border-color: white;
+}
+
+table, th, td {
+	background-color: wheat;
+	border-color: white;
+	margin-left:200px;
+	border: 1px solid black;
+	padding: 15px;
+}
+
+th, td {
+	border-color: #96D4D4;
+}
+
+tr:hover {
+	background-color: #D6EEEE;
+}
+
+body {
+	background-color: Dodgerblue;
+}
+

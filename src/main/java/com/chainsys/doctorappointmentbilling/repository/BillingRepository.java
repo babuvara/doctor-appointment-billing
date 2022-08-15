@@ -1,4 +1,4 @@
-package com.chainsys.doctorappointmentbilling.dao;
+package com.chainsys.doctorappointmentbilling.repository;
 
 /**
  * @author babu3107
@@ -13,6 +13,7 @@ import com.chainsys.doctorappointmentbilling.model.Billing;
 @Repository
 public interface BillingRepository extends CrudRepository<Billing, Integer> {
 
+	@SuppressWarnings("unchecked")
 	Billing save(Billing bill);
 
 	List<Billing> findAll();

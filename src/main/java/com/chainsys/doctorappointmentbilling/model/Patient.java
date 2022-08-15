@@ -20,8 +20,8 @@ import javax.validation.constraints.Size;
 @Table(name = "PATIENT")
 public class Patient {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO,generator="PATIENT_ID_REF")
-	@SequenceGenerator(name="PATIENT_ID_REF",sequenceName ="PATIENT_ID_REF",allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "PATIENT_ID_REF")
+	@SequenceGenerator(name = "PATIENT_ID_REF", sequenceName = "PATIENT_ID_REF", allocationSize = 1)
 	@Column(name = "PATIENT_ID")
 	private int patientId;
 	// @Size(min =3,message =" Name Size is not less than 3")
@@ -30,17 +30,18 @@ public class Patient {
 	private String name;
 	// @NotBlank( message ="Mandatory field")
 	@Column(name = "GENDER")
-	private String gender;  
+	private String gender;
 	@Column(name = "DOB")
 	private Date dob;
 	// @NotBlank( message ="This field can not be Empty")
 	@Column(name = "BLOOD_GROUP")
 	private String bloodGroup;
-	@Email(message="Please Enter a Valid Email Id !!")
+	@Email(message = "Please Enter a Valid Email Id !!")
 	@Column(name = "EMAIL_ID")
 	private String emailId;
 	// @Size(min =8,message =" Password Contains Minimum 8 Characters")
-	// @Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The Password can contain only characters and digits")
+	// @Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The Password can contain only
+	// characters and digits")
 	// @NotBlank( message ="Password is must field")
 	@Column(name = "PASSWORD")
 	private String password;
@@ -50,8 +51,16 @@ public class Patient {
 	@Column(name = "LOCATION")
 	private String location;
 	// @NotBlank( message ="Disease can not be Empty")
-	@Column(name = "DISEASE")
-	private String disease;
+	@Column(name = "SYMPTOMS")
+	private String symptoms;
+
+	public String getSymptoms() {
+		return symptoms;
+	}
+
+	public void setSymptoms(String symptoms) {
+		this.symptoms = symptoms;
+	}
 
 	public int getPatientId() {
 		return patientId;
@@ -123,14 +132,6 @@ public class Patient {
 
 	public void setLocation(String location) {
 		this.location = location;
-	}
-
-	public String getDisease() {
-		return disease;
-	}
-
-	public void setDisease(String disease) {
-		this.disease = disease;
 	}
 
 }

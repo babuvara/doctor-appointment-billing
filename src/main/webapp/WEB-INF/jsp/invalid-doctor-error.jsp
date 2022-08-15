@@ -23,10 +23,8 @@ input[type=button]:hover {
 </style>
 </head>
 <body>
-	<center>
-		<h2>Invalid Name and Password</h2>
-		<div>Check your user name and password</div>
-		<a href="/doctordetails/doctorlogin"> Return to Doctor login</a>
-	</center>
+	<h2>Invalid Name and Password</h2>
+	<div>Check your user name and password</div>
+	<a href="/doctordetails/doctorlogin"> Return to Doctor login</a>
 </body>
 </html>

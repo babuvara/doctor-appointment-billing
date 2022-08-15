@@ -8,27 +8,12 @@
 <meta charset="ISO-8859-1">
 <title>Billing list</title>
 <style>
-table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-
-th, td {
-	border-color: #96D4D4;
-}
-
-tr:hover {
-	background-color: #D6EEEE;
-}
+<%@include file="/WEB-INF/css/list-patient.css"%>
 </style>
 </head>
 <body>
-	<center>
 		<h1 style="color: Tomato">Billing List</h1>
 		<div id="table root">
-	</center>
-	<center>
 		<table>
 			<thead>
 				<tr>
@@ -36,7 +21,7 @@ tr:hover {
 					<th>Patient id</th>
 					<th>Purpose</th>
 					<th>Appointment id</th>
-					<th>Net Bill</th>
+					<th>Appointment Bill</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -46,12 +31,11 @@ tr:hover {
 						<td>${bill.patientId}</td>
 						<td>${bill.purpose}</td>
 						<td>${bill.appointmentId}</td>
-						<td>${bill.netBill}</td>
+						<td>${bill.appointmentBill}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
-	</center>
 	</div>
 </body>
 </html>

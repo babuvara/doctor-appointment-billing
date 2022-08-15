@@ -1,4 +1,4 @@
-package com.chainsys.doctorappointmentbilling.dao;
+package com.chainsys.doctorappointmentbilling.repository;
 
 /**
  * @author babu3107
@@ -14,10 +14,11 @@ import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
 public interface DoctorDetailsRepository extends CrudRepository<DoctorDetails, Integer> {
 	DoctorDetails findById(int id);
 
+	@SuppressWarnings("unchecked")
 	DoctorDetails save(DoctorDetails doctorDetails);
 
 	List<DoctorDetails> findAll();
 
-	DoctorDetails findByDoctorNameAndPassword(String name, String password);
+	DoctorDetails findByDoctorEmailAndPassword(String doctorEmail, String password);
 
 }

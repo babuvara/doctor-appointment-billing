@@ -8,27 +8,12 @@
 <meta charset="ISO-8859-1">
 <title>DoctorDetails list</title>
 <style>
-table, th, td {
-	border: 1px solid black;
-	padding: 15px;
-	text-align: left;
-}
-
-th, td {
-	border-color: #96D4D4;
-}
-
-tr:hover {
-	background-color: #D6EEEE;
-}
+<%@include file="/WEB-INF/css/list-patient.css"%>
 </style>
 </head>
 <body>
-	<center>
 		<h1 style="color: Tomato">Doctors List</h1>
 		<div id="table root">
-	</center>
-	<center>
 		<table>
 			<thead>
 				<tr>
@@ -49,7 +34,6 @@ tr:hover {
 				</c:forEach>
 			</tbody>
 		</table>
-	</center>
 	</div>
 </body>
 </html>

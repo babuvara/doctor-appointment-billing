@@ -155,10 +155,10 @@
 			</div>
 			<div class="row">
 				<div class="col-25">
-					<label for="disease">Disease</label>
+					<label for="symptoms">Symptoms</label>
 				</div>
 				<div class="col-75">
-					<form:input path="disease" placeholder="Disease" />
+					<form:input path="symptoms" placeholder="Symptoms" />
 				</div>
 			</div>
 			<div class="row">

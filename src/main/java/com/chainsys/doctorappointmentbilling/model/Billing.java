@@ -15,20 +15,20 @@ import javax.persistence.Table;
 @Table(name = "BILLING")
 public class Billing {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO,generator="BILL_ID_REF")
-	@SequenceGenerator(name="BILL_ID_REF",sequenceName ="BILL_ID_REF",allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "BILL_ID_REF")
+	@SequenceGenerator(name = "BILL_ID_REF", sequenceName = "BILL_ID_REF", allocationSize = 1)
 	@Column(name = "BILL_ID")
 	private int billId;
 	@Column(name = "HOSPITAL_NAME")
 	private String hospitalName;
-	@Column(name = "PATIENT_ID")
-	private int patientId;
+	@Column(name = "PATIENT_EMAIL")
+	private int patientEmail;
 	@Column(name = "PURPOSE")
 	private String purpose;
 	@Column(name = "APPOINTMENT_ID")
 	private int appointmentId;
-	@Column(name = "NET_BILL")
-	private float netBill;
+	@Column(name = "APPOINTMENT_BILL")
+	private float appointmentBill;
 
 	public int getBillId() {
 		return billId;
@@ -46,12 +46,12 @@ public class Billing {
 		this.hospitalName = hospitalName;
 	}
 
-	public int getPatientId() {
-		return patientId;
+	public int getPatientEmail() {
+		return patientEmail;
 	}
 
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
+	public void setPatientEmail(int patientEmail) {
+		this.patientEmail = patientEmail;
 	}
 
 	public String getPurpose() {
@@ -70,12 +70,11 @@ public class Billing {
 		this.appointmentId = appointmentId;
 	}
 
-	public float getNetBill() {
-		return netBill;
+	public float getAppointmentBill() {
+		return appointmentBill;
 	}
 
-	public void setNetBill(float netBill) {
-		this.netBill = netBill;
+	public void setAppointmentBill(float appointmentBill) {
+		this.appointmentBill = appointmentBill;
 	}
-
 }

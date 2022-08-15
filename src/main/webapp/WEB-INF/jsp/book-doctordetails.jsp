@@ -12,11 +12,8 @@
 </style>
 </head>
 <body>
-	<center>
 		<h1 style="color: Tomato">Doctors List</h1>
 		<div id="table root">
-	</center>
-	<center>
 		<table>
 			<thead>
 				<tr>
@@ -25,7 +22,7 @@
 					<th>Speciality</th>
 					<th>Available Time</th>
 					<th>Experience</th>
-					<th>Booking Status</th>
+					<th>Click to Book</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -42,7 +39,6 @@
 				</c:forEach>
 			</tbody>
 		</table>
-	</center>
 	</div>
 </body>
 </html>

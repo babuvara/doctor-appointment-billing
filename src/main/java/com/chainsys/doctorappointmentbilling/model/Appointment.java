@@ -20,16 +20,16 @@ import javax.persistence.Table;
 @Table(name = "APPOINTMENT")
 public class Appointment {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO,generator="APPOINTMENT_ID_REF")
-	@SequenceGenerator(name="APPOINTMENT_ID_REF",sequenceName ="APPOINTMENT_ID_REF",allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "APPOINTMENT_ID_REF")
+	@SequenceGenerator(name = "APPOINTMENT_ID_REF", sequenceName = "APPOINTMENT_ID_REF", allocationSize = 1)
 	@Column(name = "APPOINTMENT_ID")
 	private int appointmentId;
 	@Column(name = "APPOINTMENT_DATE")
 	private Date appointmentDate;
 	@Column(name = "APPOINTMENT_TIME")
 	private String appointmentTime;
-	@Column(name = "PATIENT_ID")
-	private int patientId;
+	@Column(name = "PATIENT_EMAIL")
+	private String patientEmail;
 	@Column(name = "DOCTOR_ID")
 	private int doctorId;
 	@Column(name = "APPOINTMENT_STATUS")
@@ -38,6 +38,14 @@ public class Appointment {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "DOCTOR_ID", nullable = false, insertable = false, updatable = false)
 	private DoctorDetails doctorDetails;
+
+	public DoctorDetails getDoctorDetails() {
+		return doctorDetails;
+	}
+
+	public void setDoctorDetails(DoctorDetails doctorDetails) {
+		this.doctorDetails = doctorDetails;
+	}
 
 	public DoctorDetails getDocDet() {
 		return doctorDetails;
@@ -71,12 +79,12 @@ public class Appointment {
 		this.appointmentTime = appointmentTime;
 	}
 
-	public int getPatientId() {
-		return patientId;
+	public String getPatientEmail() {
+		return patientEmail;
 	}
 
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
+	public void setPatientEmail(String patientEmail) {
+		this.patientEmail = patientEmail;
 	}
 
 	public int getDoctorId() {
@@ -94,5 +102,4 @@ public class Appointment {
 	public void setAppointmentStatus(String appointmentStatus) {
 		this.appointmentStatus = appointmentStatus;
 	}
-
 }

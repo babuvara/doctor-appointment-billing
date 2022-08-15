@@ -45,19 +45,34 @@
 						<form:option value="3 - 4 PM">3 - 4 PM</form:option>
 						<form:option value="4 - 5 PM">4 - 5 PM</form:option>
 						<form:option value="5 - 6 PM">5 - 6 PM</form:option>
+						<form:option value="6 - 7 PM">6 - 7 PM</form:option>
+						<form:option value="7 - 8 PM">7 - 8 PM</form:option>
+						<form:option value="8 - 9 PM">8 - 9 PM</form:option>
+						<form:option value="9 - 10 PM">9 - 10 PM</form:option>
+						<form:option value="10 - 11 PM">10 - 11 PM</form:option>
+						<form:option value="11 - 12 AM">11 - 12 AM</form:option>
+						<form:option value="12 - 1 AM">12 - 1 AM</form:option>
+						<form:option value="1 - 2 AM">1 - 2 AM</form:option>
+						<form:option value="2 - 3 AM">2 - 3 AM</form:option>
+						<form:option value="3 - 4 AM">3 - 4 AM</form:option>
+						<form:option value="4 - 5 AM">4 - 5 AM</form:option>
+						<form:option value="5 - 6 AM">5 - 6 AM</form:option>
+						<form:option value="6 - 7 AM">6 - 7 AM</form:option>
+						<form:option value="7 - 8 AM">7 - 8 AM</form:option>
+						<form:option value="8 - 9 AM">8 - 9 AM</form:option>
 					</form:select>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-25">
 
-					<label for="patientId">Patient id</label>
+					<label for="patientEmail">Patient Email</label>
 
 				</div>
 				<div class="col-75">
-					<form:input path="patientId" placeholder="patient id" required="true" />
+					<form:input path="patientEmail" placeholder="Patient Email" required="true" />
 				</div>
-				<form:errors path="patientId" cssClass="text-danger" />
+				<form:errors path="patientEmail" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">

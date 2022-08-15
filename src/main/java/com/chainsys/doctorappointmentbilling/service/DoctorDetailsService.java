@@ -10,8 +10,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.doctorappointmentbilling.dao.DoctorDetailsRepository;
 import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
+import com.chainsys.doctorappointmentbilling.repository.DoctorDetailsRepository;
 
 @Service
 public class DoctorDetailsService {
@@ -37,10 +37,8 @@ public class DoctorDetailsService {
 		return doctorDetailsRepo.save(doctorDetails);
 	}
 
-	public DoctorDetails getDoctorDetailsByNameAndPassword(String name, String password) {
-
-		return doctorDetailsRepo.findByDoctorNameAndPassword(name, password);
-
+	public DoctorDetails getDoctorDetailsByEmailAndPassword(String doctorEmail, String password) {
+		return doctorDetailsRepo.findByDoctorEmailAndPassword(doctorEmail, password);
 	}
 
 }

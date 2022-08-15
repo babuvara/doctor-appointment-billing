@@ -32,6 +32,17 @@
 			<div class="row">
 				<div class="col-25">
 
+					<label for="doctorEmail">Doctor Email</label>
+
+				</div>
+				<div class="col-75">
+					<form:input path="doctorEmail" placeholder="Doctor Email" required="true" />
+				</div>
+				<form:errors path="doctorEmail" cssClass="text-danger" />
+			</div>
+			<div class="row">
+				<div class="col-25">
+
 					<label for="password">Password</label>
 
 				</div>
@@ -51,16 +62,17 @@
 				</div>
 				<form:errors path="speciality" cssClass="text-danger" />
 			</div>
-			<div class="row">
+				<div class="row">
 				<div class="col-25">
-
-					<label for="availableTime">Available Time</label>
-
+					<label for="bloodGroup">Available Time</label>
 				</div>
 				<div class="col-75">
-					<form:input path="availableTime" placeholder="Available Time" required="true" />
+					<form:select path="availableTime">
+						<form:errors path="availableTime" />
+						<form:option value="O Positive">9 AM - 6 PM</form:option>
+						<form:option value="O Negative">6 PM - 9 AM</form:option>
+					</form:select>
 				</div>
-				<form:errors path="availableTime" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
