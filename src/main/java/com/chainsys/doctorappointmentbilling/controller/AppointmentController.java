@@ -52,5 +52,4 @@ public class AppointmentController {
 		appointmentService.save(appointment);
 		return "redirect:/appointment/getappointmentbyid?appointmentId=" + appointment.getAppointmentId();
 	}
-
 }

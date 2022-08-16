@@ -14,8 +14,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "DOCTORDETAILS")
@@ -25,25 +23,27 @@ public class DoctorDetails {
 	@SequenceGenerator(name = "DOCTOR_ID_REF", sequenceName = "DOCTOR_ID_REF", allocationSize = 1)
 	@Column(name = "DOCTOR_ID")
 	private int doctorId;
-	@Size(min = 3, message = " Name Size is not less than 3")
-	@NotBlank(message = "Name can not be Empty")
+//	@Size(max = 40, min = 3, message = "Name length should be 3 to 40")
+//	@NotNull(message = "Employee Name can't be Empty")
 	@Column(name = "DOCTOR_NAME")
+//	@NotEmpty(message = "*Please enter employeeName")
+//  @Pattern(regexp = "^[a-zA-Z]*$", message = "*Value should be in Alphabets ")
 	private String doctorName;
-	@Size(min = 8, message = " Password Contains Minimum 8 Characters")
-	// @Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The Password can contain only
-	// characters and digits")
-	@NotBlank(message = "Password is must field")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "EMAIL_ID")
+//	@Email(message = "*Invalid Email", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 	private String doctorEmail;
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "PASSWORD")
+//	@Pattern(regexp="^.(?=.{8,})(?=..[0-9])(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=]).$",message="please enter the correct format *Welcome@12")
 	private String password;
-	@NotBlank(message = "Speciality can not be Empty")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "SPECIALITY")
 	private String speciality;
-	@NotBlank(message = "Available Time can not be Empty")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "AVAILABLE_TIME")
 	private String availableTime;
-	@NotBlank(message = "Experience can not be Empty")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "EXPERIENCE")
 	private String experience;
 	@OneToMany(mappedBy = "doctorDetails", fetch = FetchType.LAZY)

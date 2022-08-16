@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Appointment</title>
@@ -12,7 +12,7 @@
 </head>
 <body style="background-color: Dodgerblue;">
 <body>
-   <h2 align="center">Book Your Appointment</h2>
+   <h2>Book Your Appointment</h2>
 	<div class="container">
 		<form:form action="register" method="post"
 			modelAttribute="registerappointment">
@@ -81,8 +81,8 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="doctorId" placeholder="doctor id" required="true" />
-				</div>
+					<form:input path="doctorId" placeholder="doctor id" required="true" readonly="true"/>
+				</div> 
 				<form:errors path="doctorId" cssClass="text-danger" />
 			</div>
 			<div class="row">

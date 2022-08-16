@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.doctorappointmentbilling.model.Billing;
 import com.chainsys.doctorappointmentbilling.service.BillingService;
@@ -31,16 +32,25 @@ public class BillingController {
 	}
 
 	@GetMapping("/registerbill")
-	public String showRegisterForm(Model model) {
+	public String showRegisterForm( Model model) {
 		Billing bill = new Billing();
+		bill.setHospitalName("Apollo");
+		bill.setAppointmentBill(250.50f);
+//		 bill.setPatientEmail(patientEmail);
+//		System.out.println("dfghjkhgfdgh"+ bill.getPatientEmail());
 		model.addAttribute("registerbill", bill);
 		return "register-bill";
 	}
-
 	@PostMapping("/register")
 	public String addNewBill(@ModelAttribute("registerbill") Billing bill) {
 		billService.save(bill);
-		return "redirect:/billing/getbill";
+		return "redirect:/billing/getbillbyid?billId=" +bill.getBillId();
+	}
+	@GetMapping("/getbillbyid")
+	public String finddoctorById(@RequestParam("billId") int id, Model model) {
+		Billing billing = billService.findById(id);
+		model.addAttribute("findbillbyid", billing);
+		return "find-bill-form";
 	}
 
 }

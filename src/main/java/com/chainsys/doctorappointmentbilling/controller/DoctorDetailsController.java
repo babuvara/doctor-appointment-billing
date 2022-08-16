@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.doctorappointmentbilling.model.DoctorDetails;
 import com.chainsys.doctorappointmentbilling.service.DoctorDetailsService;
@@ -90,10 +91,18 @@ public class DoctorDetailsController {
 				.getDoctorDetailsByEmailAndPassword(doctorDetails.getDoctorEmail(), doctorDetails.getPassword());
 		if (doctorLogin != null) {
 
-			return "doctorlogin";
+			return "redirect:/doctordetails/gotodoctorlogin?doctorId="+ doctorLogin.getDoctorId();
 		} else
 			return "invalid-doctor-error";
 
 	}
+	
+	
+
+@GetMapping("/gotodoctorlogin")
+public String goToDashBoard(@RequestParam("doctorId") int id , Model model) {
+    model.addAttribute("doctorId" , id);
+    return "doctorlogin";
+}
 
 }

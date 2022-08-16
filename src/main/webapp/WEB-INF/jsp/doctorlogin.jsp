@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+	
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Doctor Login</title>
@@ -11,17 +13,21 @@
 </head>
 <body>
 	<nav>
+	<form:form modelAttribute="doctorId">
 		<div class="menu">
 			<div class="logo">
 				<a>MyHealth</a>
 			</div>
+			
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/patient/getpatient">Patients Lists</a></li>
 				<li><a href="/appointment/getappointment">Appointments Lists</a></li>
 				<li><a href="/">Logout</a></li>
+				<li><a href="/doctorappointment/getdoctorappointmentlist?doctorId=${doctorId}">My Appointments</a></li>
 			</ul>
 		</div>
+		</form:form>
 	</nav>
 	<div class="img"></div>
 	<div class="center">

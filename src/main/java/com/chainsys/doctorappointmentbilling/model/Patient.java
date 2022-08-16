@@ -13,8 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Past;
 
 @Entity
 @Table(name = "PATIENT")
@@ -24,33 +23,42 @@ public class Patient {
 	@SequenceGenerator(name = "PATIENT_ID_REF", sequenceName = "PATIENT_ID_REF", allocationSize = 1)
 	@Column(name = "PATIENT_ID")
 	private int patientId;
-	// @Size(min =3,message =" Name Size is not less than 3")
-	// @NotBlank( message ="Name can not be Empty")
+//	@Size(max = 40, min = 3, message = "Name length should be 3 to 40")
+//	@NotNull(message = "Name can't be Empty")
 	@Column(name = "NAME")
+//	@NotEmpty(message = "*Please Enter Your Name")
+//  @Pattern(regexp = "^[a-zA-Z]*$", message = "*Value should be in Alphabets ")
 	private String name;
-	// @NotBlank( message ="Mandatory field")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "GENDER")
 	private String gender;
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "DOB")
+	@Past
 	private Date dob;
-	// @NotBlank( message ="This field can not be Empty")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "BLOOD_GROUP")
 	private String bloodGroup;
+//	@NotEmpty( message ="*Mandatory field")
 	@Email(message = "Please Enter a Valid Email Id !!")
 	@Column(name = "EMAIL_ID")
+//	@Email(message = "*Invalid Email", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 	private String emailId;
 	// @Size(min =8,message =" Password Contains Minimum 8 Characters")
 	// @Pattern(regexp="^[a-zA-Z)-9]{5}",message =" The Password can contain only
 	// characters and digits")
-	// @NotBlank( message ="Password is must field")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "PASSWORD")
+//	@Pattern(regexp="^.(?=.{8,})(?=..[0-9])(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=]).$",message="please enter the correct format *Welcome@12")
 	private String password;
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "MOBILE_NUMBER")
+//	@Digits(message = "*Invalid number.", integer = 10, fraction = 0)
 	private long mobileNumber;
-	// @NotBlank( message ="Location can not be Empty")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "LOCATION")
 	private String location;
-	// @NotBlank( message ="Disease can not be Empty")
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "SYMPTOMS")
 	private String symptoms;
 

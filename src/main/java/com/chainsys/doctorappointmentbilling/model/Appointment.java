@@ -15,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Future;
 
 @Entity
 @Table(name = "APPOINTMENT")
@@ -24,11 +25,16 @@ public class Appointment {
 	@SequenceGenerator(name = "APPOINTMENT_ID_REF", sequenceName = "APPOINTMENT_ID_REF", allocationSize = 1)
 	@Column(name = "APPOINTMENT_ID")
 	private int appointmentId;
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "APPOINTMENT_DATE")
+	@Future
 	private Date appointmentDate;
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "APPOINTMENT_TIME")
 	private String appointmentTime;
+//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "PATIENT_EMAIL")
+//	@Email(message = "*Invalid Email", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 	private String patientEmail;
 	@Column(name = "DOCTOR_ID")
 	private int doctorId;
@@ -44,14 +50,6 @@ public class Appointment {
 	}
 
 	public void setDoctorDetails(DoctorDetails doctorDetails) {
-		this.doctorDetails = doctorDetails;
-	}
-
-	public DoctorDetails getDocDet() {
-		return doctorDetails;
-	}
-
-	public void setDocDet(DoctorDetails doctorDetails) {
 		this.doctorDetails = doctorDetails;
 	}
 

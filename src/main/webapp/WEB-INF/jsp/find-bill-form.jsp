@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +16,26 @@
 <body>
    <h2>Bill Details</h2>
 	<div class="container">
-		<form:form action="register" method="post"
-			modelAttribute="registerbill">
+		<form:form action="" 
+			modelAttribute="findbillbyid">
+
+
 			<div class="row">
 				<div class="col-25">
+
+					<label for="billId">Bill Id</label>
+
+				</div>
+				<div class="col-75">
+					<form:input path="billId" readonly="true" required="true" />
+				</div>
+				<form:errors path="billId" cssClass="text-danger" />
+			</div>
+			<div class="row">
+				<div class="col-25">
+
 					<label for="hospitalName">Hospital Name</label>
+
 				</div>
 				<div class="col-75">
 					<form:input path="hospitalName" readonly="true" required="true" />
@@ -32,7 +49,7 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="patientEmail" placeholder="Patient Email" required="true" />
+					<form:input path="patientEmail" readonly="true" required="true" />
 				</div>
 				<form:errors path="patientEmail" cssClass="text-danger" />
 			</div>
@@ -43,7 +60,7 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="purpose" placeholder="purpose" required="true" />
+					<form:input path="purpose" readonly="true" required="true" />
 				</div>
 				<form:errors path="purpose" cssClass="text-danger" />
 			</div>
@@ -54,23 +71,23 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="appointmentId" required="true" />
+					<form:input path="appointmentId" readonly="true" required="true" />
 				</div>
 				<form:errors path="appointmentId" cssClass="text-danger" />
 			</div>
-			<div class="row">
+		<div class="row">
 				<div class="col-25">
+
 					<label for="appointmentBill">Appointment Bill</label>
+
 				</div>
 				<div class="col-75">
-					<form:input path="appointmentBill" required="true" />
+					<form:input path="appointmentBill" readonly="true" required="true" />
 				</div>
 				<form:errors path="appointmentBill" cssClass="text-danger" />
 			</div>
-			<div class="row">
-				<form:button class="btn">Pay Bill</form:button>
-			</div>
 		</form:form>
+		<h1>Booked confirmed and Payment Successfull</h1>
 	</div>
 </body>
 </html>

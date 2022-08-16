@@ -27,4 +27,8 @@ public class BillingService {
 	public Billing save(Billing bill) {
 		return billingRepo.save(bill);
 	}
+
+	public Billing findById(int id) {
+		return billingRepo.findByBillId(id);
+	}
 }

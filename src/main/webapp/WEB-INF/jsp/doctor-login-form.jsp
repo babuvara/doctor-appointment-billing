@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Doctor Login</title>
@@ -12,7 +12,7 @@
 </head>
 <body style="background-color: Dodgerblue;">
 <body>
-  <h2 align="center">Doctor Login</h2>
+  <h2>Doctor Login</h2>
 	<div class="container">
 		<form:form action="checkdoctorlogin" method="post"
 			modelAttribute="doctor">

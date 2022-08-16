@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Appointment</title>
@@ -12,9 +14,9 @@
 </head>
 <body style="background-color: Dodgerblue;">
 <body>
-   <h2 align="center">Appointment Details</h2>
+   <h2>Appointment Details</h2>
 	<div class="container">
-		<form:form action="" method="post"
+		<form:form action="registerbill" method="Get"
 			modelAttribute="findappointmentbyid">
 
 
@@ -43,7 +45,7 @@
 			<div class="row">
 				<div class="col-25">
 
-					<label for="appointmentTime">Appointment Date</label>
+					<label for="appointmentTime">Appointment Time</label>
 
 				</div>
 				<div class="col-75">
@@ -65,7 +67,7 @@
 			<div class="row">
 				<div class="col-25">
 
-					<label for="doctorId">Appointment Date</label>
+					<label for="doctorId">Doctor Id</label>
 
 				</div>
 				<div class="col-75">
@@ -84,7 +86,21 @@
 				</div>
 				<form:errors path="appointmentStatus" cssClass="text-danger" />
 			</div>
+			<%--  <div class="row">
+				<form:button class="btn"> Get Bill</form:button>
+			</div>  --%>
 		</form:form>
+		<%-- <c:forEach var="co" items="${findappointmentbyid}">
+                    <td>${co.patientEmail}</td>
+                    
+                    
+                        
+		<a href="/billing/registerbill?patientEmail="${co.patientEmail}><input
+								onclick="change()" type="button" value="Book" id="myButton1"></input></a>
+		</c:forEach> --%>
+		
+		<a href="/billing/registerbill"><input
+								onclick="change()" type="button" value="Get Bill" id="myButton1"></input></a>
 	</div>
 </body>
 </html>

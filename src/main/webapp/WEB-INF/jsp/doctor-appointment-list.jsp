@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Appointments Details</title>
@@ -28,29 +28,11 @@
 					</div>
 				</div>
 				<div>
-					<label for="password">Password</label>
+					<label for="doctorEmail">Doctor Email</label>
 					<div>
-						<form:input path="password" type="password" />
+						<form:input path="doctorEmail" />
 					</div>
-				</div>
-				<div>
-					<label for="speciality">Speciality</label>
-					<div>
-						<form:input path="speciality" />
 					</div>
-				</div>
-				<div>
-					<label for="availableTime">Available Time</label>
-					<div>
-						<form:input path="availableTime" />
-					</div>
-				</div>
-				<div>
-					<label for="experience">Experience</label>
-					<div>
-						<form:input path="experience" />
-					</div>
-				</div>
 			</form:form>
 		</div>
 	</div>
@@ -61,9 +43,7 @@
 					<th>appointmentId</th>
 					<th>appointmentDate</th>
 					<th>appointmentTime</th>
-					<th>patientId</th>
-					<th>purpose</th>
-					<th>doctorId</th>
+					<th>patientEmail</th>
 					<th>appointmentStatus</th>
 				</tr>
 			</thead>
@@ -73,9 +53,7 @@
 						<td>${appointment.appointmentId}</td>
 						<td>${appointment.appointmentDate}</td>
 						<td>${appointment.appointmentTime}</td>
-						<td>${appointment.patientId}</td>
-						<td>${appointment.purpose}</td>
-						<td>${appointment.doctorId}</td>
+						<td>${appointment.patientEmail}</td>
 						<td>${appointment.appointmentStatus}</td>
 					</tr>
 				</c:forEach>

@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>SignUp Doctor</title>
@@ -12,7 +12,7 @@
 </head>
 <body style="background-color: Dodgerblue;">
 <body>
-   <h2 align="center">SignUp Doctor Account</h2>
+   <h2>SignUp Doctor Account</h2>
 	<div class="container">
 		<form:form action="signup" method="post"
 			modelAttribute="signupdoctor">
@@ -28,6 +28,17 @@
 					<form:input path="doctorName" placeholder="Doctor Name" required="true" />
 				</div>
 				<form:errors path="doctorName" cssClass="text-danger" />
+			</div>
+			<div class="row">
+				<div class="col-25">
+
+					<label for="doctorEmail">Doctor Email</label>
+
+				</div>
+				<div class="col-75">
+					<form:input path="doctorEmail" placeholder="Doctor Email" required="true" />
+				</div>
+				<form:errors path="doctorEmail" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">

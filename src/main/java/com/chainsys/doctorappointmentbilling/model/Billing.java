@@ -22,7 +22,7 @@ public class Billing {
 	@Column(name = "HOSPITAL_NAME")
 	private String hospitalName;
 	@Column(name = "PATIENT_EMAIL")
-	private int patientEmail;
+	private String patientEmail;
 	@Column(name = "PURPOSE")
 	private String purpose;
 	@Column(name = "APPOINTMENT_ID")
@@ -46,11 +46,11 @@ public class Billing {
 		this.hospitalName = hospitalName;
 	}
 
-	public int getPatientEmail() {
+	public String getPatientEmail() {
 		return patientEmail;
 	}
 
-	public void setPatientEmail(int patientEmail) {
+	public void setPatientEmail(String patientEmail) {
 		this.patientEmail = patientEmail;
 	}
 
