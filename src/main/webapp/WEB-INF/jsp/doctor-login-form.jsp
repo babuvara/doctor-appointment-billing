@@ -7,11 +7,20 @@
 <meta charset="ISO-8859-1">
 <title>Doctor Login</title>
 <style>
-<%@include file="/WEB-INF/css/patient-login-form.css"%>
+<%@include file="/WEB-INF/css/doctor-login-form.css"%>
 </style>
 </head>
-<body style="background-color: Dodgerblue;">
 <body>
+<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>MyHealth</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+			</ul>
+		</div>
+	</nav>
   <h2>Doctor Login</h2>
 	<div class="container">
 		<form:form action="checkdoctorlogin" method="post"

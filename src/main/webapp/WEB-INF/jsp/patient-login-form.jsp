@@ -10,9 +10,18 @@
 <%@include file="/WEB-INF/css/patient-login-form.css"%>
 </style>
 </head>
-<body style="background-color: Dodgerblue;">
 <body>
-  <h2 align="center">Patient Login</h2>
+<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>MyHealth</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+			</ul>
+		</div>
+	</nav>
+  <h2>Patient Login</h2>
 	<div class="container">
 		<form:form action="checkpatientlogin" method="post"
 			modelAttribute="patient">

@@ -9,37 +9,30 @@
 <style>
 <%@include file="/WEB-INF/css/register-patient.css"%>
 </style>
+<script>
+<%@include file="/WEB-INF/script/register-patient.js"%>
+</script>
 </head>
-<body style="background-color: Dodgerblue;">
 <body>
    <h2>Register Your Account</h2>
 	<div class="container">
 		<form:form action="register" method="post"
 			modelAttribute="registerpatient">
-
-
 			<div class="row">
 				<div class="col-25">
-
 					<label for="name">Name</label>
-
 				</div>
 				<div class="col-75">
-					<form:input path="name" placeholder="Name" required="true" />
+					<form:input path="name" placeholder="Name" name="name" onblur="nameCheck();" required="true" />
 				</div>
 				<form:errors path="name" cssClass="text-danger" />
 			</div>
 
 			<div class="row">
 				<div class="col-25">
-
-
 					<label for="gender">Select Gender</label>
-
-
 				</div>
 				<div class="col-75">
-
 					Male:
 					<form:radiobutton path="gender" value="Male" />
 					Female:
@@ -47,13 +40,10 @@
 					Transgender:
 					<form:radiobutton path="gender" value="Transgender" />
 				</div>
-
 			</div>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="dob">DOB</label>
-
 				</div>
 				<div class="col-75">
 					<form:input path="dob" type="date" />
@@ -82,7 +72,7 @@
 					<label for="emailId">Email</label>
 				</div>
 				<div class="col-75">
-					<form:input path="emailId" placeholder="Email" required="true" />
+					<form:input path="emailId" placeholder="Email" name="emailId" onblur="emailCheck();" required="true" />
 				</div>
 				<form:errors path="emailId" cssClass="text-danger" />
 			</div>
@@ -102,7 +92,7 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="mobileNumber" placeholder="Mobile Number" />
+					<form:input path="mobileNumber" name="mobileNumber" onblur="mobileNumberCheck();" placeholder="Mobile Number" required="true"/>
 				</div>
 			</div>
 			<div class="row">
