@@ -64,14 +64,14 @@ public class DoctorDetailsController {
 	@GetMapping("/signupdoctor")
 	public String showDoctorDetailsSignUpForm(Model model) {
 		DoctorDetails doctorDetails = new DoctorDetails();
-		model.addAttribute("signupdoctor", doctorDetails);
-		return "signup-doctordetails";
+		model.addAttribute("registerdoctordetails", doctorDetails);
+		return "register-doctordetails";
 	}
 
 	@PostMapping("/signup")
-	public String addSignUpDoctor(@Valid @ModelAttribute("signupdoctor") DoctorDetails doctor, Errors error) {
+	public String addSignUpDoctor(@Valid @ModelAttribute("registerdoctordetails") DoctorDetails doctor, Errors error) {
 		if (error.hasErrors()) {
-			return "signup-doctordetails";
+			return "register-doctordetails";
 		} else {
 			doctorDetailsService.save(doctor);
 			return "redirect:doctorlogin";

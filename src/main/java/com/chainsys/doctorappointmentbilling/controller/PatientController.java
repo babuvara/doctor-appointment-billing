@@ -53,15 +53,15 @@ public class PatientController {
 	@GetMapping("/signuppatient")
 	public String showPatientDetailsSignUpForm(Model model) {
 		Patient patient = new Patient();
-		model.addAttribute("signuppatient", patient);
-		return "signup-patient";
+		model.addAttribute("registerpatient", patient);
+		return "register-patient";
 	}
 
 	@PostMapping("/signup")
-	public String addSignUpPatient(@Valid @ModelAttribute("signuppatient") Patient patient,
+	public String addSignUpPatient(@Valid @ModelAttribute("registerpatient") Patient patient,
 			BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
-			return "signup-patient";
+			return "register-patient";
 		} else {
 			patientService.save(patient);
 			return "redirect:patientlogin";
