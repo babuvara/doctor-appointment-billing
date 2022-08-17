@@ -86,18 +86,17 @@ public class DoctorDetailsController {
 	}
 
 	@PostMapping("/checkdoctorlogin")
-	public String checkingAccess(@ModelAttribute("doctor") DoctorDetails doctorDetails) {
+	public String checkingAccess(@ModelAttribute("doctor") DoctorDetails doctorDetails, Model model) {
 		DoctorDetails doctorLogin = doctorDetailsService
 				.getDoctorDetailsByEmailAndPassword(doctorDetails.getDoctorEmail(), doctorDetails.getPassword());
 		if (doctorLogin != null) {
 
 			return "redirect:/doctordetails/gotodoctorlogin?doctorId="+ doctorLogin.getDoctorId();
 		} else
-			return "invalid-doctor-error";
+			model.addAttribute("result","Incorrect Email and Password!!!"+"Please Enter the Correct Email and Password");
+		return "doctor-login-form";
 
 	}
-	
-	
 
 @GetMapping("/gotodoctorlogin")
 public String goToDashBoard(@RequestParam("doctorId") int id , Model model) {

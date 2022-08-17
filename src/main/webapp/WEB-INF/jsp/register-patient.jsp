@@ -14,10 +14,11 @@
 </script>
 </head>
 <body>
-   <h2>Register Your Account</h2>
 	<div class="container">
+	<div id="form" class='fieldset'>
 		<form:form action="register" method="post"
-			modelAttribute="registerpatient">
+			modelAttribute="registerpatient" name="myForm">
+			<h2>Register Your Account</h2>
 			<div class="row">
 				<div class="col-25">
 					<label for="name">Name</label>
@@ -33,20 +34,21 @@
 					<label for="gender">Select Gender</label>
 				</div>
 				<div class="col-75">
-					Male:
 					<form:radiobutton path="gender" value="Male" />
-					Female:
+					Male
 					<form:radiobutton path="gender" value="Female" />
-					Transgender:
+					Female
 					<form:radiobutton path="gender" value="Transgender" />
+					Transgender
 				</div>
+				<form:errors path="gender" cssClass="text-danger" required="true"/>
 			</div>
 			<div class="row">
 				<div class="col-25">
 					<label for="dob">DOB</label>
 				</div>
 				<div class="col-75">
-					<form:input path="dob" type="date" />
+					<form:input path="dob" type="date" required="true"/>
 				</div>
 			</div>
 			<div class="row">
@@ -154,6 +156,7 @@
 				<form:button class="btn">Register</form:button>
 			</div>
 		</form:form>
+	</div>
 	</div>
 </body>
 </html>

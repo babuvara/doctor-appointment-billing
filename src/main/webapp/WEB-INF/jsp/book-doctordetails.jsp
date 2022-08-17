@@ -12,7 +12,19 @@
 </style>
 </head>
 <body>
-		<h1 style="color: Tomato">Doctors List</h1>
+<nav>
+		<div class="menu">
+			<div class="logo">
+				<a>MyHealth</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/doctordetails/getdoctordetails">Doctors Lists</a></li>
+				<li><a href="/">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+		<h1>Doctors List</h1>
 		<div id="table root">
 		<table>
 			<thead>

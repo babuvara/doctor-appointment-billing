@@ -4,24 +4,18 @@
 }
 
  body {
-	background-image: url("https://www.trainerbubble.com/wp-content/uploads/2015/09/Doctor-Doctor_web-1024x682.jpg");
+	background-image: url("https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?w=2000");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
-input[type=text] {
+input[type=text], select, textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	resize: vertical;
-}
-input[type=password]{
-	margin-top: 10px;
-    width: 267px;
-    height: 42px;
-    margin-left: 0px;
 }
 
 label {
@@ -31,7 +25,7 @@ label {
 
 .container {
 	text-align: center;
-	margin-top: 8%;
+	margin-top: 6%;
 	margin-left: 6%;
 	box-shadow: 5px 2px 20px #000;
 	border-radius: 5px;
@@ -71,27 +65,15 @@ label {
 	border: none;
 	border-radius: 10px;
 	box-shadow: 0 9px #1E90FF;
-	
-	margin-left: 10px;
-    margin-top: 23px;
+	margin-left: 40px;
+	margin-top: 10px;
 }
 
 .btn:hover {
 	background-color: #6bb6ff
 }
 .btn:active {
-  background-color: #9932CC;
+  background-color:     #9932CC;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
-
-.btn2{
-	margin-top: 46px;
-    margin-left: 20px;
-}
-
-.result{
-	margin-top: 10%;
-	color: red;
-	background-color: Dodgerblue; 
 }

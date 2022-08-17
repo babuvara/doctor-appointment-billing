@@ -76,14 +76,15 @@ public class PatientController {
 	}
 
 	@PostMapping("/checkpatientlogin")
-	public String checkingAccess(@ModelAttribute("patient") Patient patient) {
+	public String checkingAccess(@ModelAttribute("patient") Patient patient, Model model) {
 		Patient patientLogin = patientService.getPatientByEmailIdAndPassword(patient.getEmailId(),
 				patient.getPassword());
 		if (patientLogin != null) {
 
 			return "patientlogin";
 		} else
-			return "invalid-patient-error";
+			model.addAttribute("result","Incorrect Email and Password!!!"+"Please Enter the Correct Email and Password");
+			return "patient-login-form";
 
 	}
 

@@ -11,22 +11,10 @@
 </style>
 </head>
 <body>
-<nav>
-		<div class="menu">
-			<div class="logo">
-				<a>MyHealth</a>
-			</div>
-			<ul>
-				<li><a href="/">Home</a></li>
-			</ul>
-		</div>
-	</nav>
-  <h2>Patient Login</h2>
 	<div class="container">
 		<form:form action="checkpatientlogin" method="post"
 			modelAttribute="patient">
-
-
+          <h2>Patient Login</h2>
 			<div class="row">
 				<div class="col-25">
 
@@ -54,12 +42,15 @@
 				</div>
 		</form:form>
 		<div >
+		<div class="result">
+		${result}
+	</div>
 		<div class="btn2">
 			<label> Don't have an account?</label> <a class ="a1" href="signuppatient">
 				<input onclick="change()"  class ="a1" type="button" value="SignUp"></input>
 			</a>
 		</div>
 	</div>
-	</div>
+</div>
 </body>
 </html>

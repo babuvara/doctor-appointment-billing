@@ -7,17 +7,15 @@
 <meta charset="ISO-8859-1">
 <title>Register Doctor</title>
 <style>
-<%@include file="/WEB-INF/css/register-patient.css"%>
+<%@include file="/WEB-INF/css/register-doctor.css"%>
 </style>
 </head>
 <body style="background-color: Dodgerblue;">
 <body>
-   <h2>Register Your Account</h2>
 	<div class="container">
 		<form:form action="register" method="post"
 			modelAttribute="registerdoctordetails">
-
-
+            <h2>Register Your Account</h2>
 			<div class="row">
 				<div class="col-25">
 
@@ -64,13 +62,13 @@
 			</div>
 				<div class="row">
 				<div class="col-25">
-					<label for="bloodGroup">Available Time</label>
+					<label for="availableTime">Available Time</label>
 				</div>
 				<div class="col-75">
 					<form:select path="availableTime">
 						<form:errors path="availableTime" />
-						<form:option value="O Positive">9 AM - 6 PM</form:option>
-						<form:option value="O Negative">6 PM - 9 AM</form:option>
+						<form:option value="9 AM - 6 PM">9 AM - 6 PM</form:option>
+						<form:option value="6 PM - 9 AM">6 PM - 9 AM</form:option>
 					</form:select>
 				</div>
 			</div>
