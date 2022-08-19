@@ -7,12 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Doctor Login</title>
-<style type="text/css">
+<link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
+<style>
 <%@include file="/WEB-INF/css/doctorlogin.css"%>
 </style>
 </head>
 <body>
 	<nav>
+	<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<form:form modelAttribute="doctorId">
 		<div class="menu">
 			<div class="logo">
@@ -34,5 +36,6 @@
 		<div class="title">Have a nice day Doctor !</div>
 		<div class="btns"></div>
 	</div>
+		<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 </body>
 </html>

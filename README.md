@@ -51,6 +51,7 @@ A Doctor Appointment Booking system, allows patients to book an appointment from
 3. Form validation in frontend level.
 4. Form validation in JavaScript level.
 5. Form null validation in Oracle DataBase level(SQL).
+6. Generating Id automatically
 
 # Technology
 

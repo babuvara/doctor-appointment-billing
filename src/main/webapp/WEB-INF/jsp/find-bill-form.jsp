@@ -8,6 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Billing</title>
+<link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
 <%@include file="/WEB-INF/css/register-patient.css"%>
 </style>
@@ -87,7 +88,7 @@
 				<form:errors path="appointmentBill" cssClass="text-danger" />
 			</div>
 		</form:form>
-		<h1>Booked confirmed and Payment Successfully</h1>
+		<h1>Booking confirmed and Payment Successfully</h1>
 	</div>
 </body>
 </html>

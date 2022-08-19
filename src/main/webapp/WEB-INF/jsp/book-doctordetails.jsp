@@ -7,12 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>DoctorDetails list</title>
+<link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
 <%@include file="/WEB-INF/css/book-doctordetails.css"%>
 </style>
 </head>
 <body>
 <nav>
+<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 		<div class="menu">
 			<div class="logo">
 				<a>MyHealth</a>

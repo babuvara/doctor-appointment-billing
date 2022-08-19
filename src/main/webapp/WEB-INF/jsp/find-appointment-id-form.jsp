@@ -8,6 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Appointment</title>
+<link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
 <%@include file="/WEB-INF/css/register-patient.css"%>
 </style>
@@ -84,9 +85,10 @@
 				<form:errors path="appointmentStatus" cssClass="text-danger" />
 			</div>
 			<div class="btn1">
-			<form:button>Get Bill</form:button>
+			<form:button>Confirm to Pay Bill</form:button>
 			</div>
 		</form:form>
+		<input onclick="history.back()" type="button" value="Cancel" id="myButton1"></input>
 	</div>
 </body>
-</html>
+</html>          

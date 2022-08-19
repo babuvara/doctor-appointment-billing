@@ -7,11 +7,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Appointments Details</title>
+<link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
 <%@include file="/WEB-INF/css/list-doctordetails.css"%>
 </style>
 </head>
 <body>
+<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<div id="root">
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getdoctor">

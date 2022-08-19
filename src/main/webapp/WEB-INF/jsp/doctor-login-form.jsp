@@ -6,11 +6,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Doctor Login</title>
+<link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
 <%@include file="/WEB-INF/css/doctor-login-form.css"%>
 </style>
 </head>
 <body>
+<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<div class="container">
 		<form:form action="checkdoctorlogin" method="post"
 			modelAttribute="doctor">

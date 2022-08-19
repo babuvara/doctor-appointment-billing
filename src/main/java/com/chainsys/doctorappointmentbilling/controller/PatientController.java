@@ -24,6 +24,8 @@ import com.chainsys.doctorappointmentbilling.service.PatientService;
 public class PatientController {
 	@Autowired
 	private PatientService patientService;
+	@Autowired
+	private static final String PATITENTLOGINFORM="patient-login-form";
 
 	@GetMapping("/getpatient")
 	public String getAllPatient(Model model) {
@@ -53,7 +55,7 @@ public class PatientController {
 	public String patientAccessform(Model model) {
 		Patient patient = new Patient();
 		model.addAttribute("patient", patient);
-		return "patient-login-form";
+		return PATITENTLOGINFORM;
 	}
 
 	@PostMapping("/checkpatientlogin")
@@ -65,7 +67,7 @@ public class PatientController {
 			return "patientlogin";
 		} else
 			model.addAttribute("result","Incorrect Email and Password!!!"+"Please Enter the Correct Email and Password");
-			return "patient-login-form";
+			return PATITENTLOGINFORM;
 
 	}
 
