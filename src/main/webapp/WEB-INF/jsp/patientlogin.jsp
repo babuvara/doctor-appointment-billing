@@ -18,7 +18,7 @@
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/doctordetails/getdoctordetails">Doctors Lists</a></li>
-				<li><a href="/doctordetails/bookdoctordetails">Book Doctors</a></li>
+				<li><a href="/doctordetails/bookdoctordetails">Book Doctor</a></li>
 				<li><a href="/">Logout</a></li>
 			</ul>
 		</div>

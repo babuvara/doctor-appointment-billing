@@ -87,7 +87,7 @@
 				<form:errors path="appointmentBill" cssClass="text-danger" />
 			</div>
 		</form:form>
-		<h1>Booked confirmed and Payment Successfull</h1>
+		<h1>Booked confirmed and Payment Successfully</h1>
 	</div>
 </body>
 </html>

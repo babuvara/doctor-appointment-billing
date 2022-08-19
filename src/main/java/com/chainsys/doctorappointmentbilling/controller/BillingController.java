@@ -32,14 +32,14 @@ public class BillingController {
 	}
 
 	@GetMapping("/registerbill")
-	public String showRegisterForm( Model model) {
+	public String showRegisterForm(@ModelAttribute("findappointmentbyid") Billing bill2, Model model) {
 		Billing bill = new Billing();
 		bill.setHospitalName("Apollo");
 		bill.setAppointmentBill(250.50f);
-//		 bill.setPatientEmail(patientEmail);
-//		System.out.println("dfghjkhgfdgh"+ bill.getPatientEmail());
+		 bill.setPatientEmail(bill2.getPatientEmail());
+		 bill.setAppointmentId(bill2.getAppointmentId());
 		model.addAttribute("registerbill", bill);
-		return "register-bill";
+		return "register-bill";		
 	}
 	@PostMapping("/register")
 	public String addNewBill(@ModelAttribute("registerbill") Billing bill) {

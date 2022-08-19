@@ -8,13 +8,14 @@
 <meta charset="ISO-8859-1">
 <title>Billing list</title>
 <style>
-<%@include file="/WEB-INF/css/list-patient.css"%>
+<%@include file="/WEB-INF/css/list-doctordetails.css"%>
 </style>
 </head>
 <body>
 		<h1 style="color: Tomato">Billing List</h1>
 		<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Hospital Name</th>

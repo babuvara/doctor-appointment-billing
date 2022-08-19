@@ -8,13 +8,14 @@
 <meta charset="ISO-8859-1">
 <title>Appointment list</title>
 <style>
-<%@include file="/WEB-INF/css/list-patient.css"%>
+<%@include file="/WEB-INF/css/list-doctordetails.css"%>
 </style>
 </head>
 <body>
 			<h1>Appointments list</h1>
 	<div id="table root">
 			<table>
+			<caption></caption>
 				<thead>
 					<tr>
 						<th>Appointment id</th>

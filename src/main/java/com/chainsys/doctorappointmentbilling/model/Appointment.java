@@ -25,16 +25,12 @@ public class Appointment {
 	@SequenceGenerator(name = "APPOINTMENT_ID_REF", sequenceName = "APPOINTMENT_ID_REF", allocationSize = 1)
 	@Column(name = "APPOINTMENT_ID")
 	private int appointmentId;
-//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "APPOINTMENT_DATE")
-	@Future
+	@Future(message = "Past Date is Not Support")
 	private Date appointmentDate;
-//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "APPOINTMENT_TIME")
 	private String appointmentTime;
-//	@NotEmpty( message ="*Mandatory field")
 	@Column(name = "PATIENT_EMAIL")
-//	@Email(message = "*Invalid Email", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 	private String patientEmail;
 	@Column(name = "DOCTOR_ID")
 	private int doctorId;

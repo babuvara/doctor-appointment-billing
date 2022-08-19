@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -61,23 +60,6 @@ public class DoctorDetailsController {
 		}
 	}
 
-	@GetMapping("/signupdoctor")
-	public String showDoctorDetailsSignUpForm(Model model) {
-		DoctorDetails doctorDetails = new DoctorDetails();
-		model.addAttribute("registerdoctordetails", doctorDetails);
-		return "register-doctordetails";
-	}
-
-	@PostMapping("/signup")
-	public String addSignUpDoctor(@Valid @ModelAttribute("registerdoctordetails") DoctorDetails doctor, Errors error) {
-		if (error.hasErrors()) {
-			return "register-doctordetails";
-		} else {
-			doctorDetailsService.save(doctor);
-			return "redirect:doctorlogin";
-		}
-	}
-
 	@GetMapping("/doctorlogin")
 	public String doctorAccessform(Model model) {
 		DoctorDetails doctorDetails = new DoctorDetails();
@@ -91,17 +73,18 @@ public class DoctorDetailsController {
 				.getDoctorDetailsByEmailAndPassword(doctorDetails.getDoctorEmail(), doctorDetails.getPassword());
 		if (doctorLogin != null) {
 
-			return "redirect:/doctordetails/gotodoctorlogin?doctorId="+ doctorLogin.getDoctorId();
+			return "redirect:/doctordetails/gotodoctorlogin?doctorId=" + doctorLogin.getDoctorId();
 		} else
-			model.addAttribute("result","Incorrect Email and Password!!!"+"Please Enter the Correct Email and Password");
+			model.addAttribute("result",
+					"Incorrect Email and Password!!!" + "Please Enter the Correct Email and Password");
 		return "doctor-login-form";
 
 	}
 
-@GetMapping("/gotodoctorlogin")
-public String goToDashBoard(@RequestParam("doctorId") int id , Model model) {
-    model.addAttribute("doctorId" , id);
-    return "doctorlogin";
-}
+	@GetMapping("/gotodoctorlogin")
+	public String goToDashBoard(@RequestParam("doctorId") int id, Model model) {
+		model.addAttribute("doctorId", id);
+		return "doctorlogin";
+	}
 
 }

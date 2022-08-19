@@ -16,15 +16,12 @@
 <body>
    <h2>Appointment Details</h2>
 	<div class="container">
-		<form:form action="registerbill" method="Get"
+		<form:form action="/billing/registerbill" method="Get"
 			modelAttribute="findappointmentbyid">
-
-
+            <h1>My Appointments</h1>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="appointmentId">Appointment Id</label>
-
 				</div>
 				<div class="col-75">
 					<form:input path="appointmentId" readonly="true" required="true" />
@@ -86,21 +83,10 @@
 				</div>
 				<form:errors path="appointmentStatus" cssClass="text-danger" />
 			</div>
-			<%--  <div class="row">
-				<form:button class="btn"> Get Bill</form:button>
-			</div>  --%>
+			<div class="btn1">
+			<form:button>Get Bill</form:button>
+			</div>
 		</form:form>
-		<%-- <c:forEach var="co" items="${findappointmentbyid}">
-                    <td>${co.patientEmail}</td>
-                    
-                    
-                        
-		<a href="/billing/registerbill?patientEmail="${co.patientEmail}><input
-								onclick="change()" type="button" value="Book" id="myButton1"></input></a>
-		</c:forEach> --%>
-		
-		<a href="/billing/registerbill"><input
-								onclick="change()" type="button" value="Get Bill" id="myButton1"></input></a>
 	</div>
 </body>
 </html>

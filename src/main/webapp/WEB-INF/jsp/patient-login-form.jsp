@@ -46,7 +46,7 @@
 		${result}
 	</div>
 		<div class="btn2">
-			<label> Don't have an account?</label> <a class ="a1" href="signuppatient">
+			<label> Don't have an account?</label> <a class ="a1" href="registerpatient">
 				<input onclick="change()"  class ="a1" type="button" value="SignUp"></input>
 			</a>
 		</div>

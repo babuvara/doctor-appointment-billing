@@ -10,7 +10,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -43,24 +42,6 @@ public class PatientController {
 	@PostMapping("/register")
 	public String addNewPatient(@Valid @ModelAttribute("registerpatient") Patient patient, Errors error) {
 		if (error.hasErrors()) {
-			return "register-patient";
-		} else {
-			patientService.save(patient);
-			return "redirect:patientlogin";
-		}
-	}
-
-	@GetMapping("/signuppatient")
-	public String showPatientDetailsSignUpForm(Model model) {
-		Patient patient = new Patient();
-		model.addAttribute("registerpatient", patient);
-		return "register-patient";
-	}
-
-	@PostMapping("/signup")
-	public String addSignUpPatient(@Valid @ModelAttribute("registerpatient") Patient patient,
-			BindingResult bindingResult) {
-		if (bindingResult.hasErrors()) {
 			return "register-patient";
 		} else {
 			patientService.save(patient);

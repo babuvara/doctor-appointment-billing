@@ -8,13 +8,14 @@
 <meta charset="ISO-8859-1">
 <title>DoctorDetails list</title>
 <style>
-<%@include file="/WEB-INF/css/book-doctordetails.css"%>
+<%@include file="/WEB-INF/css/list-doctordetails.css"%>
 </style>
 </head>
 <body>
 		<h1>Doctors List</h1>
 		<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Doctor Name</th>

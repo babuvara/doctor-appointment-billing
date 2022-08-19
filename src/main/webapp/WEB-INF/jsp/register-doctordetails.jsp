@@ -9,12 +9,15 @@
 <style>
 <%@include file="/WEB-INF/css/register-doctor.css"%>
 </style>
+<script>
+<%@include file="/WEB-INF/script/register-doctordetails.js"%>
+</script>
 </head>
-<body style="background-color: Dodgerblue;">
 <body>
 	<div class="container">
+	<div id="form" class='fieldset'>
 		<form:form action="register" method="post"
-			modelAttribute="registerdoctordetails">
+			modelAttribute="registerdoctordetails" name="myForm">
             <h2>Register Your Account</h2>
 			<div class="row">
 				<div class="col-25">
@@ -23,7 +26,7 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="doctorName" placeholder="Doctor Name" required="true" />
+					<form:input path="doctorName" placeholder="Doctor Name" name="name" onblur="doctorNameCheck();" required="true" />
 				</div>
 				<form:errors path="doctorName" cssClass="text-danger" />
 			</div>
@@ -34,7 +37,7 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="doctorEmail" placeholder="Doctor Email" required="true" />
+					<form:input path="doctorEmail" placeholder="Doctor Email" name="emailId" onblur="doctorEmailCheck();" required="true" />
 				</div>
 				<form:errors path="doctorEmail" cssClass="text-danger" />
 			</div>
@@ -45,7 +48,7 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="password" placeholder="Password" required="true" />
+					<form:input path="password" placeholder="Password" onblur="passwordCheck();"  name="password" required="true" />
 				</div>
 				<form:errors path="password" cssClass="text-danger" />
 			</div>
@@ -87,6 +90,7 @@
 				<form:button class="btn">Register</form:button>
 			</div>
 		</form:form>
+	</div>
 	</div>
 </body>
 </html>

@@ -121,3 +121,9 @@ body {
 	background-attachment: fixed;
 	background-size: 100% 100%;
 }
+
+.title {
+	background-color: white;
+       width: 709px;
+    margin-left: 294px;
+}

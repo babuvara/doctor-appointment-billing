@@ -23,8 +23,8 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="/patient/getpatient">Patients Lists</a></li>
 				<li><a href="/appointment/getappointment">Appointments Lists</a></li>
-				<li><a href="/">Logout</a></li>
 				<li><a href="/doctorappointment/getdoctorappointmentlist?doctorId=${doctorId}">My Appointments</a></li>
+				<li><a href="/">Logout</a></li>
 			</ul>
 		</div>
 		</form:form>

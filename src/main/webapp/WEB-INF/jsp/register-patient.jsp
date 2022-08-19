@@ -41,7 +41,7 @@
 					<form:radiobutton path="gender" value="Transgender" />
 					Transgender
 				</div>
-				<form:errors path="gender" cssClass="text-danger" required="true"/>
+				<form:errors path="gender" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
@@ -50,12 +50,13 @@
 				<div class="col-75">
 					<form:input path="dob" type="date" required="true"/>
 				</div>
+				<form:errors path="dob" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
 					<label for="bloodGroup">Blood Group</label>
 				</div>
-				<div class="col-75">
+				<div class="blood">
 					<form:select path="bloodGroup">
 						<form:errors path="bloodGroup" />
 						<form:option value="O Positive">O Positive</form:option>
@@ -101,7 +102,7 @@
 				<div class="col-25">
 					<label for="location">Location</label>
 				</div>
-				<div class="col-75">
+				<div class="location">
 					<form:select path="location">
 						<form:errors path="location" />
 						<form:option value="Ariyalur">Ariyalur</form:option>
@@ -149,7 +150,7 @@
 					<label for="symptoms">Symptoms</label>
 				</div>
 				<div class="col-75">
-					<form:input path="symptoms" placeholder="Symptoms" />
+					<form:input path="symptoms" placeholder="Symptoms" required="true"/>
 				</div>
 			</div>
 			<div class="row">

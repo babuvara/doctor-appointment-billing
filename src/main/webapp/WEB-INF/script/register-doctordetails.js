@@ -1,9 +1,9 @@
 /**
  * 
  */
- var nameCheck = function() {
-	 var nameRegex = new RegExp("^[a-zA-Z]+$");
-	 if(!document.myForm.name.value.match(nameRegex)){
+ var doctorNameCheck = function() {
+	 var nameRegex = new RegExp("^[a-zA-Z\sa-zA-Z]+$");
+	 if(!document.myForm.doctorName.value.match(nameRegex)){
 			if(alert("Name must contain only alphabets")){ 
 				 document.myForm.name.focus();
 		    }
@@ -16,23 +16,10 @@
    
 }
 
- var mobileNumberCheck = function() {
-	 var phoneRg = new RegExp("[1-9]{1}[0-9]{9}");
-	 if(!document.myForm.mobileNumber.value.match(phoneRg)){
-			if(alert("Mobile Number is not valid and support only 10 numbers")){
-				 document.myForm.mobileNumber.focus();
-			}
-			else
-				document.activeElement.blur();
-		}
-    else{
-    	return false;
-    }
-} 
  
-var emailCheck = function() {
+var doctoremailCheck = function() {
 	var rg = new RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
-	if(!document.myForm.emailId.value.match(rg)){
+	if(!document.myForm.doctoremail.value.match(rg)){
 		if(alert("Email is not valid Ex:abc@gmail.com")){
 			document.myForm.emailId.focus();
 		}

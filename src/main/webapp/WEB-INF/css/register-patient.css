@@ -10,7 +10,7 @@
 }
 
 
-input[type=text], select, textarea {
+input[type=text] {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
@@ -18,10 +18,13 @@ input[type=text], select, textarea {
 	resize: vertical;
 }
 
-label {
-	padding: 12px 12px 12px 0;
-	display: inline-block;
+input[type=date] {
+	height: 42px;
+    width: 273px;
+	
 }
+
+
 
 .container {
 	text-align: center;
@@ -37,7 +40,7 @@ label {
 .col-25 {
 	float: left;
 	width: 30%;
-	margin-top: 6px;
+	margin-top: 19px;
 	margin-left: 10px;
 }
 
@@ -46,6 +49,7 @@ label {
 	width: 55%;
 	margin-top: 6px;
 }
+
 
 .row:after {
 	content: "";
@@ -76,4 +80,18 @@ label {
   background-color:     #9932CC;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#bloodGroup{
+	margin-left: -60px;
+    margin-top: 19px;
+    width: 271px;
+    height: 43px;
+}
+
+#location{
+	    margin-top: 6px;
+    width: 271px;
+    margin-left: -68px;
+    height: 41px;
 }
