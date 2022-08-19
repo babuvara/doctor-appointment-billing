@@ -13,6 +13,7 @@
 </style>
 </head>
 <body>
+<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 		<h1>Doctors List</h1>
 		<div id="table root">
 		<table>

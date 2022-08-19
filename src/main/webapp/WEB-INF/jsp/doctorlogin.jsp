@@ -36,6 +36,5 @@
 		<div class="title">Have a nice day Doctor !</div>
 		<div class="btns"></div>
 	</div>
-		<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 </body>
 </html>

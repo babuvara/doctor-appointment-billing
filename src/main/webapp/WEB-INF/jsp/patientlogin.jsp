@@ -12,6 +12,7 @@
 </head>
 <body>
 	<nav>
+	<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 		<div class="menu">
 			<div class="logo">
 				<a>MyHealth</a>

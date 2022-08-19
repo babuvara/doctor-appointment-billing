@@ -12,6 +12,7 @@
 </style>
 </head>
 <body>
+<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<div class="container">
 		<form:form action="checkpatientlogin" method="post"
 			modelAttribute="patient">

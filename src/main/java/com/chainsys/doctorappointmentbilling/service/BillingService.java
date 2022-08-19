@@ -19,8 +19,7 @@ public class BillingService {
 	private BillingRepository billingRepo;
 
 	public List<Billing> getBill() {
-		List<Billing> billingList = billingRepo.findAll();
-		return billingList;
+		return billingRepo.findAll();
 	}
 
 	@Transactional

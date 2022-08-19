@@ -15,6 +15,7 @@
 </script>
 </head>
 <body>
+<button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<div class="container">
 	<div id="form" class='fieldset'>
 		<form:form action="register" method="post"
