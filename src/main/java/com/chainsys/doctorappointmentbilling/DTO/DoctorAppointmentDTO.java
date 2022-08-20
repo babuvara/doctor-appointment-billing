@@ -1,4 +1,4 @@
-package com.chainsys.doctorappointmentbilling.DTO;
+package com.chainsys.doctorappointmentbilling.dto;
 
 /**
  * @author babu3107

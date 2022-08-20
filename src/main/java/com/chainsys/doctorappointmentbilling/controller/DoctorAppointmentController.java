@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.doctorappointmentbilling.DTO.DoctorAppointmentDTO;
+import com.chainsys.doctorappointmentbilling.dto.DoctorAppointmentDTO;
 import com.chainsys.doctorappointmentbilling.service.DoctorAppointmentService;
 
 @Controller

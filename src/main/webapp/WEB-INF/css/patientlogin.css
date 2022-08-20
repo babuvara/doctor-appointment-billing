@@ -74,7 +74,7 @@ nav .menu {
 }
 
 .center .title {
-	text-color:black;
+	color:black;
 	font-size: 55px;
 	font-weight: 600;
 }
@@ -90,7 +90,6 @@ nav .menu {
 	border-radius: 5px;
 	border: none;
 	margin: 0 10px;
-	border: 2px solid white;
 	font-size: 20px;
 	font-weight: 500;
 	padding: 0 10px;

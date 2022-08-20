@@ -37,7 +37,7 @@ public class DoctorDetailsController {
 	}
 
 	@GetMapping("/bookdoctordetails")
-	public String BookDoctorDetails(Model model) {
+	public String bookDoctorDetails(Model model) {
 		List<DoctorDetails> doctorDetailsList = doctorDetailsService.getDoctorDetails();
 		model.addAttribute("alldoctordetails", doctorDetailsList);
 
