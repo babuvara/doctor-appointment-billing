@@ -16,17 +16,13 @@
 <body style="background-color: Dodgerblue;">
 <body>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
-   <h2>Bill Details</h2>
 	<div class="container">
 		<form:form action="" 
 			modelAttribute="findbillbyid">
-
-
+ <h2>Bill Details</h2>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="billId">Bill Id</label>
-
 				</div>
 				<div class="col-75">
 					<form:input path="billId" readonly="true" required="true" />
@@ -90,6 +86,7 @@
 			</div>
 		</form:form>
 		<h1>Booking confirmed and Payment Successfully</h1>
+		<a href="/"><input onclick="change()" type="button" value="Done" id="myButton1"></input></a>
 	</div>
 </body>
 </html>

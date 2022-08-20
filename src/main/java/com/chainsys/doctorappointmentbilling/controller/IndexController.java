@@ -13,6 +13,11 @@ public class IndexController {
 		return "index";
 	}
 
+	@GetMapping("/about")
+	public String about() {
+		return "about";
+	}
+
 	@GetMapping("/register")
 	public String register() {
 		return "register";

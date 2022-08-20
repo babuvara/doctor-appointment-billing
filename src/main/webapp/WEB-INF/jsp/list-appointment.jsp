@@ -9,11 +9,23 @@
 <title>Appointment list</title>
 <link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
-<%@include file="/WEB-INF/css/list-doctordetails.css"%>
+<%@include file="/WEB-INF/css/book-doctordetails.css"%>
 </style>
 </head>
 <body>
+<nav>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
+		<div class="menu">
+			<div class="logo">
+				<a>MyHealth</a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/patient/getpatient">Patients Lists</a></li>
+				<li><a href="/">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
 			<h1>Appointments list</h1>
 	<div id="table root">
 			<table>

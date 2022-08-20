@@ -25,7 +25,8 @@
 	<div class="img"></div>
 	<div class="center">
 		<div class="title">Doctor-Appointment</div>
-		<div class="btns"></div>
+		<a href="/about">
+        <button class="about">About Us</button></a>
 	</div>
 </body>
 </html>

@@ -75,7 +75,7 @@ nav .menu {
 }
 
 .center .title {
-	text-color:black;
+	color:black;
 	font-size: 55px;
 	font-weight: 600;
 }
@@ -92,7 +92,6 @@ nav .menu {
 	border-radius: 5px;
 	border: none;
 	margin: 0 10px;
-	border: 2px solid white;
 	font-size: 20px;
 	font-weight: 500;
 	padding: 0 10px;
@@ -121,7 +120,7 @@ nav .menu {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 50vw;
+    height: 100vh;
 }
 h1 {
 	padding-top: 120px;
@@ -159,8 +158,8 @@ td{
   font-weight: 300;
   font-size: 17px;
   color: #012733;
-      border: 1px solid #012733;
-    background-color: white;}
+  border: 1px solid #012733;
+  background-color: white;}
     
     .button3{
     position: absolute;

@@ -14,10 +14,10 @@
 <body style="background-color: Dodgerblue;">
 <body>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
-   <h2>Bill Details</h2>
 	<div class="container">
 		<form:form action="register" method="post"
 			modelAttribute="registerbill">
+			 <h2>Pay Your Bill</h2>
 			<div class="row">
 				<div class="col-25">
 					<label for="hospitalName">Hospital Name</label>

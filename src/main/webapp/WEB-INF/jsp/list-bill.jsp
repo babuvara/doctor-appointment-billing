@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Billing list</title>
 <style>
-<%@include file="/WEB-INF/css/list-doctordetails.css"%>
+<%@include file="/WEB-INF/css/book-doctordetails.css"%>
 </style>
 </head>
 <body>

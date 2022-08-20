@@ -1,0 +1,84 @@
+@charset "ISO-8859-1";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header {
+  padding: 290px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  background-image:
+		url('https://www.gigadocs.com/blog/wp-content/uploads/2019/12/blog.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+.header h1 {
+  text-align:center;
+  font-size: 40px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.row {  
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  
+}
+.fa-home{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 4em;
+}
+.side {
+  -ms-flex: 30%; 
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  background-color:#FFA07A;
+  text-align:center;
+    border: 6px solid gray;
+}
+
+p {
+  text-indent: 90px;
+  text-align: justify;
+  letter-spacing: 3px;
+  font-size:20px;
+}
+.main {
+	background-color: dodgerblue;
+}
+.title {
+	color:black;
+	background-color: white;
+    width: 525px;
+    margin-left: 150px;
+}
+
+
+

@@ -50,7 +50,7 @@
 					<label for="dob">DOB</label>
 				</div>
 				<div class="col-75">
-					<form:input path="dob" type="date" required="true"/>
+					<form:input path="dob" type="date" name="dateOfBirth" onblur="checkDateOfBirth();" required="true"/>
 				</div>
 				<form:errors path="dob" cssClass="text-danger" />
 			</div>

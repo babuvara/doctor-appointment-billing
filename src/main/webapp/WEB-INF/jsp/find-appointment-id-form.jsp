@@ -16,11 +16,10 @@
 <body style="background-color: Dodgerblue;">
 <body>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
-   <h2>Appointment Details</h2>
 	<div class="container">
 		<form:form action="/billing/registerbill" method="Get"
 			modelAttribute="findappointmentbyid">
-            <h1>My Appointments</h1>
+<h2>Appointment Details</h2>
 			<div class="row">
 				<div class="col-25">
 					<label for="appointmentId">Appointment Id</label>

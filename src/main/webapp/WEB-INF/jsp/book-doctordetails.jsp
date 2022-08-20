@@ -29,6 +29,7 @@
 		<h1>Doctors List</h1>
 		<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 			
