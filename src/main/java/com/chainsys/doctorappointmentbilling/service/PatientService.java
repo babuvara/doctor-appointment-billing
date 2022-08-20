@@ -19,8 +19,7 @@ public class PatientService {
 	private PatientRepository patientRepo;
 
 	public List<Patient> getPatient() {
-		List<Patient> patientList = patientRepo.findAll();
-		return patientList;
+		return patientRepo.findAll();
 	}
 
 	@Transactional

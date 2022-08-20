@@ -19,8 +19,8 @@ public class DoctorDetailsService {
 	private DoctorDetailsRepository doctorDetailsRepo;
 
 	public List<DoctorDetails> getDoctorDetails() {
-		List<DoctorDetails> doctorList = doctorDetailsRepo.findAll();
-		return doctorList;
+	
+		return doctorDetailsRepo.findAll();
 	}
 	
 	public DoctorDetails findById(int id) {

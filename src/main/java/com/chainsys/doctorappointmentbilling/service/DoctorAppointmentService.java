@@ -20,14 +20,14 @@ public class DoctorAppointmentService {
 	@Autowired
 	AppointmentRepository appointmentRepo;
 
-	public DoctorAppointmentDTO getAppointmentList(int DOCTOR_ID) {
-		DoctorDetails doctor = doctorDetailsRepo.findById(DOCTOR_ID);
+	public DoctorAppointmentDTO getAppointmentList(int id) {
+		DoctorDetails doctor = doctorDetailsRepo.findById(id);
 		DoctorAppointmentDTO dto = new DoctorAppointmentDTO();
 		dto.setDoctor(doctor);
-		List<Appointment> appointment = appointmentRepo.findByDoctorId(DOCTOR_ID);
+		List<Appointment> appointment = appointmentRepo.findByDoctorId(id);
 		Iterator<Appointment> iterator = appointment.iterator();
 		while (iterator.hasNext())
-			dto.addAppointmentList((Appointment) iterator.next());
+			dto.addAppointmentList(iterator.next());
 
 		return dto;
 	}

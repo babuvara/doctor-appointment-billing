@@ -38,11 +38,12 @@ body {
   float: right;
 }
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: beige;
   color: black;
 }
 .row {  
   display: -ms-flexbox; 
+  background-color: #ddd;
   display: flex;
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap;

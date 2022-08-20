@@ -19,15 +19,14 @@ public class AppointmentService {
 	private AppointmentRepository appointmentRepo;
 
 	public List<Appointment> getAppointment() {
-		List<Appointment> appointmentList = appointmentRepo.findAll();
-		return appointmentList;
+		return appointmentRepo.findAll();
 	}
 
 	@Transactional
 	public Appointment save(Appointment appointment) {
 		return appointmentRepo.save(appointment);
 	}
-	
+
 	public Appointment findById(int id) {
 		return appointmentRepo.findByAppointmentId(id);
 	}
