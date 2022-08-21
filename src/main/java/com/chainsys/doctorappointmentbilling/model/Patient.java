@@ -12,7 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.Past;
 
 @Entity
@@ -32,7 +31,6 @@ public class Patient {
 	private Date dob;
 	@Column(name = "BLOOD_GROUP")
 	private String bloodGroup;
-	@Email(message = "Please Enter a Valid Email Id !!")
 	@Column(name = "EMAIL_ID")
 	private String emailId;
 	@Column(name = "PASSWORD")

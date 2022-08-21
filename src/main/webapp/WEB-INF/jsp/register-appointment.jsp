@@ -10,6 +10,9 @@
 <style>
 <%@include file="/WEB-INF/css/register-patient.css"%>
 </style>
+<script>
+<%@include file="/WEB-INF/script/register-appointment.js"%>
+</script>
 </head>
 <body>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
@@ -19,12 +22,10 @@
    <h2>Book Your Appointment</h2>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="appointmentDate">Appointment Date</label>
-
 				</div>
 				<div class="col-75">
-					<form:input path="appointmentDate" type="date" required="true" />
+					<form:input path="appointmentDate" type="date" name="appointmentDate" onblur="checkAppointmentDate();" required="true"/>
 				</div>
 				<form:errors path="appointmentDate" cssClass="text-danger" />
 			</div>
@@ -69,20 +70,17 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="patientEmail" placeholder="Patient Email" required="true" />
+					<form:input path="patientEmail"  placeholder="Email" title="Enter a valid email as abc@gmail.com" 
+					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true" onblur="patientEmailCheck();" id="patientEmail" name="patientEmail"/>
 				</div>
-				<form:errors path="patientEmail" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="doctorId">Doctor id</label>
-
 				</div>
 				<div class="col-75">
 					<form:input path="doctorId" placeholder="doctor id" required="true" readonly="true"/>
 				</div> 
-				<form:errors path="doctorId" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<form:button class="btn">Submit</form:button>

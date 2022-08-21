@@ -10,8 +10,10 @@
 <style>
 <%@include file="/WEB-INF/css/register-patient.css"%>
 </style>
+<script>
+<%@include file="/WEB-INF/script/register-bill.js"%>
+</script>
 </head>
-<body style="background-color: Dodgerblue;">
 <body>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<div class="container">
@@ -45,20 +47,18 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="purpose" placeholder="purpose" required="true" />
+					<form:input path="purpose" placeholder="purpose"
+										title="purpose name can't be empty or must contain only alphabets"
+					                	pattern="^[a-zA-Z\\s]*$" onblur="purposeCheck();"  id="purpose" name="purpose" required="true"/>	
 				</div>
-				<form:errors path="purpose" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="appointmentId">Appointment Id</label>
-
 				</div>
 				<div class="col-75">
 					<form:input path="appointmentId" required="true" />
 				</div>
-				<form:errors path="appointmentId" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
@@ -67,7 +67,6 @@
 				<div class="col-75">
 					<form:input path="appointmentBill" required="true" />
 				</div>
-				<form:errors path="appointmentBill" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<form:button class="btn">Pay Bill</form:button>

@@ -66,3 +66,17 @@ let passwordCheck = function() {
                 alert("Date must be in the past");
            }
      }
+     
+      let symptomsCheck = function() {
+		let symptomsRegex = new RegExp("^[a-zA-Z\\s]*$");
+		if(!document.form.symptoms.value.match(symptomsRegex)){
+			if(alert(" Symptoms can't be empty or must contain only alphabets")){
+				 document.form.symptoms.focus();
+			}
+			else
+				document.activeElement.blur();
+		}
+		else{
+	    	return false;
+	    }
+	}

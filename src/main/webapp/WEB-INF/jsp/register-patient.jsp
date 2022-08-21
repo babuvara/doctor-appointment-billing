@@ -26,11 +26,10 @@
 					<label for="name">Name</label>
 				</div>
 				<div class="col-75">
-					<form:input path="name" placeholder="Name" name="name" onblur="nameCheck();" required="true" />
+					<form:input path="name" placeholder="Name" title="Name length should be 3 to 20" 
+					 pattern="^[a-zA-Z\\s]{3,20}$" required="true"  onblur="nameCheck();" name="name" id="name"/>
 				</div>
-				<form:errors path="name" cssClass="text-danger" />
 			</div>
-
 			<div class="row">
 				<div class="col-25">
 					<label for="gender">Select Gender</label>
@@ -43,14 +42,13 @@
 					<form:radiobutton path="gender" value="Transgender" />
 					Transgender
 				</div>
-				<form:errors path="gender" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
 					<label for="dob">DOB</label>
 				</div>
 				<div class="col-75">
-					<form:input path="dob" type="date" name="dateOfBirth" onblur="checkDateOfBirth();" required="true"/>
+					<form:input path="dob" type="date" name="dob" onblur="checkDateOfBirth();" required="true"/>
 				</div>
 				<form:errors path="dob" cssClass="text-danger" />
 			</div>
@@ -77,27 +75,29 @@
 					<label for="emailId">Email</label>
 				</div>
 				<div class="col-75">
-					<form:input path="emailId" placeholder="Email" name="emailId" onblur="emailCheck();" required="true" />
+					<form:input path="emailId"  placeholder="Email" title="Enter a valid email as abc@gmail.com" 
+					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true" onblur="emailCheck();" id="emailId" name="emailId"/>
 				</div>
-				<form:errors path="emailId" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="password">Password</label>
 				</div>
 				<div class="col-75">
-					<form:input path="password" placeholder="password" />
+					<form:input path="password"
+										title="password must begin with letter and contain atleast one number and must have atleast 8 characters"
+										pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
+										 placeholder="password" onblur="passwordCheck();"  id="password" name="password"/>
 				</div>
-
 			</div>
 			<div class="row">
 				<div class="col-25">
 					<label for="mobileNumber">Mobile Number</label>
-
 				</div>
 				<div class="col-75">
-					<form:input path="mobileNumber" name="mobileNumber" onblur="mobileNumberCheck();" placeholder="Mobile Number" required="true"/>
+					<form:input path="mobileNumber" placeholder="Mobile Number"
+										title="*please enter valid phone number"
+					                	pattern="^[6-9]{1}[0-9]{9}$" onblur="mobileNumberCheck();"  id="mobileNumber" name="mobileNumber"/>
 				</div>
 			</div>
 			<div class="row">
@@ -152,7 +152,9 @@
 					<label for="symptoms">Symptoms</label>
 				</div>
 				<div class="col-75">
-					<form:input path="symptoms" placeholder="Symptoms" required="true"/>
+					<form:input path="symptoms" placeholder="Symptoms"
+										title="symptoms name can't be empty or must contain only alphabets"
+					                	pattern="^[a-zA-Z\\s]*$" onblur="symptomsCheck();"  id="symptoms" name="symptoms" required="true"/>	
 				</div>
 			</div>
 			<div class="row">

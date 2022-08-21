@@ -28,9 +28,9 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="doctorName" placeholder="Doctor Name" name="name" onblur="doctorNameCheck();" required="true" />
+					<form:input path="doctorName" placeholder="Doctor Name" title="Name length should be 3 to 20" 
+					 pattern="^[a-zA-Z\\s]{3,20}$" required="true"  onblur="doctorNameCheck();" doctorName="name" id="doctorName"/>
 				</div>
-				<form:errors path="doctorName" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
@@ -39,31 +39,30 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="doctorEmail" placeholder="Doctor Email" name="emailId" onblur="doctorEmailCheck();" required="true" />
+					<form:input path="doctorEmail"  placeholder="Email" title="Enter a valid email as abc@gmail.com" 
+					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true" onblur="doctoremailCheck();" id="doctorEmail" name="doctorEmail"/>
 				</div>
-				<form:errors path="doctorEmail" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="password">Password</label>
-
 				</div>
 				<div class="col-75">
-					<form:input path="password" placeholder="Password" onblur="passwordCheck();"  name="password" required="true" />
+					<form:input path="password"
+										title="password must begin with letter and contain atleast one number and must have atleast 8 characters"
+										pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
+										 placeholder="password" onblur="doctorPasswordCheck();"  id="password" name="password"/>
 				</div>
-				<form:errors path="password" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="speciality">Speciality</label>
-
 				</div>
 				<div class="col-75">
-					<form:input path="speciality" placeholder="Speciality" required="true" />
+					<form:input path="speciality" placeholder="speciality"
+										title="speciality name can't be empty or must contain only alphabets"
+					                	pattern="^[a-zA-Z\\s]*$" onblur="specialityCheck();"  id="speciality" name="speciality" required="true"/>	
 				</div>
-				<form:errors path="speciality" cssClass="text-danger" />
 			</div>
 				<div class="row">
 				<div class="col-25">
@@ -79,14 +78,11 @@
 			</div>
 			<div class="row">
 				<div class="col-25">
-
 					<label for="experience">Experience</label>
-
 				</div>
 				<div class="col-75">
 					<form:input path="experience" placeholder="Experience" required="true" />
 				</div>
-				<form:errors path="experience" cssClass="text-danger" />
 			</div>
 			<div class="row">
 				<form:button class="btn">Register</form:button>

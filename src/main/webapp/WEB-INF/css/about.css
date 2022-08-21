@@ -43,10 +43,8 @@ body {
 }
 .row {  
   display: -ms-flexbox; 
-  background-color: #ddd;
-  display: flex;
+  background: orange;
   -ms-flex-wrap: wrap; 
-  flex-wrap: wrap;
   
 }
 .fa-home{
@@ -58,7 +56,8 @@ body {
 .side {
   -ms-flex: 30%; 
   flex: 30%;
-  background-color: #f1f1f1;
+  color: yellow;
+  background: black;
   padding: 20px;
   text-align:center;
     border: 6px solid gray;

@@ -31,7 +31,7 @@ let doctoremailCheck = function() {
     }
 }
 
-let passwordCheck = function() {
+let doctorPasswordCheck = function() {
 		let rg = new RegExp("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$");
 		if(!document.form.password.value.match(rg)){
 			if(alert("password must begin with letter and contain atleast one number and one symbol must have atleast 8 characters Ex:abcde@12")){
@@ -41,6 +41,20 @@ let passwordCheck = function() {
 				document.activeElement.blur();
 		}
 	    else{
+	    	return false;
+	    }
+	}
+	
+	 let specialityCheck = function() {
+		let specialityRegex = new RegExp("^[a-zA-Z\\s]*$");
+		if(!document.form.speciality.value.match(specialityRegex)){
+			if(alert(" speciality can't be empty or must contain only alphabets")){
+				 document.form.speciality.focus();
+			}
+			else
+				document.activeElement.blur();
+		}
+		else{
 	    	return false;
 	    }
 	}
