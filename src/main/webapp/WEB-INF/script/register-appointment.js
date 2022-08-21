@@ -13,7 +13,7 @@
      }
      
      let patientEmailCheck = function() {
-	let rg = new RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
+	let rg = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$/;
 	if(!document.myForm.patientEmail.value.match(rg)){
 		if(alert("Patient Email is not valid Ex:abc@gmail.com")){
 			document.myForm.patientEmail.focus();
