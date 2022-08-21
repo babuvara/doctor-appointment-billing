@@ -25,7 +25,7 @@ create table APPOINTMENT(
                         APPOINTMENT_ID NUMBER NOT NULL,
                         APPOINTMENT_DATE DATE NOT NULL,
                         APPOINTMENT_TIME VARCHAR(10) NOT NULL,
-                        PATIENT_EMAIL VARCHAR(60) NOT NULL UNIQUE,
+                        PATIENT_EMAIL VARCHAR(60) NOT NULL,
                         DOCTOR_ID NUMBER NOT NULL,
                         APPOINTMENT_STATUS VARCHAR(10) NOT NULL,
                         PRIMARY KEY (APPOINTMENT_ID),
@@ -35,13 +35,13 @@ create table APPOINTMENT(
 create table BILLING(
                         BILL_ID NUMBER NOT NULL,
                         HOSPITAL_NAME VARCHAR(45) NOT NULL,
-                        PATIENT_EMAIL VARCHAR(60) NOT NULL UNIQUE,
+                        PATIENT_EMAIL VARCHAR(60) NOT NULL,
                         PURPOSE VARCHAR(45) NOT NULL,
                         APPOINTMENT_ID NUMBER NOT NULL,
                         APPOINTMENT_BILL float NOT NULL,
                         PRIMARY KEY (BILL_ID),
                         FOREIGN KEY(PATIENT_EMAIL)REFERENCES PATIENT(EMAIL_ID),
-                        FOREIGN KEY(APPOINTMENT_ID)REFERENCES APPOINTMENT(APPOINTMENT_ID));
+                        FOREIGN KEY(APPOINTMENT_ID)REFERENCES APPOINTMENT(APPOINTMENT_ID)); 
 --------------------------------------------------------------------------------
 desc billing;
 --------------------------------------------------------------------------------
@@ -57,16 +57,16 @@ drop table appointment;
 drop table doctordetails;
 drop table PATIENT;
 --------------------------------------------------------------------------------
-
+desc appointment;
 desc doctordetails;
 desc billing;
-
+desc patient;
 --------------------------------------------------------------------------------
                
-create sequence  PATIENT_ID_REF start with 101 increment by 1;
-create sequence  DOCTOR_ID_REF start with 201 increment by 1;
-create sequence  APPOINTMENT_ID_REF start with 301 increment by 1;
-create sequence  BILL_ID_REF start with 501 increment by 1;
+create sequence  PATIENT_ID_REF start with 12345 increment by 1;
+create sequence  DOCTOR_ID_REF start with 23456 increment by 1;
+create sequence  APPOINTMENT_ID_REF start with 34567 increment by 1;
+create sequence  BILL_ID_REF start with 56789 increment by 1;
 
 drop sequence PATIENT_ID_REF;
 drop sequence DOCTOR_ID_REF;

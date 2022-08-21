@@ -154,7 +154,7 @@
 				<div class="col-75">
 					<form:input path="symptoms" placeholder="Symptoms"
 										title="symptoms name can't be empty or must contain only alphabets"
-					                	pattern="^[a-zA-Z\\s]*$" onblur="symptomsCheck();"  id="symptoms" name="symptoms" required="true"/>	
+					                	pattern="^[a-zA-z\s]+$" onblur="symptomsCheck();"  id="symptoms" name="symptoms" required="true"/>	
 				</div>
 			</div>
 			<div class="row">

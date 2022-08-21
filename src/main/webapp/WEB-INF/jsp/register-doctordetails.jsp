@@ -61,7 +61,7 @@
 				<div class="col-75">
 					<form:input path="speciality" placeholder="speciality"
 										title="speciality name can't be empty or must contain only alphabets"
-					                	pattern="^[a-zA-Z\\s]*$" onblur="specialityCheck();"  id="speciality" name="speciality" required="true"/>	
+					                	pattern="^[a-zA-z\s]+$" onblur="specialityCheck();"  id="speciality" name="speciality" required="true"/>	
 				</div>
 			</div>
 				<div class="row">
