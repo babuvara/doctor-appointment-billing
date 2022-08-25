@@ -17,7 +17,7 @@
 }
 
  let mobileNumberCheck = function() {
-	 let phoneRg = `^[1-9]{1}[0-9]{9}`;
+	 let phoneRg = `^[6-9]{1}[0-9]{9}`;
 	 if(!document.myForm.mobileNumber.value.match(phoneRg)){
 			if(alert("Mobile Number is not valid and support only 10 numbers")){
 				 document.myForm.mobileNumber.focus();

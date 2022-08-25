@@ -28,8 +28,8 @@ public class Appointment {
 	@Column(name = "APPOINTMENT_DATE")
 	@Future(message = "Past Date is Not Support")
 	private Date appointmentDate;
-	@Column(name = "APPOINTMENT_TIME")
-	private String appointmentTime;
+	@Column(name = "PATIENT_NAME")
+	private String patientName;
 	@Column(name = "PATIENT_EMAIL")
 	private String patientEmail;
 	@Column(name = "DOCTOR_ID")
@@ -65,12 +65,12 @@ public class Appointment {
 		this.appointmentDate = appointmentDate;
 	}
 
-	public String getAppointmentTime() {
-		return appointmentTime;
+	public String getPatientName() {
+		return patientName;
 	}
 
-	public void setAppointmentTime(String appointmentTime) {
-		this.appointmentTime = appointmentTime;
+	public void setPatientName(String patientName) {
+		this.patientName = patientName;
 	}
 
 	public String getPatientEmail() {
@@ -96,4 +96,8 @@ public class Appointment {
 	public void setAppointmentStatus(String appointmentStatus) {
 		this.appointmentStatus = appointmentStatus;
 	}
+
 }
+	
+
+	

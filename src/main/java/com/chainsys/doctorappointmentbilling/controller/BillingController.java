@@ -5,6 +5,9 @@ package com.chainsys.doctorappointmentbilling.controller;
  */
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,12 +35,15 @@ public class BillingController {
 	}
 
 	@GetMapping("/registerbill")
-	public String showRegisterForm(@ModelAttribute("findappointmentbyid") Billing bill2, Model model) {
+	public String showRegisterForm( HttpServletRequest request ,@ModelAttribute("findappointmentbyid") Billing bill2, Model model) {
 		Billing bill = new Billing();
+		HttpSession session  = request.getSession();
+		String patientName  = (String) session.getAttribute("patientName");
+		String patientEmail = (String) session.getAttribute("patientEmail");
 		bill.setHospitalName("Apollo");
 		bill.setAppointmentBill(250.50f);
-		 bill.setPatientEmail(bill2.getPatientEmail());
-		 bill.setAppointmentId(bill2.getAppointmentId());
+		bill.setPatientName(patientName);
+		bill.setPatientEmail(patientEmail);
 		model.addAttribute("registerbill", bill);
 		return "register-bill";		
 	}

@@ -17,8 +17,7 @@
 <body>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<div class="container">
-		<form:form action="register" method="post"
-			modelAttribute="registerappointment">
+		<form:form action="register" method="post"  modelAttribute="registerappointment">
    <h2>Book Your Appointment</h2>
 			<div class="row">
 				<div class="col-25">
@@ -29,38 +28,15 @@
 				</div>
 				<form:errors path="appointmentDate" cssClass="text-danger" />
 			</div>
-				<div class="row">
+					<div class="row">
 				<div class="col-25">
-					<label for="appointmentTime">Appointment Time</label>
+
+					<label for="patientName">Patient Name</label>
+
 				</div>
 				<div class="col-75">
-					<form:select path="appointmentTime">
-						<form:errors path="appointmentTime" />
-						<form:option value="9 - 10 AM">9 - 10 AM</form:option>
-						<form:option value="10 - 11 AM">10 - 11 AM</form:option>
-						<form:option value="11 - 12 PM">11 - 12 PM</form:option>
-						<form:option value="12 - 1 PM">12 - 1 PM</form:option>
-						<form:option value="1 - 2 PM">1 - 2 PM</form:option>
-						<form:option value="2 - 3 PM">2 - 3 PM</form:option>
-						<form:option value="3 - 4 PM">3 - 4 PM</form:option>
-						<form:option value="4 - 5 PM">4 - 5 PM</form:option>
-						<form:option value="5 - 6 PM">5 - 6 PM</form:option>
-						<form:option value="6 - 7 PM">6 - 7 PM</form:option>
-						<form:option value="7 - 8 PM">7 - 8 PM</form:option>
-						<form:option value="8 - 9 PM">8 - 9 PM</form:option>
-						<form:option value="9 - 10 PM">9 - 10 PM</form:option>
-						<form:option value="10 - 11 PM">10 - 11 PM</form:option>
-						<form:option value="11 - 12 AM">11 - 12 AM</form:option>
-						<form:option value="12 - 1 AM">12 - 1 AM</form:option>
-						<form:option value="1 - 2 AM">1 - 2 AM</form:option>
-						<form:option value="2 - 3 AM">2 - 3 AM</form:option>
-						<form:option value="3 - 4 AM">3 - 4 AM</form:option>
-						<form:option value="4 - 5 AM">4 - 5 AM</form:option>
-						<form:option value="5 - 6 AM">5 - 6 AM</form:option>
-						<form:option value="6 - 7 AM">6 - 7 AM</form:option>
-						<form:option value="7 - 8 AM">7 - 8 AM</form:option>
-						<form:option value="8 - 9 AM">8 - 9 AM</form:option>
-					</form:select>
+					<form:input path="patientName" 
+					required="true"  readonly="true"/>
 				</div>
 			</div>
 			<div class="row">
@@ -70,8 +46,8 @@
 
 				</div>
 				<div class="col-75">
-					<form:input path="patientEmail"  placeholder="Email" title="Enter a valid email as abc@gmail.com" 
-					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true" onblur="patientEmailCheck();" id="patientEmail" name="patientEmail"/>
+					<form:input path="patientEmail" 
+					required="true"  readonly="true"/>
 				</div>
 			</div>
 			<div class="row">

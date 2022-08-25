@@ -32,11 +32,20 @@
 			<div class="row">
 				<div class="col-25">
 
-					<label for="patientEmail">Patient Email</label>
+					<label for="patientName">Patient Name</label>
 
 				</div>
 				<div class="col-75">
-					<form:input path="patientEmail" placeholder="Patient Email" required="true" />
+					<form:input path="patientName" required="true" />
+				</div>
+				<form:errors path="patientName" cssClass="text-danger" />
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="patientEmail">Patient Email</label>
+				</div>
+				<div class="col-75">
+					<form:input path="patientEmail" required="true" />
 				</div>
 				<form:errors path="patientEmail" cssClass="text-danger" />
 			</div>
@@ -50,14 +59,6 @@
 					<form:input path="purpose" placeholder="purpose"
 										title="purpose name can't be empty or must contain only alphabets"
 					                	pattern="^[a-zA-Z\\s]*$" onblur="purposeCheck();"  id="purpose" name="purpose" required="true"/>	
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="appointmentId">Appointment Id</label>
-				</div>
-				<div class="col-75">
-					<form:input path="appointmentId" required="true" />
 				</div>
 			</div>
 			<div class="row">

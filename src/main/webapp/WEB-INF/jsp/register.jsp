@@ -23,7 +23,7 @@
 	</nav>
 	<div class="img"></div>
 	<div class="center">
-		<div class="title">Doctor-Appointment</div>
+		<div class="title">Register Your Account</div>
 		<div class="btns"></div>
 	</div>
 </body>

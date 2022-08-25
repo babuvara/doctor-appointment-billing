@@ -107,3 +107,8 @@ input[type=date] {
 	height: 40px;
 	width: 273px;
 }
+
+#password {
+	    height: 40px;
+    width: 273px;
+}

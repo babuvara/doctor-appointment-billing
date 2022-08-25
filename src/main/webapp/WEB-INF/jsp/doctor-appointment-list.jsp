@@ -9,7 +9,7 @@
 <title>Appointments Details</title>
 <link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
-<%@include file="/WEB-INF/css/book-doctordetails.css"%>
+<%@include file="/WEB-INF/css/appointmentlist.css"%>
 </style>
 </head>
 <body>
@@ -33,25 +33,25 @@
 				<div>
 					<label for="doctorId">Doctor Id</label>
 					<div>
-						<form:input path="doctorId" />
+						<form:input path="doctorId" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="doctorName">Doctor Name</label>
 					<div>
-						<form:input path="doctorName" />
+						<form:input path="doctorName" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="doctorEmail">Doctor Email</label>
 					<div>
-						<form:input path="doctorEmail" />
+						<form:input path="doctorEmail" readonly="true"/>
 					</div>
 					</div>
 			</form:form>
 		</div>
 	</div>
-	<div id="table root">
+	<div id="tableroot">
 		<table>
 		<caption></caption>
 			<thead>
@@ -76,5 +76,6 @@
 			</tbody>
 		</table>
 	</div>
+
 </body>
 </html>

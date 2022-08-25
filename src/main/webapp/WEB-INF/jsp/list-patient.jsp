@@ -9,7 +9,7 @@
 <title>Patients list</title>
 <link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
-<%@include file="/WEB-INF/css/book-doctordetails.css"%>
+<%@include file="/WEB-INF/css/patientlist.css"%>
 </style>
 </head>
 <body>
@@ -27,7 +27,7 @@
 		</div>
 	</nav>
 		<h1>Patients list</h1>
-		<div id="table root">
+		<div id="tableroot">
 			<table>
 			<caption></caption>
 				<thead>

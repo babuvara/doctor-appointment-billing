@@ -84,3 +84,8 @@ label {
     left: 16px;
     font-size: 4em;
 }
+
+#password {
+	height: 40px;
+    width: 275px;
+}

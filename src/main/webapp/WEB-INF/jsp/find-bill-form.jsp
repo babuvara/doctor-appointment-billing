@@ -13,7 +13,6 @@
 <%@include file="/WEB-INF/css/register-patient.css"%>
 </style>
 </head>
-<body style="background-color: Dodgerblue;">
 <body>
 <button class="button3" onclick="history.back()" ><em class="gg-arrow-left-o"></em></button>
 	<div class="container">
@@ -43,6 +42,17 @@
 			<div class="row">
 				<div class="col-25">
 
+					<label for="patientName">Patient Name</label>
+
+				</div>
+				<div class="col-75">
+					<form:input path="patientName" readonly="true" required="true" />
+				</div>
+				<form:errors path="patientName" cssClass="text-danger" />
+			</div>
+			<div class="row">
+				<div class="col-25">
+
 					<label for="patientEmail">Patient Email</label>
 
 				</div>
@@ -61,17 +71,6 @@
 					<form:input path="purpose" readonly="true" required="true" />
 				</div>
 				<form:errors path="purpose" cssClass="text-danger" />
-			</div>
-			<div class="row">
-				<div class="col-25">
-
-					<label for="appointmentId">Appointment Id</label>
-
-				</div>
-				<div class="col-75">
-					<form:input path="appointmentId" readonly="true" required="true" />
-				</div>
-				<form:errors path="appointmentId" cssClass="text-danger" />
 			</div>
 		<div class="row">
 				<div class="col-25">

@@ -9,8 +9,19 @@
 <title>Appointment list</title>
 <link href='https://css.gg/arrow-left-o.css' rel='stylesheet'>
 <style>
-<%@include file="/WEB-INF/css/book-doctordetails.css"%>
+<%@include file="/WEB-INF/css/appointmentlist.css"%>
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </head>
 <body>
 <nav>
@@ -27,25 +38,26 @@
 		</div>
 	</nav>
 			<h1>Appointments list</h1>
-	<div id="table root">
+	<div id="tableroot">
+	<input id="myInput" type="text" placeholder="Search.." class="text-box">
 			<table>
 			<caption></caption>
 				<thead>
 					<tr>
 						<th>Appointment id</th>
 						<th>Appointment Date</th>
-						<th>Appointment Time</th>
+						<th>Patient Name</th>
 						<th>Patient Email</th>
 						<th>Doctor id</th>
 						<th>Appointment Status</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id = "myTable">
 					<c:forEach var="appointment" items="${allappointment}">
 						<tr>
 							<td>${appointment.appointmentId}</td>
 							<td>${appointment.appointmentDate}</td>
-							<td>${appointment.appointmentTime}</td>
+							<td>${appointment.patientName}</td>
 							<td>${appointment.patientEmail}</td>
 							<td>${appointment.doctorId}</td>
 							<td>${appointment.appointmentStatus}</td>

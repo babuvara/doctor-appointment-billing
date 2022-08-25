@@ -5,6 +5,9 @@ package com.chainsys.doctorappointmentbilling.controller;
  */
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,8 +42,13 @@ public class AppointmentController {
 	}
 
 	@GetMapping("/registerappointment")
-	public String showRegisterForm(@RequestParam("doctorId") int id, Model model) {
+	public String showRegisterForm(@RequestParam("doctorId") int id, HttpServletRequest request, Model model) {
 		Appointment appointment = new Appointment();
+		HttpSession session = request.getSession();
+		String patientEmail = (String) session.getAttribute("patientEmail");
+		String patientName = (String) session.getAttribute("patientName");
+		appointment.setPatientName(patientName);
+		appointment.setPatientEmail(patientEmail);
 		appointment.setDoctorId(id);
 		model.addAttribute("registerappointment", appointment);
 		return "register-appointment";

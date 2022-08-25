@@ -21,60 +21,50 @@ public class Billing {
 	private int billId;
 	@Column(name = "HOSPITAL_NAME")
 	private String hospitalName;
+	@Column(name = "PATIENT_NAME")
+	private String patientName;
 	@Column(name = "PATIENT_EMAIL")
 	private String patientEmail;
 	@Column(name = "PURPOSE")
 	private String purpose;
-	@Column(name = "APPOINTMENT_ID")
-	private int appointmentId;
 	@Column(name = "APPOINTMENT_BILL")
 	private float appointmentBill;
-
 	public int getBillId() {
 		return billId;
 	}
-
 	public void setBillId(int billId) {
 		this.billId = billId;
 	}
-
 	public String getHospitalName() {
 		return hospitalName;
 	}
-
 	public void setHospitalName(String hospitalName) {
 		this.hospitalName = hospitalName;
 	}
-
+	public String getPatientName() {
+		return patientName;
+	}
+	public void setPatientName(String patientName) {
+		this.patientName = patientName;
+	}
 	public String getPatientEmail() {
 		return patientEmail;
 	}
-
 	public void setPatientEmail(String patientEmail) {
 		this.patientEmail = patientEmail;
 	}
-
 	public String getPurpose() {
 		return purpose;
 	}
-
 	public void setPurpose(String purpose) {
 		this.purpose = purpose;
 	}
-
-	public int getAppointmentId() {
-		return appointmentId;
-	}
-
-	public void setAppointmentId(int appointmentId) {
-		this.appointmentId = appointmentId;
-	}
-
 	public float getAppointmentBill() {
 		return appointmentBill;
 	}
-
 	public void setAppointmentBill(float appointmentBill) {
 		this.appointmentBill = appointmentBill;
 	}
 }
+
+	

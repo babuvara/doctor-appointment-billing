@@ -27,7 +27,7 @@
 		</div>
 	</nav>
 		<h1>Doctors List</h1>
-		<div id="table root">
+		<div id="tableroot">
 		<table>
 		<caption></caption>
 			<thead>

@@ -5,6 +5,7 @@ package com.chainsys.doctorappointmentbilling.controller;
  */
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,11 +60,12 @@ public class PatientController {
 	}
 
 	@PostMapping("/checkpatientlogin")
-	public String checkingAccess(@ModelAttribute("patient") Patient patient, Model model) {
+	public String checkingAccess(@ModelAttribute("patient") Patient patient, Model model, HttpSession session) {
 		Patient patientLogin = patientService.getPatientByEmailIdAndPassword(patient.getEmailId(),
 				patient.getPassword());
 		if (patientLogin != null) {
-
+            session.setAttribute("patientEmail", patientLogin.getEmailId());
+            session.setAttribute("patientName", patientLogin.getName());
 			return "patientlogin";
 		} else
 			model.addAttribute("result","Incorrect Email and Password!!!"+"Please Enter the Correct Email and Password");

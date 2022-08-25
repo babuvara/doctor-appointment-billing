@@ -141,7 +141,7 @@ table{
  
 }
 #tableroot{
-	margin-left:127px;
+	margin-left:117px;
 }
 th{
   padding: 20px 15px;
@@ -167,5 +167,10 @@ td{
     top: 20px;
     left: 16px;
     font-size: 4em;
+}
+
+#getdoctor{
+	    padding-top: 116px;
+    padding-left: 620px;
 }
    

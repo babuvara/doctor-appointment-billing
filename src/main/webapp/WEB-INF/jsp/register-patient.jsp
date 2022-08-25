@@ -27,7 +27,7 @@
 				</div>
 				<div class="col-75">
 					<form:input path="name" placeholder="Name" title="Name length should be 3 to 20" 
-					 pattern="^[a-zA-Z\\s]{3,20}$" required="true"  onblur="nameCheck();" name="name" id="name"/>
+					 pattern="^[a-zA-Z\\s]{3,20}$" required="true"  name="name" id="name"/>
 				</div>
 			</div>
 			<div class="row">
@@ -76,7 +76,7 @@
 				</div>
 				<div class="col-75">
 					<form:input path="emailId"  placeholder="Email" title="Enter a valid email as abc@gmail.com" 
-					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true" onblur="emailCheck();" id="emailId" name="emailId"/>
+					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true"  id="emailId" name="emailId"/>
 				</div>
 			</div>
 			<div class="row">
@@ -84,10 +84,10 @@
 					<label for="password">Password</label>
 				</div>
 				<div class="col-75">
-					<form:input path="password"
+					<form:input path="password" type="password"
 										title="password must begin with letter and contain atleast one number and must have atleast 8 characters"
 										pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
-										 placeholder="password" onblur="passwordCheck();"  id="password" name="password"/>
+										 placeholder="password"   id="password" name="password"/>
 				</div>
 			</div>
 			<div class="row">
@@ -97,7 +97,7 @@
 				<div class="col-75">
 					<form:input path="mobileNumber" placeholder="Mobile Number"
 										title="*please enter valid phone number"
-					                	pattern="^[6-9]{1}[0-9]{9}$" onblur="mobileNumberCheck();"  id="mobileNumber" name="mobileNumber"/>
+					                	pattern="^[6-9]{1}[0-9]{9}$"   id="mobileNumber" name="mobileNumber"/>
 				</div>
 			</div>
 			<div class="row">
@@ -109,7 +109,7 @@
 						<form:errors path="location" />
 						<form:option value="Ariyalur">Ariyalur</form:option>
 						<form:option value="Chengalpattu">Chengalpattu</form:option>
-						<form:option value="Chennai">Chennai</form:option>
+						<form:option  value="Chennai">Chennai</form:option>
 						<form:option value="Coimbatore">Coimbatore</form:option>
 						<form:option value="Cuddalore">Cuddalore</form:option>
 						<form:option value="Dharmapuri">Dharmapuri</form:option>
@@ -154,7 +154,7 @@
 				<div class="col-75">
 					<form:input path="symptoms" placeholder="Symptoms"
 										title="symptoms name can't be empty or must contain only alphabets"
-					                	pattern="^[a-zA-z\s]+$" onblur="symptomsCheck();"  id="symptoms" name="symptoms" required="true"/>	
+					                	pattern="^[a-zA-z\s]+$"  id="symptoms" name="symptoms" required="true"/>	
 				</div>
 			</div>
 			<div class="row">

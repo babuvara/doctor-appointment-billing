@@ -29,7 +29,7 @@
 				</div>
 				<div class="col-75">
 					<form:input path="doctorName" placeholder="Doctor Name" title="Name length should be 3 to 20" 
-					 pattern="^[a-zA-Z\\s]{3,20}$" required="true"  onblur="doctorNameCheck();" doctorName="name" id="doctorName"/>
+					 pattern="^[a-zA-Z\\s]{3,20}$" required="true"  doctorName="name" id="doctorName"/>
 				</div>
 			</div>
 			<div class="row">
@@ -40,7 +40,7 @@
 				</div>
 				<div class="col-75">
 					<form:input path="doctorEmail"  placeholder="Email" title="Enter a valid email as abc@gmail.com" 
-					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true" onblur="doctoremailCheck();" id="doctorEmail" name="doctorEmail"/>
+					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$" required="true"  id="doctorEmail" name="doctorEmail"/>
 				</div>
 			</div>
 			<div class="row">
@@ -48,10 +48,10 @@
 					<label for="password">Password</label>
 				</div>
 				<div class="col-75">
-					<form:input path="password"
+					<form:input path="password" type="password"
 										title="password must begin with letter and contain atleast one number and must have atleast 8 characters"
 										pattern="^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
-										 placeholder="password" onblur="doctorPasswordCheck();"  id="password" name="password"/>
+										 placeholder="password"   id="password" name="password"/>
 				</div>
 			</div>
 			<div class="row">
@@ -61,7 +61,7 @@
 				<div class="col-75">
 					<form:input path="speciality" placeholder="speciality"
 										title="speciality name can't be empty or must contain only alphabets"
-					                	pattern="^[a-zA-z\s]+$" onblur="specialityCheck();"  id="speciality" name="speciality" required="true"/>	
+					                	pattern="^[a-zA-z\s]+$"   id="speciality" name="speciality" required="true"/>	
 				</div>
 			</div>
 				<div class="row">
@@ -69,11 +69,7 @@
 					<label for="availableTime">Available Time</label>
 				</div>
 				<div class="col-75">
-					<form:select path="availableTime">
-						<form:errors path="availableTime" />
-						<form:option value="9 AM - 6 PM">9 AM - 6 PM</form:option>
-						<form:option value="6 PM - 9 AM">6 PM - 9 AM</form:option>
-					</form:select>
+					<form:input path="availableTime" placeholder="availableTime" required="true"/>
 				</div>
 			</div>
 			<div class="row">
